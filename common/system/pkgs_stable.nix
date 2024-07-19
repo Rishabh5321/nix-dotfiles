@@ -18,7 +18,7 @@
       android-tools
       bitwarden-desktop
       bottles
-      brave
+      #brave
       cava
       #cursor
       cliphist
@@ -29,7 +29,7 @@
       fastfetch
       ffmpeg
       firefox
-      floorp
+      #floorp
       figlet
       fzf
       gh
@@ -38,7 +38,7 @@
       gnome.gnome-disk-utility
       gnome.gnome-system-monitor
       gnome.nautilus
-      google-chrome
+      #google-chrome
       jellyfin-media-player
       #inputs.wezterm.packages.${pkgs.system}.default
       kodi-wayland

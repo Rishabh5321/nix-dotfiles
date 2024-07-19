@@ -11,7 +11,7 @@
   imports = [
     ./alacritty.nix
     ./cava.nix
-    ./chromium.nix
+    #./chromium.nix
     #./conky.nix
     ./direnv.nix
     ./firefox.nix
