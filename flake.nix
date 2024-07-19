@@ -102,10 +102,10 @@
           home-manager.nixosModules.home-manager
           sddm-sugar-candy-nix.nixosModules.default
           {
-          nixpkgs = {
-            overlays = [
-              sddm-sugar-candy-nix.overlays.default
-            ];
+            nixpkgs = {
+              overlays = [
+                sddm-sugar-candy-nix.overlays.default
+              ];
             };
             home-manager.extraSpecialArgs = {
               inherit inputs;

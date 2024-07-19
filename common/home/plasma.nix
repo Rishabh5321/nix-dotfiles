@@ -12,7 +12,7 @@
 }: {
   imports = [inputs.plasma-manager.homeManagerModules.plasma-manager];
 
-   programs.plasma = {
+  programs.plasma = {
     enable = true;
     shortcuts = {
       "ActivityManager"."switch-to-activity-b3473825-69a4-4434-a8c7-732f4163cad1" = "none";
@@ -237,7 +237,7 @@
       "plasmashell"."switch to previous activity" = "none\\\\\\,\\\\\\,Switch to Previous Activity";
       "plasmashell"."toggle do not disturb" = "none\\\\\\,\\\\\\,Toggle do not disturb";
       "services/kitty.desktop"."_launch" = "Meta+Return";
-      "services/org.kde.spectacle.desktop"."RecordWindow" = [ ];
+      "services/org.kde.spectacle.desktop"."RecordWindow" = [];
       "services/rofi-launcher.desktop"."_launch" = "Meta+Shift+Return";
     };
     configFile = {
