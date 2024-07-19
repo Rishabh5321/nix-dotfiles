@@ -237,7 +237,7 @@
       "plasmashell"."switch to previous activity" = "none\\\\,\\\\,Switch to Previous Activity";
       "plasmashell"."toggle do not disturb" = "none\\\\,\\\\,Toggle do not disturb";
       "services/kitty.desktop"."_launch" = "Meta+Return";
-      "services/org.kde.spectacle.desktop"."RecordWindow" = [ ];
+      "services/org.kde.spectacle.desktop"."RecordWindow" = [];
       "services/rofi-launcher.desktop"."_launch" = "Meta+Shift+Return";
     };
     configFile = {
