@@ -19,6 +19,7 @@
       bitwarden-desktop
       bottles
       #brave
+      btopw
       cava
       #cursor
       cliphist

@@ -10,6 +10,7 @@
 {
   imports = [
     ./alacritty.nix
+    ./btop.nix
     ./cava.nix
     #./chromium.nix
     #./conky.nix

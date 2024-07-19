@@ -67,12 +67,12 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
-      cdnix = "cd ~/dotfiles && code ~/dotfiles";
+      cdnix = "cd ~/nix-dotfiles && code ~/nix-dotfiles";
       ns = "nix-shell --run zsh";
       nix-shell = "nix-shell --run zsh";
-      nix-switch = "nh os switch ~/dotfiles";
-      nix-switchu = "nh os switch -u ~/dotfiles";
-      #nix-flake-update = "sudo nix flake update ~/dotfiles#";
+      nix-switch = "nh os switch ~/nix-dotfiles";
+      nix-switchu = "nh os switch -u ~/nix-dotfiles";
+      #nix-flake-update = "sudo nix flake update ~/nix-dotfiles#";
       wallswitch = "swww img /home/${username}/Pictures/Wallpapers/${wallpaper}";
       nix-clean = "sudo nix-collect-garbage && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/* && nix-collect-garbage && nix-collect-garbage -d";
 
