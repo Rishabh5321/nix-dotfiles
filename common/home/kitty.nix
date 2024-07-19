@@ -6,8 +6,7 @@
   username,
   options,
   ...
-}:
-{
+}: {
   programs.kitty = {
     enable = true;
     package = pkgs.kitty;

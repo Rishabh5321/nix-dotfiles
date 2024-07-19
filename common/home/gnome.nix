@@ -5,8 +5,7 @@
   wallpaper,
   username,
   ...
-}:
-{
+}: {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       clock-format = "12h";
@@ -41,12 +40,12 @@
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      close = [ "<Super>q" ];
-      toggle-fullscreen = [ "<Super>Print" ];
-      switch-windows = [ "<Alt>Tab" ];
-      switch-applications = [ "<Super>Tab" ];
-      switch-windows-backward = [ "<Shift><Alt>Tab" ];
-      switch-applications-backward = [ "<Shift><Super>Tab" ];
+      close = ["<Super>q"];
+      toggle-fullscreen = ["<Super>Print"];
+      switch-windows = ["<Alt>Tab"];
+      switch-applications = ["<Super>Tab"];
+      switch-windows-backward = ["<Shift><Alt>Tab"];
+      switch-applications-backward = ["<Shift><Super>Tab"];
     };
 
     "org/gnome/mutter" = {

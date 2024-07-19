@@ -21,6 +21,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    alejandra.url = "github:kamadorueda/alejandra";
+    alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
     plasma-manager = {
       url = "github:pjones/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,6 +37,7 @@
     nixpkgs-unstable,
     home-manager,
     spicetify-nix,
+    alejandra,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -76,14 +80,14 @@
       # FIXME replace with your hostname
       redmi = nixpkgs.lib.nixosSystem {
         specialArgs = {
-            inherit inputs;
-            inherit outputs;
-            inherit username;
-            inherit home-manager;
-            inherit wallpaper;
-            inherit spicetify-nix;
-            inherit pkgs-unstable;
-          };
+          inherit inputs;
+          inherit outputs;
+          inherit username;
+          inherit home-manager;
+          inherit wallpaper;
+          inherit spicetify-nix;
+          inherit pkgs-unstable;
+        };
         modules = [
           # > Our main nixos configuration file <
           ./hosts/redmi/configuration.nix
@@ -98,21 +102,21 @@
               inherit spicetify-nix;
               inherit pkgs-unstable;
             };
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "rebuild";
-              home-manager.users.rishabh = import ./home-manager/home.nix;
-            }
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "rebuild";
+            home-manager.users.rishabh = import ./home-manager/home.nix;
+          }
         ];
       };
       dell = nixpkgs.lib.nixosSystem {
         specialArgs = {
-            inherit inputs;
-            inherit outputs;
-            inherit username;
-            inherit wallpaper;
-            inherit spicetify-nix;
-            inherit pkgs-unstable;
-          };
+          inherit inputs;
+          inherit outputs;
+          inherit username;
+          inherit wallpaper;
+          inherit spicetify-nix;
+          inherit pkgs-unstable;
+        };
         modules = [
           # > Our main nixos configuration file <
           ./hosts/dell/configuration.nix
@@ -127,12 +131,12 @@
               inherit spicetify-nix;
               inherit pkgs-unstable;
             };
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = ".bak";
-              home-manager.users.rishabh = import ./home-manager/home.nix;
-            }
-          ];
-        };
-     };
-   };
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = ".bak";
+            home-manager.users.rishabh = import ./home-manager/home.nix;
+          }
+        ];
+      };
+    };
+  };
 }

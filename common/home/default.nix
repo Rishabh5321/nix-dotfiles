@@ -6,8 +6,7 @@
   username,
   options,
   ...
-}:
-{
+}: {
   imports = [
     ./alacritty.nix
     ./btop.nix

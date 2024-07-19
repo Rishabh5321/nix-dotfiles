@@ -3,16 +3,14 @@
   wallpaper,
   username,
   ...
-}:
-let
+}: let
   color0 = "rgb(${config.stylix.base16Scheme.base00})";
   color2 = "rgb(${config.stylix.base16Scheme.base02})";
   color5 = "rgb(${config.stylix.base16Scheme.base05})";
   color8 = "rgb(${config.stylix.base16Scheme.base08})";
   color10 = "rgb(${config.stylix.base16Scheme.base0A})";
   color14 = "rgb(${config.stylix.base16Scheme.base0E})";
-in
-{
+in {
   programs.hyprlock = {
     enable = true;
 

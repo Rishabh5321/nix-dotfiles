@@ -4,8 +4,7 @@
   inputs,
   options,
   ...
-}:
-{
+}: {
   programs = {
     firefox.enable = true;
     #hyprland = {
@@ -42,7 +41,7 @@
     enable = true;
   };
 
-  networking.timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
+  networking.timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
 
   virtualisation.libvirtd.enable = true;
   virtualisation.docker = {

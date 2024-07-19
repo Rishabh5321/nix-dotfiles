@@ -1,8 +1,10 @@
-{ pkgs, username, ... }:
-let
-  inherit (import ./variables.nix) gitUsername;
-in
 {
+  pkgs,
+  username,
+  ...
+}: let
+  inherit (import ./variables.nix) gitUsername;
+in {
   users.users = {
     "${username}" = {
       homeMode = "755";
@@ -18,7 +20,7 @@ in
       ];
       shell = pkgs.zsh;
       ignoreShellProgramCheck = true;
-      packages = with pkgs; [ ];
+      packages = with pkgs; [];
     };
     # "newuser" = {
     #   homeMode = "755";

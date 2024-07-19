@@ -6,8 +6,7 @@
   username,
   wallpaper,
   ...
-}:
-{
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -16,7 +15,7 @@
     historySubstringSearch.enable = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
+      plugins = ["git"];
       theme = "agnoster";
     };
     initExtraFirst = ''

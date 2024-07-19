@@ -7,9 +7,8 @@
   pkgs,
   modulesPath,
   ...
-}:
-{
-  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+}: {
+  imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   boot.initrd.availableKernelModules = [
     "xhci_pci"
@@ -21,9 +20,9 @@
     "rtsx_usb_sdmmc"
     "amdgpu"
   ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.initrd.kernelModules = [];
+  boot.kernelModules = ["kvm-intel"];
+  boot.extraModulePackages = [];
   boot.kernelParams = [
     "radeon.cik_support=0"
     "amdgpu.cik_support=1"
@@ -31,7 +30,7 @@
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/a33d68f6-9175-4c2e-b13c-c62f9cd91eab";
     fsType = "btrfs";
-    options = [ "subvol=@" ];
+    options = ["subvol=@"];
   };
 
   fileSystems."/boot" = {
@@ -43,7 +42,7 @@
     ];
   };
 
-  swapDevices = [ { device = "/dev/disk/by-uuid/58a49489-3223-4d6a-bbad-2976c91261f5"; } ];
+  swapDevices = [{device = "/dev/disk/by-uuid/58a49489-3223-4d6a-bbad-2976c91261f5";}];
 
   fileSystems."/mnt/Raid" = {
     device = "/dev/disk/by-uuid/d35415ef-75c1-4708-9759-b7d1ae846559";

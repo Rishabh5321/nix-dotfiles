@@ -6,13 +6,12 @@
   username,
   options,
   ...
-}:
-{
+}: {
   environment.systemPackages = with pkgs-unstable; [
     github-desktop
     heroic
     #inputs.nix-software-center.packages.${system}.nix-software-center
-    #inputs.alejandra.defaultPackage.${system}
+    inputs.alejandra.defaultPackage.${system}
     lutris
     protonup-qt
     rquickshare

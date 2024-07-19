@@ -4,8 +4,7 @@
   inputs,
   spicetify-nix,
   ...
-}:
-{
+}: {
   stylix.targets.rofi.enable = false;
   gtk = {
     iconTheme = {

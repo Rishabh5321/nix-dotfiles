@@ -4,11 +4,9 @@
   username,
   wallpaperDir,
   ...
-}:
-let
+}: let
   inherit (import ../system/variables.nix) wallpaperDir;
-in
-{
+in {
   home.packages = with pkgs; [
     waybar
     (import ../../scripts/wall-selector.nix {

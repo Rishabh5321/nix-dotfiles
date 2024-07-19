@@ -6,20 +6,18 @@
   username,
   options,
   ...
-}:
-{
+}: {
   environment.systemPackages =
     #let
     #  cursor = pkgs.callPackage ./pkgs/cursor.nix { };
     #in
-    with pkgs;
-    [
+    with pkgs; [
       alacritty
       android-tools
       bitwarden-desktop
       bottles
       #brave
-      btopw
+      btop
       cava
       #cursor
       cliphist

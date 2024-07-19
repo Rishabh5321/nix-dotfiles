@@ -5,8 +5,7 @@
   wallpaper,
   username,
   ...
-}:
-{
+}: {
   services.displayManager = {
     enable = true;
     sddm = {

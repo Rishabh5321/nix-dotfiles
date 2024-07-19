@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   # Git
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.git.enable
   # Aliases config in ./configs/git-aliases.nix
@@ -10,7 +9,7 @@
     pull.rebase = true;
   };
 
-  programs.git.ignores = [ "*~" ];
+  programs.git.ignores = ["*~"];
 
   programs.git.userEmail = "rishabh98818@outlook.com";
   programs.git.userName = "Rishabh5321";

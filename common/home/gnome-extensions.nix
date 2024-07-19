@@ -3,24 +3,22 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   programs.gnome-shell = {
     enable = true;
     extensions = [
-      { package = pkgs.gnomeExtensions.appindicator; }
-      { package = pkgs.gnomeExtensions.caffeine; }
-      { package = pkgs.gnomeExtensions.clipboard-indicator; }
-      { package = pkgs.gnomeExtensions.user-themes; }
-      { package = pkgs.gnomeExtensions.alphabetical-app-grid; }
-      { package = pkgs.gnomeExtensions.system-monitor; }
-      { package = pkgs.gnomeExtensions.dash-to-dock; }
-      { package = pkgs.gnomeExtensions.gsconnect; }
+      {package = pkgs.gnomeExtensions.appindicator;}
+      {package = pkgs.gnomeExtensions.caffeine;}
+      {package = pkgs.gnomeExtensions.clipboard-indicator;}
+      {package = pkgs.gnomeExtensions.user-themes;}
+      {package = pkgs.gnomeExtensions.alphabetical-app-grid;}
+      {package = pkgs.gnomeExtensions.system-monitor;}
+      {package = pkgs.gnomeExtensions.dash-to-dock;}
+      {package = pkgs.gnomeExtensions.gsconnect;}
     ];
   };
 
   dconf.settings = {
-
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = [
@@ -43,7 +41,7 @@
       screen-blank = "never";
       show-indicator = "only-active";
       show-notifications = false;
-      toggle-shortcut = [ "<Super>c" ];
+      toggle-shortcut = ["<Super>c"];
     };
 
     "org/gnome/shell/extensions/clipboard-indicator" = {
@@ -54,11 +52,11 @@
       strip-text = true;
       topbar-preview-size = 8;
 
-      clear-history = [ ];
-      next-entry = [ "<Shift><Control>p" ];
-      prev-entry = [ "<Shift><Control>o" ];
-      private-mode-binding = [ ];
-      toggle-menu = [ "<Super><Control>v" ];
+      clear-history = [];
+      next-entry = ["<Shift><Control>p"];
+      prev-entry = ["<Shift><Control>o"];
+      private-mode-binding = [];
+      toggle-menu = ["<Super><Control>v"];
     };
 
     "org/gnome/shell/extensions/alphabetical-app-grid" = {

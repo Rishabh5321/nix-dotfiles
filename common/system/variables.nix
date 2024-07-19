@@ -1,7 +1,6 @@
 let
   waybarStyle = "simplebar"; # simplebar, slickbar, or default
-in
-{
+in {
   # Git Configuration ( For Pulling Software Repos )
   gitUsername = "Rishabh5321";
   gitEmail = "rishabh98818@outlook.com";
@@ -23,8 +22,14 @@ in
 
   wallpaperDir = "~/Pictures/Wallpapers";
 
-  slickbar = if waybarStyle == "slickbar" then true else false;
-  simplebar = if waybarStyle == "simplebar" then true else false;
+  slickbar =
+    if waybarStyle == "slickbar"
+    then true
+    else false;
+  simplebar =
+    if waybarStyle == "simplebar"
+    then true
+    else false;
   bar-number = true;
 
   wezterm = true;

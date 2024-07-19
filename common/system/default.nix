@@ -6,8 +6,7 @@
   username,
   options,
   ...
-}:
-{
+}: {
   imports = [
     # Bluetooth Support
     ./bluetooth.nix
@@ -69,5 +68,4 @@
     # # Users Configuration
     ./users.nix
   ];
-
 }
