@@ -78,6 +78,9 @@
 
       #server
       #plex
+
+      where-is-my-sddm-theme
+      pkgs.libsForQt5.qt5.qtgraphicaleffects
     ];
   #services.plex.enable = true;
   #services.hypridle.enable = true;

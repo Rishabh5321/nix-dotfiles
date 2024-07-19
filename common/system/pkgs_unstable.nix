@@ -14,6 +14,7 @@
     inputs.alejandra.defaultPackage.${system}
     lutris
     protonup-qt
+    #sddm-astronaut
     rquickshare
     zed-editor
     wezterm
