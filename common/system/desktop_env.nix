@@ -15,7 +15,7 @@
     enable = true;
     desktopManager = {
       xterm.enable = true;
-      xfce.enable = true;
+      gnome.enable = true;
     };
     displayManager.gdm = {
       enable = true;

@@ -16,6 +16,7 @@
     ../modules/intel-drivers.nix
     #../modules/vm-guest-services.nix
     #../modules/local-hardware-clock.nix
+    ./power.nix
   ];
 
   drivers.amdgpu.enable = true;
