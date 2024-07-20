@@ -30,6 +30,8 @@
       inputs.home-manager.follows = "nixpkgs";
     };
 
+    impermanence.url = "github:nix-community/impermanence";
+
     #sddm-sugar-candy-nix = {
     #  url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
     #  # Optional, by default this flake follows nixpkgs-unstable.
@@ -44,6 +46,7 @@
     home-manager,
     spicetify-nix,
     alejandra,
+    impermanence,
     #sddm-sugar-candy-nix,
     ...
   } @ inputs: let
@@ -53,7 +56,7 @@
       "x86_64-linux"
     ];
     username = "rishabh";
-    wallpaper = "wall13.jpg";
+    wallpaper = "wall56.jpg";
     pkgs-unstable = import nixpkgs-unstable {
       system = "x86_64-linux";
       config = {
@@ -100,6 +103,7 @@
           ./hosts/redmi/configuration.nix
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
+          impermanence.nixosModules.impermanence
           #sddm-sugar-candy-nix.nixosModules.default
           {
             nixpkgs = {
@@ -134,6 +138,7 @@
           # > Our main nixos configuration file <
           ./hosts/dell/configuration.nix
           inputs.stylix.nixosModules.stylix
+          impermanence.nixosModules.impermanence
           home-manager.nixosModules.home-manager
           #sddm-sugar-candy-nix.nixosModules.default
           {
