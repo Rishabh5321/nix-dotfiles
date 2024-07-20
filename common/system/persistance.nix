@@ -18,6 +18,8 @@
 	"Downloads"
 	"Music"
 	"Documents"
+  "nix-dotfiles"
+  "dotfiles"
 	"Pictures"
         "Videos"
 	".local/share/sddm"
