@@ -20,7 +20,7 @@
     #./gnome.nix
     #./hypridle.nix
     #./hyprlock.nix
-    ./plasma.nix
+    #./plasma.nix
     #./idleinhibitor.nix
     ./kitty.nix
     #./packages.nix

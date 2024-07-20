@@ -23,4 +23,8 @@
   #  style.name = "Adw-gtk3";
   #  platformTheme.name = "gtk3";
   #};
+
+  programs.gpg.enable = true;
+
+  services.gpg-agent.enable = true;
 }
