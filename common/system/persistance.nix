@@ -1,6 +1,10 @@
-{ config, pkgs, lib, username, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  username,
+  ...
+}: {
   environment.persistence."/nix/persist" = {
     hideMounts = true;
     directories = [
@@ -15,20 +19,20 @@
     ];
     users.${username} = {
       directories = [
-	"Downloads"
-	"Music"
-	"Documents"
-  "nix-dotfiles"
-  "dotfiles"
-	"Pictures"
+        "Downloads"
+        "Music"
+        "Documents"
+        "nix-dotfiles"
+        "dotfiles"
+        "Pictures"
         "Videos"
-	".local/share/sddm"
-	".mozilla"
-	".cache"
-	".ssh"
-	".config/discord"
-	".config/obs-studio"
-	".steam"
+        ".local/share/sddm"
+        ".mozilla"
+        ".cache"
+        ".ssh"
+        ".config/discord"
+        ".config/obs-studio"
+        ".steam"
       ];
       files = [
       ];
