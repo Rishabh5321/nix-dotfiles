@@ -30,11 +30,11 @@
       inputs.home-manager.follows = "nixpkgs";
     };
 
-    sddm-sugar-candy-nix = {
-      url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
-      # Optional, by default this flake follows nixpkgs-unstable.
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #sddm-sugar-candy-nix = {
+    #  url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
+    #  # Optional, by default this flake follows nixpkgs-unstable.
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
   };
 
   outputs = {
@@ -44,7 +44,7 @@
     home-manager,
     spicetify-nix,
     alejandra,
-    sddm-sugar-candy-nix,
+    #sddm-sugar-candy-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -100,11 +100,11 @@
           ./hosts/redmi/configuration.nix
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
-          sddm-sugar-candy-nix.nixosModules.default
+          #sddm-sugar-candy-nix.nixosModules.default
           {
             nixpkgs = {
               overlays = [
-                sddm-sugar-candy-nix.overlays.default
+                #sddm-sugar-candy-nix.overlays.default
               ];
             };
             home-manager.extraSpecialArgs = {
@@ -135,7 +135,7 @@
           ./hosts/dell/configuration.nix
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
-          sddm-sugar-candy-nix.nixosModules.default
+          #sddm-sugar-candy-nix.nixosModules.default
           {
             home-manager.extraSpecialArgs = {
               inherit inputs;
