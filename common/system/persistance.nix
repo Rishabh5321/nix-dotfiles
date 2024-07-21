@@ -17,7 +17,7 @@
     files = [
       # "/etc/machine-id"
     ];
-    users.${username} = {
+    users.rishabh = {
       directories = [
         "Downloads"
         "Music"

@@ -38,7 +38,7 @@
     # # Polkit Configuration
     # ./polkit.nix
 
-    ./persistance.nix
+    #./persistance.nix
 
     # # Stable Packages
     ./pkgs_stable.nix
