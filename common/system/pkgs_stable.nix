@@ -75,6 +75,8 @@
       zinit
       zsh
       zsh-powerlevel10k
+      unetbootin
+      ventoy
 
       #server
       #plex
