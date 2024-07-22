@@ -12,7 +12,7 @@ in {
   clock24h = false;
 
   # Program Options
-  browser = "floorp"; # Set Default Browser (google-chrome-stable for google-chrome)
+  browser = "firefox"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "alacritty"; # Set Default System Terminal
 
   theShell = "zsh";

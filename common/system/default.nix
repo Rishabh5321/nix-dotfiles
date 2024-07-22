@@ -73,4 +73,66 @@
     # Xfce Configuration
     #./xfce.nix
   ];
+    environment.systemPackages = with pkgs; [
+    vim
+    wget
+    killall
+    eza
+    git
+    cmatrix
+    lolcat
+    fastfetch
+    htop
+    libvirt
+    firefox
+    lxqt.lxqt-policykit
+    lm_sensors
+    unzip
+    unrar
+    libnotify
+    v4l-utils
+    ydotool
+    gnome.gnome-disk-utility
+    duf
+    ncdu
+    wl-clipboard
+    pciutils
+    gedit
+    ffmpeg
+    socat
+    cowsay
+    ripgrep
+    lshw
+    bat
+    pkg-config
+    meson
+    docker-compose
+    hyprpicker
+    ninja
+    brightnessctl
+    virt-viewer
+    swappy
+    appimage-run
+    networkmanagerapplet
+    yad
+    inxi
+    playerctl
+    nh
+    nixfmt-rfc-style
+    discord
+    libvirt
+    swww
+    grim
+    slurp
+    gnome.file-roller
+    swaynotificationcenter
+    imv
+    mpv
+    pavucontrol
+    tree
+    spotify
+    neovide
+    #greetd.tuigreet
+  ];
+
 }

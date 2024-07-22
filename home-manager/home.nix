@@ -84,7 +84,7 @@
     (import ../pkgs/emopicker9000.nix { inherit pkgs; })
     (import ../pkgs/task-waybar.nix { inherit pkgs; })
     (import ../pkgs/squirtle.nix { inherit pkgs; })
-    (import ../pkgs/nvidia-offload.nix { inherit pkgs; })
+    #(import ../pkgs/nvidia-offload.nix { inherit pkgs; })
     (import ../pkgs/wallsetter.nix {
       inherit pkgs;
       inherit username;

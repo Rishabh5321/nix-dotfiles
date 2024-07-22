@@ -18,12 +18,12 @@
     ./git.nix
     ./gnome-extensions.nix
     ./gnome.nix
-    #./hypridle.nix
-    #./hyprlock.nix
+    ./hypridle.nix
+    ./hyprlock.nix
     #./plasma.nix
     #./idleinhibitor.nix
     ./kitty.nix
-    #./packages.nix
+    ./packages.nix
     ./spicetify.nix
     #./starship.nix
     ./stylix.nix

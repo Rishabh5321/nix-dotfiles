@@ -9,7 +9,7 @@
 in {
   home.packages = with pkgs; [
     waybar
-    (import ../../scripts/wall-selector.nix {
+    (import ../../pkgs/wall-selector.nix {
       inherit pkgs;
       inherit wallpaperDir;
     })
