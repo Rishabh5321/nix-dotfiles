@@ -40,6 +40,11 @@
 
     impermanence.url = "github:nix-community/impermanence";
 
+    fine-cmdline = {
+      url = "github:VonHeikemen/fine-cmdline.nvim";
+      flake = false;
+    };
+
     #sddm-sugar-candy-nix = {
     #  url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
     #  # Optional, by default this flake follows nixpkgs-unstable.
