@@ -29,7 +29,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "nixpkgs";
     };
-    
+
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # hyprland.inputs.nixpkgs.follows = "nixpkgs";
     hyprland-plugins = {

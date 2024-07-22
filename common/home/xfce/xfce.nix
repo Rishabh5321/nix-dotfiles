@@ -5,4 +5,4 @@
   ...
 }: {
   #home.file = ../.config
- }
+}
