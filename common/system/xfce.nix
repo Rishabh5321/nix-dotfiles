@@ -1,16 +1,19 @@
-{ config, pkgs, lib, ... }:
 {
-
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   # NOTE: Home-manager related settings are in homemanager/xfce.nix
-  
+
   # Enable the XFCE Desktop Environment.
   services.xserver.displayManager = {
     lightdm.enable = true;
-    
+
     # auto-start a few apps on xfce startup:
     sessionCommands = ''
-        autokey-gtk &
-    '';         
+      autokey-gtk &
+    '';
   };
 
   services.xserver.desktopManager = {
@@ -20,9 +23,8 @@
   services.gnome.gnome-keyring.enable = true; ## 2023-09-03: on HM level the option is `services.gnome-keyring...'
 
   environment.systemPackages = with pkgs; [
-
     # ##################################################################
-    # xfce: this can't be in homemanager/xfce.nix because of: 
+    # xfce: this can't be in homemanager/xfce.nix because of:
     redshift
     xclip
     xfce.xfce4-dict
@@ -62,9 +64,7 @@
 
     # libsForQt514.oxygen-icons5 ## 2022-11-06 broken
     # ##################################################################
-
   ];
-  
-  programs.xfconf.enable = true;
 
+  programs.xfconf.enable = true;
 }
