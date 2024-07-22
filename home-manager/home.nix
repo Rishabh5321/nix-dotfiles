@@ -81,17 +81,17 @@
 
   home.packages = [
     (import ../pkgs/rofi-launcher.nix {inherit pkgs;})
-    (import ../pkgs/emopicker9000.nix { inherit pkgs; })
-    (import ../pkgs/task-waybar.nix { inherit pkgs; })
-    (import ../pkgs/squirtle.nix { inherit pkgs; })
+    (import ../pkgs/emopicker9000.nix {inherit pkgs;})
+    (import ../pkgs/task-waybar.nix {inherit pkgs;})
+    (import ../pkgs/squirtle.nix {inherit pkgs;})
     #(import ../pkgs/nvidia-offload.nix { inherit pkgs; })
     (import ../pkgs/wallsetter.nix {
       inherit pkgs;
       inherit username;
     })
-    (import ../pkgs/web-search.nix { inherit pkgs; })
-    (import ../pkgs/rofi-launcher.nix { inherit pkgs; })
-    (import ../pkgs/screenshootin.nix { inherit pkgs; })
+    (import ../pkgs/web-search.nix {inherit pkgs;})
+    (import ../pkgs/rofi-launcher.nix {inherit pkgs;})
+    (import ../pkgs/screenshootin.nix {inherit pkgs;})
     (import ../pkgs/list-hypr-bindings.nix {
       inherit pkgs;
       inherit host;

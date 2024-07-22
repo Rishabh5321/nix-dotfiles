@@ -73,7 +73,7 @@
     # Xfce Configuration
     #./xfce.nix
   ];
-    environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     vim
     wget
     killall
@@ -134,5 +134,4 @@
     neovide
     #greetd.tuigreet
   ];
-
 }
