@@ -28,13 +28,13 @@
     "amdgpu.cik_support=1"
   ];
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/a33d68f6-9175-4c2e-b13c-c62f9cd91eab";
+    device = "/dev/disk/by-uuid/4c3de1d0-57f6-4029-a777-1981340aab97";
     fsType = "btrfs";
     options = ["subvol=@"];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/207C-AD4E";
+    device = "/dev/disk/by-uuid/8904-E4A6";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -42,7 +42,7 @@
     ];
   };
 
-  swapDevices = [{device = "/dev/disk/by-uuid/58a49489-3223-4d6a-bbad-2976c91261f5";}];
+  swapDevices = [{device = "/dev/disk/by-uuid/604813c3-a0d0-4e18-bd98-f7307a9af2c0";}];
 
   fileSystems."/mnt/Raid" = {
     device = "/dev/disk/by-uuid/d35415ef-75c1-4708-9759-b7d1ae846559";
