@@ -27,6 +27,11 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
+            hyprland = {
+           enable = true;
+            package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+            xwayland.enable = true;
+          };
     thunar = {
       enable = true;
       plugins = with pkgs.xfce; [
