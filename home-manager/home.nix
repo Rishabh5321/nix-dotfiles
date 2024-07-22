@@ -22,6 +22,11 @@
     ../common/home/rofi/rofi.nix
     ../common/home/rofi/config-emoji.nix
     ../common/home/rofi/config-long.nix
+    ../common/home/hyprland/emoji.nix
+    ../common/home/hyprland/neovim.nix
+    ../common/home/hyprland/swaync.nix
+    ../common/home/hyprland/waybar.nix
+    ../common/home/hyprland/wlogout.nix
   ];
   nixpkgs = {
     # You can add overlays here
