@@ -7,8 +7,8 @@
   # NOTE: Most system-level settings are in ../xfce.nix
 
   ## 2023-09-03 on system level: "The option `services.gammastep' does not exist."
-  services.gammastep.enable = true;
-  services.gammastep.tray = true;
+  #services.gammastep.enable = true;
+  #services.gammastep.tray = true;
   #services.gammastep.latitude  = "47.0"; # SPECIFICTOKARL
   #services.gammastep.longitude = "15.4"; # SPECIFICTOKARL
   #services.gammastep.temperature.day = 5700;
