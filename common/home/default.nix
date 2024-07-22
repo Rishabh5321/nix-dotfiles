@@ -29,5 +29,6 @@
     ./stylix.nix
     ./wezterm.nix
     ./zsh.nix
+    ./xfce/xfce.nix
   ];
 }
