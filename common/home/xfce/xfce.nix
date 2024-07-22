@@ -520,11 +520,11 @@
     }; # xfconf.settings
 
   # files in ~/
-  home.file.".themes/Adwaita-dark-Xfce".source = ../../assets/.themes/Adwaita-dark-Xfce;
+  #home.file.".themes/Adwaita-dark-Xfce".source = ../../../assets/.themes/Adwaita-dark-Xfce;
 
   # files in ~/.config/
   # 2023-08-06: following xfce panel plugins can't be configured via xfconf. Therefore, I just overwrite my personal settings via file:
-  xdg.configFile."xfce4/panel/screenshooter-5.rc".source = ../../assets/.config/xfce4/panel/screenshooter-x.rc;
-  xdg.configFile."xfce4/panel/cpugraph-8.rc".source = ../../assets/.config/xfce4/panel/cpugraph-x.rc;
-  xdg.configFile."xfce4/panel/netload-10.rc".source = ../../assets/.config/xfce4/panel/netload-x.rc;
+  xdg.configFile."xfce4/panel/screenshooter-5.rc".source = ../../../assets/.config/xfce4/panel/screenshooter-x.rc;
+  #xdg.configFile."xfce4/panel/cpugraph-8.rc".source = ../../../assets/.config/xfce4/panel/cpugraph-x.rc;
+  #xdg.configFile."xfce4/panel/netload-10.rc".source = ../../../assets/.config/xfce4/panel/netload-x.rc;
 }

@@ -18,8 +18,8 @@
       xterm.enable = true;
       gnome.enable = true;
     };
-    #displayManager.gdm = {
-    #  enable = true;
-    #};
+    displayManager.gdm = {
+      enable = true;
+    };
   };
 }

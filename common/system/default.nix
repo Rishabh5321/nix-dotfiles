@@ -18,10 +18,10 @@
     ./cache.nix
 
     # # Desktop Environment Configuration
-    #./desktop_env.nix
+    ./desktop_env.nix
 
     # # Display Manager Configuration
-    #./displaymanager.nix
+    ./displaymanager.nix
 
     # # Gaming Configuration
     ./gaming.nix
@@ -71,6 +71,6 @@
     ./users.nix
 
     # Xfce Configuration
-    ./xfce.nix
+    #./xfce.nix
   ];
 }
