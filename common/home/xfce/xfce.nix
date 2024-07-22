@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
 {
-
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   # NOTE: Most system-level settings are in ../xfce.nix
 
   ## 2023-09-03 on system level: "The option `services.gammastep' does not exist."
@@ -10,18 +13,16 @@
   #services.gammastep.longitude = "15.4"; # SPECIFICTOKARL
   #services.gammastep.temperature.day = 5700;
   #services.gammastep.temperature.night = 3500;
-  
+
   services.clipman.enable = true; ## 2023-09-03: on HM level the option is `services.clipman...'
 
   home.packages = with pkgs; [
-
-
   ];
-      
-#        xfconf.settings = {
-    # FIXXME: test from https://www.reddit.com/r/NixOS/comments/15coxtr/homemanager_using_hostname_for_hostspecific/
-     xfconf.settings = 
-     #let
+
+  #        xfconf.settings = {
+  # FIXXME: test from https://www.reddit.com/r/NixOS/comments/15coxtr/homemanager_using_hostname_for_hostspecific/
+  xfconf.settings =
+    #let
     #   # myServers = [
     #   #   "nixosvms"
     #   #   "nixosvmr"
@@ -29,9 +30,8 @@
     #   isVm = hostname: (builtins.match "^nixos" hostname) != null;
     #   isInList = hostname: builtins.elem hostname myServers;
     #   enableSaver = hostname: ! (isVm hostname || isInList hostname);
-    # in 
+    # in
     {
-
       # FIXXME: as of 2023-07-28 I had some issues with xfconf not
       # being able to set some options. While playing around and to my
       # astonishment, I found out that some xfce modules require a
@@ -42,13 +42,14 @@
       # to run through without causing this error message. This might
       # be considered as a bug and may change in future, I don't know
       # for now.
-      
+
       xfce4-session = {
       }; # xfce4-session
 
-      xfwm4 = { # 2023-07-29: MUST NOT have leading slashes
+      xfwm4 = {
+        # 2023-07-29: MUST NOT have leading slashes
         "general/workspace_count" = 4;
-        "general/workspace_names" = [ "1" "2" "3" "4" ];
+        "general/workspace_names" = ["1" "2" "3" "4"];
         "general/borderless_maximize" = true;
         "general/click_to_focus" = false;
         "general/cycle_apps_only" = false;
@@ -60,7 +61,7 @@
         "general/cycle_raise" = false;
         "general/cycle_tabwin_mode" = 0;
         "general/cycle_workspaces" = false;
-        "general/double_click_action" = "maximize";  # Window Manager -> Advanced -> Double click action
+        "general/double_click_action" = "maximize"; # Window Manager -> Advanced -> Double click action
         "general/double_click_distance" = 5;
         "general/double_click_time" = 250;
         "general/easy_click" = "Alt";
@@ -94,7 +95,8 @@
         "general/zoom_pointer" = true;
       }; # xfwm4
 
-      xfce4-desktop = { # 2023-07-29: MUST NOT have leading slashes
+      xfce4-desktop = {
+        # 2023-07-29: MUST NOT have leading slashes
         # FIXXME: this section is untested
         "desktop-icons/file-icons/show-filesystem" = false;
         "desktop-icons/file-icons/show-home" = false;
@@ -106,14 +108,15 @@
         "backdrop/single-workspace-number" = 3;
       }; # xfce4-desktop
 
-      xfce4-panel = { # 2023-07-29: MUST have leading slashes
+      xfce4-panel = {
+        # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is not working completely; in particular: "whiskermenu"; "cpugraph"; "netload"; "eyes";
 
         # example configurations:
         # https://github.com/vhminh/dotfiles/blob/7b7dd80408658f0d76f8d0b518a314f5952146ec/nix/modules/desktop.nix#L62
         # https://github.com/lobre/nix-home/blob/8117fbdb4bca887b875f622132b3b9e9c737a5bf/roles/hm/xfce/xfconf.nix#L144 -> leading slashes! :-O
-        
-        "panels" = [ 1 ];
+
+        "panels" = [1];
         "panels/dark-mode" = true;
         "panels/panel-1/nrows" = 1; # number of rows
         "panels/panel-1/mode" = 0; # Horizontal
@@ -127,7 +130,7 @@
         "panels/panel-1/position" = "p=6;x=0;y=0";
         "panels/panel-1/enable-struts" = true;
         "panels/panel-1/position-locked" = true;
-        "panels/panel-1/plugin-ids" = [ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 ];
+        "panels/panel-1/plugin-ids" = [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16];
         # Application menu = whiskermenu
         "plugins/plugin-1" = "whiskermenu";
         # Tasklist
@@ -188,10 +191,10 @@
         "plugins/plugin-15/show-frame" = false;
         # Eyes: where's my mouse cursor?
         "plugins/plugin-16" = "eyes";
-      }; # xfce4-panel        
-      
-      
-      xfce4-screensaver = { # 2023-07-29: MUST have leading slashes
+      }; # xfce4-panel
+
+      xfce4-screensaver = {
+        # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
         "/lock/saver-activation/delay" = 10;
         "/lock/saver-activation/enabled" = true;
@@ -200,14 +203,14 @@
         # FIXXME: trying to find the correct syntax for setting the lock screen boolean according to "my.isvm":
         #"/lock/enabled" =  "${nixos.config.networking.hostName}" == "nixosvms"; # error: undefined variable 'nixos'
         #"/lock/enabled" =  "${config.networking.hostName}" == "nixosvms"; # error: attribute 'networking' missing
-        
+
         #"/lock/enabled" =  ! config.options.my.isvm; # error: attribute 'options' missing
         #"/lock/enabled" =  ! ${config.options.my.isvm}; # error: syntax error, unexpected DOLLAR_CURLY
         #"/lock/enabled" =  ! ${nixos.config.options.my.isvm}; # error: syntax error, unexpected DOLLAR_CURLY
         #"/lock/enabled" =  ! ${options.my.isvm}; # error: syntax error, unexpected DOLLAR_CURLY
         #"/lock/enabled" =  ! "${options.my.isvm}"; # error: undefined variable 'options'
         #"/lock/enabled" =  ! options.my.isvm; # error: undefined variable 'options'
-        
+
         #"/lock/enabled" =  ! config.my.isvm; #attribute 'my' missing
         #"/lock/enabled" =  ! my.isvm; # error: undefined variable 'my'
         #"/lock/enabled" =  ! ${config.my.isvm}; # error: syntax error, unexpected DOLLAR_CURLY
@@ -215,8 +218,8 @@
         #"/lock/enabled" =  ! ${my.isvm}; # error: syntax error, unexpected DOLLAR_CURLY
         #"/lock/enabled" =  ! "${my.isvm}"; # error: undefined variable 'my'
 
-#        "/lock/enabled" = enableSaver config.networking.hostName;
-        
+        #        "/lock/enabled" = enableSaver config.networking.hostName;
+
         "/saver/enabled" = true;
         "/saver/idle-activation/delay" = 9;
         "/saver/idle-activation/enabled" = true;
@@ -225,12 +228,11 @@
         "/screensavers/xfce-personal-slideshow/location" = "month";
       }; # xfce4-screensaver
 
-      
       xfce4-appfinder = {
       }; # xfce4-appfinder
 
-      
-      keyboard-layout = { # 2023-07-29: MUST have leading slashes
+      keyboard-layout = {
+        # 2023-07-29: MUST have leading slashes
         "/Default/XkbDisable" = false;
         "/Default/XkbLayout" = "us";
         "/Default/XkbModel" = "pc105";
@@ -238,23 +240,23 @@
         "/Default/XkbVariant" = "intl";
       }; # keyboard-layout
 
-      
-      xfce4-keyboard-shortcuts = { # 2023-07-29: MUST have leading slashes
+      xfce4-keyboard-shortcuts = {
+        # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
-        
+
         "/commands/custom/<Alt>F1" = "xfce4-popup-applicationsmenu";
         "/commands/custom/<Alt>F2" = "xfce4-popup-whiskermenu";
         "/commands/custom/<Alt>F3" = "xfce4-appfinder";
         # "/commands/custom/<Alt>space" = recoll;
-        "/commands/custom/override" = true;  # no idea what this is
+        "/commands/custom/override" = true; # no idea what this is
         #"/commands/custom/<Primary><Alt>Delete" = "xflock4";
         #"/commands/custom/<Primary>Escape" = "--menu";
         "/commands/custom/<Primary>F1" = "exec /home/vk/src/misc/vksave-window-positions.sh"; # DEPENDENCY
         "/commands/custom/<Primary>F2" = "exec /home/vk/src/misc/vkrestore-window-positions.sh"; # DEPENDENCY
         "/commands/custom/<Primary>F7" = "emacsclient --eval '(emacs-everywhere)'"; # unconfirmed
         "/commands/custom/<Primary>F8" = "rofi -monitor -2 -show window -kb-accept-alt 'Return' -kb-accept-entry 'Shift+Return' -window-command '/home/vk/src/misc/vk-switch-to-windowid.sh {window}'";
-        "/commands/custom/<Shift><Super>Left" = "active";  # no idea what this is
-        "/commands/custom/<Shift><Super>Right" = "active";  # no idea what this is
+        "/commands/custom/<Shift><Super>Left" = "active"; # no idea what this is
+        "/commands/custom/<Shift><Super>Right" = "active"; # no idea what this is
         "/commands/custom/<Super>l" = "xflock4";
         "/commands/custom/<Super>p" = "xfce4-display-settings"; # FIXXME: doesn't work
         "/commands/custom/XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -10%";
@@ -268,12 +270,12 @@
         # "/commands/custom/XF86Mail" = MailReader;
         # "/commands/custom/XF86WWW" = WebBrowser;
         "/commands/default/<Alt>F1" = "xfce4-popup-applicationsmenu";
-#         "/commands/default/<Alt>F2" = --collapsed
-#     true;
-        "/commands/default/<Alt>F2/startup-notify" = true;  # no idea what this is
-#         "/commands/default/<Alt>F3" = xfce4-appfinder
-#     true;
-        "/commands/default/<Alt>F3/startup-notify" = true;  # no idea what this is
+        #         "/commands/default/<Alt>F2" = --collapsed
+        #     true;
+        "/commands/default/<Alt>F2/startup-notify" = true; # no idea what this is
+        #         "/commands/default/<Alt>F3" = xfce4-appfinder
+        #     true;
+        "/commands/default/<Alt>F3/startup-notify" = true; # no idea what this is
         #"/commands/default/<Alt>Print" = "-w";
         #"/commands/default/<Alt><Super>s" = "orca";
         #"/commands/default/HomePage" = "WebBrowser";
@@ -289,13 +291,13 @@
         #"/commands/default/<Shift>Print" = "-r";
         #"/commands/default/<Super>e" = "thunar";
         #"/commands/default/<Super>p" = "--minimal";
-#         "/commands/default/<Super>r" = -c
-#     true;
-        "/commands/default/<Super>r/startup-notify" = true;  # no idea what this is
-#         "/commands/default/XF86Display" = --minimal;
-#         "/commands/default/XF86Mail" = MailReader;
-#         "/commands/default/XF86WWW" = WebBrowser;
-#         "providers" = <<UNSUPPORTED>>;
+        #         "/commands/default/<Super>r" = -c
+        #     true;
+        "/commands/default/<Super>r/startup-notify" = true; # no idea what this is
+        #         "/commands/default/XF86Display" = --minimal;
+        #         "/commands/default/XF86Mail" = MailReader;
+        #         "/commands/default/XF86WWW" = WebBrowser;
+        #         "providers" = <<UNSUPPORTED>>;
         "/xfwm4/custom/<Alt>F11" = "fullscreen_key";
         "/xfwm4/default/<Alt>F11" = "fullscreen_key";
         "/xfwm4/custom/<Alt>F4" = "close_window_key";
@@ -314,12 +316,12 @@
         "/xfwm4/default/Left" = "left_key";
         "/xfwm4/default/Up" = "up_key";
         "/xfwm4/default/Right" = "right_key";
-        "/xfwm4/custom/override" = true;  # no idea what this is
+        "/xfwm4/custom/override" = true; # no idea what this is
         "/xfwm4/custom/<Primary>F9" = "workspace_1_key"; # FIXXME: doesn't work
         "/xfwm4/custom/<Primary>F10" = "workspace_2_key"; # FIXXME: doesn't work
         "/xfwm4/custom/<Primary>F11" = "workspace_3_key"; # FIXXME: doesn't work
         "/xfwm4/custom/<Primary>F12" = "workspace_4_key"; # FIXXME: doesn't work
-        "/xfwm4/custom/<Primary><Shift>F9"  = "move_window_workspace_1_key"; # FIXXME: doesn't work
+        "/xfwm4/custom/<Primary><Shift>F9" = "move_window_workspace_1_key"; # FIXXME: doesn't work
         "/xfwm4/custom/<Primary><Shift>F10" = "move_window_workspace_2_key"; # FIXXME: doesn't work
         "/xfwm4/custom/<Primary><Shift>F11" = "move_window_workspace_3_key"; # FIXXME: doesn't work
         "/xfwm4/custom/<Primary><Shift>F12" = "move_window_workspace_4_key"; # FIXXME: doesn't work
@@ -374,7 +376,7 @@
         #"/xfwm4/default/<Super>KP_Up" = "tile_up_key";
         "/xfwm4/default/<Super>Tab" = "switch_window_key";
       }; # xfce4-keyboard-shortcuts
-      
+
       xsettings = {
         # "/Gdk/WindowScalingFactor" = 1;
         # "/Gtk/ButtonImages" = true;
@@ -409,8 +411,8 @@
         # "/Xft/RGBA" = none;
       }; # xsettings
 
-      
-      xfce4-power-manager = { # 2023-07-29: MUST have leading slashes
+      xfce4-power-manager = {
+        # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
         "/xfce4-power-manager/blank-on-ac" = 0;
         "/xfce4-power-manager/brightness-switch" = 1;
@@ -427,25 +429,21 @@
         "/xfce4-power-manager/lid-action-on-ac" = 0; # just blank screen
         "/xfce4-power-manager/logind-handle-lid-switch" = false;
         "/xfce4-power-manager/critical-power-action" = 3; # Ask
-
       }; # xfce4-power-manager
 
-      
       xfce4-mime-settings = {
       }; # xfce4-mime-settings
-
 
       displays = {
       }; # displays
 
-      
-      xfce4-mixer = { # 2023-07-29: MUST have leading slashes
+      xfce4-mixer = {
+        # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
         # "/sound-card" = "HDAIntelHDMIAlsamixer";
         #"/volume-step-size" = 5;
       }; # xfce4-mixer
 
-      
       xfce4-notifyd = {
         # "/applications/known_applications" = <<UNSUPPORTED>>;
         # "/log-level" = 0;
@@ -454,13 +452,12 @@
         # "/primary-monitor" = 0;
       }; # xfce4-notifyd
 
-      
       ristretto = {
         # "window/navigationbar/position" = left;
       }; # ristretto
 
-      
-      thunar-volman = { # 2023-07-29: MUST have leading slashes
+      thunar-volman = {
+        # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
         "/autobrowse/enabled" = true;
         # "/autoburn/audio-cd-command" = -a;
@@ -482,7 +479,8 @@
         # "/autotablet/enabled" = false;
       }; # thunar-volman
 
-      thunar = { # 2023-07-29: MUST have leading slashes
+      thunar = {
+        # 2023-07-29: MUST have leading slashes
         # FIXXME: this section is untested
         # "/hidden-bookmarks" = <<UNSUPPORTED>>;
         # "/hidden-devices" = <<UNSUPPORTED>>;
@@ -510,26 +508,23 @@
         "/misc-volume-management" = false;
       }; # thunar
 
-      
       xfce4-settings-manager = {
         #"/last/window-height" = 1029;
         #"/last/window-width" = 734;
       }; # xfce4-settings-manager
-    
-    keyboards = { # 2023-07-29: MUST have leading slashes
-        "/Default/Numlock" = false;
-    }; # keyboards
 
+      keyboards = {
+        # 2023-07-29: MUST have leading slashes
+        "/Default/Numlock" = false;
+      }; # keyboards
     }; # xfconf.settings
 
-    
-    # files in ~/
-    home.file.".themes/Adwaita-dark-Xfce".source = ../../assets/.themes/Adwaita-dark-Xfce;
+  # files in ~/
+  home.file.".themes/Adwaita-dark-Xfce".source = ../../assets/.themes/Adwaita-dark-Xfce;
 
-    # files in ~/.config/
-    # 2023-08-06: following xfce panel plugins can't be configured via xfconf. Therefore, I just overwrite my personal settings via file:
-    xdg.configFile."xfce4/panel/screenshooter-5.rc".source = ../../assets/.config/xfce4/panel/screenshooter-x.rc;
-    xdg.configFile."xfce4/panel/cpugraph-8.rc".source = ../../assets/.config/xfce4/panel/cpugraph-x.rc;
-    xdg.configFile."xfce4/panel/netload-10.rc".source = ../../assets/.config/xfce4/panel/netload-x.rc;
-    
+  # files in ~/.config/
+  # 2023-08-06: following xfce panel plugins can't be configured via xfconf. Therefore, I just overwrite my personal settings via file:
+  xdg.configFile."xfce4/panel/screenshooter-5.rc".source = ../../assets/.config/xfce4/panel/screenshooter-x.rc;
+  xdg.configFile."xfce4/panel/cpugraph-8.rc".source = ../../assets/.config/xfce4/panel/cpugraph-x.rc;
+  xdg.configFile."xfce4/panel/netload-10.rc".source = ../../assets/.config/xfce4/panel/netload-x.rc;
 }
