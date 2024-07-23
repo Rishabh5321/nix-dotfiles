@@ -5,8 +5,9 @@
   inputs,
   username,
   options,
+  flakeDir,
   ...
-}: {
+}:{
   imports = [
     # Bluetooth Support
     ./bluetooth.nix
@@ -36,7 +37,7 @@
     ./nix_settings.nix
 
     # # Polkit Configuration
-    # ./polkit.nix
+    ./polkit.nix
 
     #./persistance.nix
 
@@ -134,4 +135,9 @@
     neovide
     #greetd.tuigreet
   ];
+
+  environment.variables = {
+    FLAKE = "${flakeDir}";
+    POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+  };
 }

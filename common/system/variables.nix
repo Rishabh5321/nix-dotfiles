@@ -1,5 +1,5 @@
 let
-  waybarStyle = "slickbar"; # simplebar, slickbar, or default
+  waybarStyle = "simplebar"; # simplebar, slickbar, or default
 in {
   # Git Configuration ( For Pulling Software Repos )
   gitUsername = "Rishabh5321";
@@ -7,6 +7,8 @@ in {
 
   # Hyprland Settings
   extraMonitorSettings = "";
+
+  flakeDir = "/home/rishabh/nix-dotfiles";
 
   # Waybar Settings
   clock24h = false;

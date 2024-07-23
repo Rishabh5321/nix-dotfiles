@@ -82,6 +82,7 @@
         allowUnfreePredicate = _: true;
       };
     };
+    flakeDir = "~/nix-dotfiles";
     # This is a function that generates an attribute by calling a function you
     # pass to it, with each system as an argument
     forAllSystems = nixpkgs.lib.genAttrs systems;
@@ -114,6 +115,7 @@
           inherit home-manager;
           inherit wallpaper;
           inherit spicetify-nix;
+          inherit flakeDir;
           inherit pkgs-unstable;
         };
         modules = [
@@ -135,6 +137,7 @@
               inherit outputs;
               inherit username;
               inherit wallpaper;
+              inherit flakeDir;
               inherit spicetify-nix;
               inherit pkgs-unstable;
             };
@@ -150,6 +153,7 @@
           inherit outputs;
           inherit username;
           inherit wallpaper;
+          inherit flakeDir;
           inherit spicetify-nix;
           inherit pkgs-unstable;
         };
@@ -167,6 +171,7 @@
               inherit outputs;
               inherit username;
               inherit wallpaper;
+              inherit flakeDir;
               inherit spicetify-nix;
               inherit pkgs-unstable;
             };
