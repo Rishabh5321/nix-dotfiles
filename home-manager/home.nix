@@ -70,6 +70,10 @@
     source = ../common/home/fastfetch;
     recursive = true;
   };
+  home.file.".config/wlogout/icons" = {
+    source = ../common/home/wlogout/wlogout;
+    recursive = true;
+  };
 
   # Create XDG Dirs
   xdg = {
@@ -78,6 +82,7 @@
       createDirectories = true;
     };
   };
+  
 
   home.packages = [
     (import ../pkgs/rofi-launcher.nix {inherit pkgs;})
