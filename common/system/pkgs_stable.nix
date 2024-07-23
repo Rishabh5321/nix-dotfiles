@@ -48,7 +48,6 @@
       nixos-generators
       micro
       nh
-      obsidian
       onlyoffice-bin_latest
       pfetch-rs
       peaclock

@@ -32,4 +32,9 @@ in {
     #   packages = with pkgs; [];
     # };
   };
+  
+  users = {
+    mutableUsers = true;
+  };
+
 }

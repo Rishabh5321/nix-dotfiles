@@ -19,6 +19,7 @@
       lutris
       protonup-qt
       #sddm-astronaut
+      obsidian
       rquickshare
       zed-editor
       wezterm
