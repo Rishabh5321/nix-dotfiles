@@ -40,6 +40,7 @@
       #google-chrome
       jellyfin-media-player
       #inputs.wezterm.packages.${pkgs.system}.default
+      kdePackages.kdeconnect-kde
       kodi-wayland
       lazycli
       lazydocker
