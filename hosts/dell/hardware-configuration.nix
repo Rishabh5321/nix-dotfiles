@@ -27,22 +27,19 @@
     "radeon.cik_support=0"
     "amdgpu.cik_support=1"
   ];
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/4c3de1d0-57f6-4029-a777-1981340aab97";
-    fsType = "btrfs";
-    options = ["subvol=@"];
-  };
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/3d9f98eb-111e-4802-8ab0-5d02680976dc";
+      fsType = "btrfs";
+      options = [ "subvol=@" ];
+    };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/8904-E4A6";
-    fsType = "vfat";
-    options = [
-      "fmask=0022"
-      "dmask=0022"
-    ];
-  };
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/BCEC-2DD6";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
 
-  swapDevices = [{device = "/dev/disk/by-uuid/604813c3-a0d0-4e18-bd98-f7307a9af2c0";}];
+  swapDevices = [{device = "/dev/disk/by-uuid/d716f24f-0bd1-4541-80cf-ce344c583505";}];
 
   fileSystems."/mnt/Raid" = {
     device = "/dev/disk/by-uuid/d35415ef-75c1-4708-9759-b7d1ae846559";
