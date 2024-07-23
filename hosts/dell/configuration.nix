@@ -17,6 +17,7 @@
     #../modules/vm-guest-services.nix
     #../modules/local-hardware-clock.nix
     ./power.nix
+    ./docker-compose.nix
   ];
 
   drivers.amdgpu.enable = true;
