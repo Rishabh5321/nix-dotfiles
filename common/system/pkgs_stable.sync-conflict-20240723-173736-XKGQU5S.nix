@@ -16,7 +16,7 @@
       android-tools
       bitwarden-desktop
       bottles
-      brave
+      #brave
       btop
       cava
       #cursor

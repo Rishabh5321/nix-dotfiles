@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  pkgs-unstable,
   ...
 }: {
   programs.gnome-shell = {
@@ -16,7 +15,6 @@
       {package = pkgs.gnomeExtensions.system-monitor;}
       {package = pkgs.gnomeExtensions.dash-to-dock;}
       {package = pkgs.gnomeExtensions.gsconnect;}
-      #{package = pkgs-unstable.gnome-shell-extension-tilingnome-unstable;}
     ];
   };
 
