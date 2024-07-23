@@ -45,6 +45,10 @@
       flake = false;
     };
 
+    grub2-themes = {
+      url = "github:vinceliuice/grub2-themes";
+    };
+
     #sddm-sugar-candy-nix = {
     #  url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
     #  # Optional, by default this flake follows nixpkgs-unstable.
@@ -60,6 +64,7 @@
     spicetify-nix,
     alejandra,
     impermanence,
+    grub2-themes,
     #sddm-sugar-candy-nix,
     ...
   } @ inputs: let
@@ -117,6 +122,7 @@
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           impermanence.nixosModules.impermanence
+          grub2-themes.nixosModules.default
           #sddm-sugar-candy-nix.nixosModules.default
           {
             nixpkgs = {
@@ -152,6 +158,7 @@
           ./hosts/dell/configuration.nix
           inputs.stylix.nixosModules.stylix
           impermanence.nixosModules.impermanence
+          grub2-themes.nixosModules.default
           home-manager.nixosModules.home-manager
           #sddm-sugar-candy-nix.nixosModules.default
           {
