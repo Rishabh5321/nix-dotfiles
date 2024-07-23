@@ -27,10 +27,10 @@
       zed-editor
 
       # Gaming
-     heroic
-     lutris
-     protonup-qt
-     steam
+      heroic
+      lutris
+      protonup-qt
+      steam
 
       # Unsorted/Commented
       cursor
