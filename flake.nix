@@ -49,6 +49,7 @@
       url = "github:vinceliuice/grub2-themes";
     };
 
+    nix-gaming.url = "github:fufexan/nix-gaming";
     #sddm-sugar-candy-nix = {
     #  url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
     #  # Optional, by default this flake follows nixpkgs-unstable.
