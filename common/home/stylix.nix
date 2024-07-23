@@ -26,7 +26,6 @@
   stylix.targets.rofi.enable = false;
   stylix.targets.hyprland.enable = false;
 
-
   programs.gpg.enable = true;
 
   services.gpg-agent.enable = true;

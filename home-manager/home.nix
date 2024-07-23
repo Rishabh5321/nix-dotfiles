@@ -81,7 +81,6 @@
       createDirectories = true;
     };
   };
-  
 
   home.packages = [
     (import ../pkgs/rofi-launcher.nix {inherit pkgs;})
