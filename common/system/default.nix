@@ -7,7 +7,7 @@
   options,
   flakeDir,
   ...
-}:{
+}: {
   imports = [
     # Bluetooth Support
     ./bluetooth.nix
