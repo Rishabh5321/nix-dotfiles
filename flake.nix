@@ -74,7 +74,7 @@
       "x86_64-linux"
     ];
     username = "rishabh";
-    wallpaper = "wall3.jpg";
+    wallpaper = "wall45.jpg";
     pkgs-unstable = import nixpkgs-unstable {
       system = "x86_64-linux";
       config = {
