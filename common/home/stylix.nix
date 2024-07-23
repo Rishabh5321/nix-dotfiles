@@ -5,7 +5,6 @@
   spicetify-nix,
   ...
 }: {
-  stylix.targets.rofi.enable = false;
   gtk = {
     iconTheme = {
       name = "Papirus";
@@ -23,6 +22,10 @@
   #  style.name = "Adw-gtk3";
   #  platformTheme.name = "gtk3";
   #};
+  stylix.targets.waybar.enable = false;
+  stylix.targets.rofi.enable = false;
+  stylix.targets.hyprland.enable = false;
+
 
   programs.gpg.enable = true;
 

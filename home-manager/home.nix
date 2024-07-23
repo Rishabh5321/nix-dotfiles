@@ -71,8 +71,7 @@
     recursive = true;
   };
   home.file.".config/wlogout/icons" = {
-    source = ../common/home/wlogout/wlogout;
-    recursive = true;
+    source = ../common/home/hyprland/wlogout;
   };
 
   # Create XDG Dirs
