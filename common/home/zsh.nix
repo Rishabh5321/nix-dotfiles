@@ -61,8 +61,8 @@
       dsize = "du -hs";
       findw = "grep -rl";
 
-      l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
-      ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
+      l = "eza"; # EZA_ICON_SPACING=2
+      ll = "eza -a -long";
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos

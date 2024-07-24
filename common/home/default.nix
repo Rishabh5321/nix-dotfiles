@@ -30,5 +30,9 @@
     ./wezterm.nix
     ./zsh.nix
     #./xfce/xfce.nix
+
+    # TEST
+    ./eza.nix
+    ./fzf.nix
   ];
 }
