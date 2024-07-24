@@ -74,6 +74,7 @@
     # Xfce Configuration
     #./xfce.nix
   ];
+
   environment.systemPackages = with pkgs; [
     vim
     wget

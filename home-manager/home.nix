@@ -99,6 +99,8 @@
       inherit pkgs;
       inherit host;
     })
+    #(import ../pkgs/startup.nix {inherit pkgs;})
+    #(import ../pkgs/battery.nix {inherit pkgs;})
   ];
 
   dconf.settings = {

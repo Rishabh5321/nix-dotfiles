@@ -19,6 +19,11 @@ in
         enable = true;
         extraCommands = ["systemctl --user start hypridle.service"];
       };
+      settings = {
+        exec-once = [
+          "startup"
+        ];
+      };
       # plugins = [
       #   hyprplugins.hyprtrails
       # ];
@@ -49,6 +54,7 @@ in
             exec-once = nm-applet --indicator
             #exec-once = lxqt-policykit-agent
             #exec-once = hyprlock --immediate
+            #exec-once = sleep 1.5 && startup
             exec-once = sleep 10 && kdeconnect-app && kdeconnect-indicator
             exec-once = wl-paste --type text --watch cliphist store #Stores only text data
             exec-once = wl-paste --type image --watch cliphist store #Stores only image data
