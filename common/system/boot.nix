@@ -39,9 +39,12 @@
   #Uncomment after enabling stylix
   stylix.targets.grub.enable = false;
 
+  # Theme names can be
+  # 1. tela , 2.vimix , 3.stylish , 4. whitesur
+
   boot.loader.grub2-theme = {
     enable = true;
-    theme = "tela";
+    theme = "whitesur";
     footer = true;
   };
 
