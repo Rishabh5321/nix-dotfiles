@@ -16,6 +16,7 @@
       alacritty
       figlet
       fzf
+      lazygit
       micro
       nh
       ranger
