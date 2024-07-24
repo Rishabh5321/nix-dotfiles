@@ -35,7 +35,6 @@
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     impermanence.url = "github:nix-community/impermanence";

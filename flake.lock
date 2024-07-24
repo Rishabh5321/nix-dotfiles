@@ -428,6 +428,8 @@
           "hyprland"
         ],
         "nixpkgs": [
+          "hyprland-plugins",
+          "hyprland",
           "nixpkgs"
         ],
         "systems": [
@@ -593,11 +595,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1721797027,
-        "narHash": "sha256-y0IFu8vfjFwPIzvWYmcNe76dJ09cCRRa0YIsztJDXBk=",
+        "lastModified": 1721804089,
+        "narHash": "sha256-1a4FrLzn4I1xoASzWfhGEF3Gln33g4lrtRLDNybftak=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "885ae53a587d94d3205bcdfeb3e66957aed4840b",
+        "rev": "633ae2570ec145a008d7703886e78faa24b9c1bd",
         "type": "github"
       },
       "original": {

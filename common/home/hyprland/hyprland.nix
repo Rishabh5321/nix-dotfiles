@@ -8,7 +8,7 @@
   wallpaper,
   ...
 }: let
-  #hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
+  # hyprplugins = inputs.hyprland-plugins.packages.${pkgs.system};
   inherit (import ../../system/variables.nix) browser terminal extraMonitorSettings;
 in
   with lib; {
@@ -20,15 +20,14 @@ in
         extraCommands = ["systemctl --user start hypridle.service"];
       };
       # plugins = [
-      #  hyprplugins.hyprtrails
-      #];
+      #   hyprplugins.hyprtrails
+      # ];
       #settings.exec-once = [ "hypridle" ];
       extraConfig = let
         modifier = "SUPER";
       in
         concatStrings [
           ''
-
             env = NIXOS_OZONE_WL, 1
             env = NIXPKGS_ALLOW_UNFREE, 1
             env = XDG_CURRENT_DESKTOP, Hyprland
@@ -56,6 +55,11 @@ in
             exec-once = sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/${wallpaper}
             monitor=,preferred,auto,1
             ${extraMonitorSettings}
+            # plugin {
+            #   hyprtrails {
+            #       color = rgb(${config.stylix.base16Scheme.base08})
+            #   }
+            # }
             general {
               gaps_in = 1
               gaps_out = 2

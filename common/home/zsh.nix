@@ -16,7 +16,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = ["git"];
-      theme = "agnoster";
+      theme = "intheloop";
     };
     initExtraFirst = ''
       HISTFILE=~/.histfile
