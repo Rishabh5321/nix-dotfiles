@@ -50,7 +50,7 @@
 
   virtualisation.libvirtd.enable = true;
   virtualisation.docker = {
-    enable = true;
+    enable = false;
     rootless = {
       enable = false;
       setSocketVariable = true;
