@@ -50,9 +50,9 @@
 
   virtualisation.libvirtd.enable = true;
   virtualisation.docker = {
-    enable = false;
+    enable = true;
     rootless = {
-      enable = false;
+      enable = true;
       setSocketVariable = true;
     };
     storageDriver = "btrfs";

@@ -41,6 +41,7 @@
       bitwarden-desktop
       cliphist
       distrobox
+      docker
       eza
       fast-cli
       fastfetch
