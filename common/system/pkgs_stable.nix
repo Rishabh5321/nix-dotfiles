@@ -58,7 +58,7 @@
       libreoffice
       nixos-generators
       onlyoffice-bin_latest
-      polkit_gnome
+      #polkit_gnome
       speedtest-cli
       tldr
       wayland-pipewire-idle-inhibit

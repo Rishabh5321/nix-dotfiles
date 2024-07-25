@@ -45,7 +45,6 @@ in
             env = QT_AUTO_SCREEN_SCALE_FACTOR, 1
             env = SDL_VIDEODRIVER, x11
             env = MOZ_ENABLE_WAYLAND, 1
-            exec-once = $POLKIT_BIN
             exec-once = dbus-update-activation-environment --systemd --all
             exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
             exec-once = killall -q swww;sleep .5 && swww init
@@ -97,7 +96,6 @@ in
             windowrulev2 = minsize 1 1, title:^()$,class:^(steam)$
             windowrule = animation fade,^(wlogout)$
             windowrule = fullscreen, ^(wlogout)$
-            windowrulev2 = dimaround, class:^(polkit-gnome-authentication-agent-1)$
             gestures {
               workspace_swipe = true
             }
