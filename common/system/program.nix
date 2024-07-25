@@ -52,7 +52,7 @@
   virtualisation.docker = {
     enable = true;
     rootless = {
-      enable = true;
+      enable = false;
       setSocketVariable = true;
     };
     storageDriver = "btrfs";
