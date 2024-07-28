@@ -16,23 +16,18 @@
     "uas"
     "sd_mod"
     "rtsx_usb_sdmmc"
-    "amdgpu"
   ];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
-  boot.kernelParams = [
-    "radeon.cik_support=0"
-    "amdgpu.cik_support=1"
-  ];
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/4c3de1d0-57f6-4029-a777-1981340aab97";
+    device = "/dev/disk/by-uuid/d7d588f3-05b5-4be9-8009-098490050ddc";
     fsType = "btrfs";
     options = ["subvol=@"];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/8904-E4A6";
+    device = "/dev/disk/by-uuid/9F7C-51F6";
     fsType = "vfat";
     options = [
       "fmask=0022"
@@ -40,7 +35,7 @@
     ];
   };
 
-  swapDevices = [{device = "/dev/disk/by-uuid/604813c3-a0d0-4e18-bd98-f7307a9af2c0";}];
+  swapDevices = [{device = "/dev/disk/by-uuid/17d1a7d6-7338-4ee5-8974-8dafee4768d0";}];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
