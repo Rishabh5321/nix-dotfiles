@@ -66,9 +66,9 @@ in
             #   }
             # }
             general {
-              gaps_in = 1
-              gaps_out = 1
-              border_size = 1
+              gaps_in = 4
+              gaps_out = 6
+              border_size = 3
               layout = master
               resize_on_border = true
               col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.stylix.base16Scheme.base0C}) 45deg
@@ -119,9 +119,9 @@ in
               animation = workspaces, 1, 5, wind
             }
             decoration {
-              rounding = 0
+              rounding = 4
               drop_shadow = false
-              shadow_range = 0
+              shadow_range = 10
               shadow_render_power = 3
               col.shadow = rgba(1a1a1aee)
               blur {
