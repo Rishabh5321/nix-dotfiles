@@ -26,35 +26,29 @@ in {
       # BACKGROUND
       background = [
         {
-          path = "/home/${username}/Pictures/Wallpapers/${wallpaper}";
-          blur_passes = 3;
-          blur_size = 8;
-          noise = 1.17e-2;
-          contrast = 0.8916;
-          brightness = 0.8172;
-          vibrancy = 0.1696;
+          #path = screenshot   # screenshot of your desktop
+          path = /home/${username}/Pictures/Wallpapers/${wallpaper};
+          # all these options are taken from hyprland, see https://wiki.hyprland.org/Configuring/Variables/#blur for explanations
+          blur_size = 5;
+          blur_passes = 1; # 0 disables blurring
+          noise = 0.0117;
+          contrast = 1.3000; # Vibrant!!!
+          brightness = 0.8000;
+          vibrancy = 0.2100;
           vibrancy_darkness = 0.0;
-          color = color0;
         }
       ];
 
       # TIME
       label = [
         {
-          text = "cmd[update:30000] echo \"$(date +\"%I:%M %p\")\"";
-          color = color5;
-          font_size = 90;
-          position = "-30, 0";
-          halign = "right";
-          valign = "top";
-        }
-        {
-          text = "cmd[update:43200000] echo \"$(date +\"%A, %d %B %Y\")\"";
-          color = color5;
-          font_size = 25;
-          position = "-30, -150";
-          halign = "right";
-          valign = "top";
+          text = cmd[update:18000000] echo " <b> "$(date +'%A, %-d %B %Y')" </b> ";
+          color = color14;
+          font_size = 34;
+          font_family = JetBrains Mono Nerd Font Mono ExtraBold;
+          position = "0, -100";
+          halign = center;
+          valign = top;
         }
       ];
 

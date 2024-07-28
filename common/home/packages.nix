@@ -27,6 +27,7 @@ in {
     wlroots
     qt5ct
     libva
+    hyprlock
     dconf
     wayland-utils
     wayland-protocols
