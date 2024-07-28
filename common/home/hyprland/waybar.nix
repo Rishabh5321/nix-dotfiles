@@ -235,7 +235,7 @@ in
         ''
                * {
           font-size: 16px;
-          font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
+          font-family: FiraCode Nerd Font, Font Awesome, sans-serif;
              	font-weight: bold;
                }
                window#waybar {

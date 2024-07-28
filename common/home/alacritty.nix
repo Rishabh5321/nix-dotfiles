@@ -14,9 +14,9 @@ in
           padding.x = 15;
           padding.y = 15;
           decorations = "none";
-          startup_mode = "Windowed";
+          #startup_mode = "Windowed";
           dynamic_title = true;
-          opacity = 0.8;
+          #opacity = 0.8;
         };
         cursor = {
           style = {
@@ -25,13 +25,6 @@ in
           };
         };
         live_config_reload = true;
-        font = {
-          normal.family = "JetBrainsMono Nerd Font Mono";
-          bold.family = "JetBrainsMono Nerd Font Mono";
-          italic.family = "JetBrainsMono Nerd Font Mono";
-          bold_italic.family = "JetBrainsMono Nerd Font Mono";
-          size = 15;
-        };
       };
     };
   }

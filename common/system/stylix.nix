@@ -27,14 +27,14 @@
     #   base0F = "56526e";
     # };
     polarity = "dark";
-    opacity.terminal = 0.8;
+    opacity.terminal = 0.9;
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Ice";
     cursor.size = 24;
     fonts = {
       monospace = {
         package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-        name = "JetBrainsMono Nerd Font Mono";
+        name = "FiraCode Nerd Font";
       };
       sansSerif = {
         package = pkgs.montserrat;

@@ -19,6 +19,7 @@
       lazygit
       micro
       nh
+      nvtopPackages.full
       ranger
       vim
       zoxide
@@ -106,6 +107,7 @@
       font-awesome
       symbola
       powerline
+      nerdfonts
       material-icons
     ];
   };
