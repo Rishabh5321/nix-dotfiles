@@ -23,7 +23,9 @@
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
     };
-    grub2-themes.url = "github:vinceliuice/grub2-themes";
+    darkmatter-grub-theme.url = "gitlab:VandalByte/darkmatter-grub-theme";
+    darkmatter-grub-theme.inputs.nixpkgs.follows = "nixpkgs";
+    #grub2-themes.url = "github:vinceliuice/grub2-themes";
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
@@ -35,7 +37,8 @@
     spicetify-nix,
     alejandra,
     impermanence,
-    grub2-themes,
+    #grub2-themes,
+    darkmatter-grub-theme,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -55,10 +58,11 @@
       };
       modules = [
         ./hosts/${hostname}/configuration.nix
+        darkmatter-grub-theme.nixosModule
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         impermanence.nixosModules.impermanence
-        grub2-themes.nixosModules.default
+        #grub2-themes.nixosModules.default
         {
           home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-unstable;};
           home-manager.useUserPackages = true;

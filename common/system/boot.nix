@@ -20,6 +20,7 @@
     loader.grub.efiInstallAsRemovable = true;
     loader.grub.efiSupport = true;
     loader.grub.useOSProber = true;
+    loader.grub.version = 2;
     # Make /tmp a tmpfs
     tmp = {
       useTmpfs = false;
@@ -34,19 +35,26 @@
       mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
       magicOrExtension = ''\x7fELF....AI\x02'';
     };
-    plymouth.enable = true;
+    #plymouth.enable = true;
   };
   #Uncomment after enabling stylix
   stylix.targets.grub.enable = false;
 
+  boot.loader.grub = {
+    darkmatter-theme = {
+      enable = true;
+      style = "nixos";
+      icon = "color";
+    };
+  };
   # Theme names can be
   # 1. tela , 2.vimix , 3.stylish , 4. whitesur
 
-  boot.loader.grub2-theme = {
-    enable = true;
-    theme = "whitesur";
-    footer = true;
-  };
+  # boot.loader.grub2-theme = {
+  #   enable = true;
+  #   theme = "whitesur";
+  #   footer = true;
+  # };
 
   # boot.loader.grub.theme = pkgs.stdenv.mkDerivation {
   #   pname = "distro-grub-themes";
