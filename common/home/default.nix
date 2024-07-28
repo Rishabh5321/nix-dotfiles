@@ -19,7 +19,7 @@
     ./gnome-extensions.nix
     ./gnome.nix
     ./hypridle.nix
-    #./hyprlock.nix
+    ./hyprlock.nix
     #./plasma.nix
     #./idleinhibitor.nix
     ./kitty.nix

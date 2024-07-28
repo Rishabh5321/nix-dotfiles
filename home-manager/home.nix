@@ -73,9 +73,9 @@
   home.file.".config/wlogout/icons" = {
     source = ../common/home/hyprland/wlogout;
   };
-  home.file.".config/hypr/hyprlock.conf" = {
-    source = ../common/home/hyprland/hyprlock.config;
-  };
+  # home.file.".config/hypr/hyprlock.conf" = {
+  #   source = ../common/home/hyprland/hyprlock.conf;
+  # };
 
   # Create XDG Dirs
   xdg = {
