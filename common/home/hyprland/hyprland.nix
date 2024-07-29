@@ -19,11 +19,6 @@ in
         enable = true;
         extraCommands = ["systemctl --user start hypridle.service"];
       };
-      settings = {
-        exec-once = [
-          "startup"
-        ];
-      };
       # plugins = [
       #   hyprplugins.hyprtrails
       # ];
@@ -144,7 +139,7 @@ in
             bind = ${modifier}SHIFT,Return,exec,rofi-launcher
             bind = ${modifier},V,exec,cliphist list | rofi -dmenu | cliphist decode | wl-copy
             bind = ${modifier}SHIFT,W,exec,web-search
-            bind = ${modifier}ALT,W,exec,wallSelector
+            bind = ${modifier}ALT,W,exec,~/.config/hypr/WallpaperSelect.sh
             bind = ${modifier}SHIFT,N,exec,swaync-client -rs
             bind = ${modifier},W,exec,${browser}
             bind = ${modifier},L,exec,wlogout

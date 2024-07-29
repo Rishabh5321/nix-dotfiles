@@ -34,9 +34,6 @@
     # TEST
     ./eza.nix
     ./fzf.nix
-    ../../pkgs/battery
-    ../../pkgs/startup
-    ../../pkgs/notification
     ./libnotify.nix
     ./mangohud.nix
   ];

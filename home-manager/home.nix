@@ -24,6 +24,7 @@
     ../common/home/rofi/rofi.nix
     ../common/home/rofi/config-emoji.nix
     ../common/home/rofi/config-long.nix
+    ../common/home/rofi/config-wallpaper.nix
     ../common/home/hyprland/emoji.nix
     ../common/home/hyprland/neovim.nix
     ../common/home/hyprland/hyprland.nix
