@@ -18,7 +18,7 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
     hyprland-plugins.inputs.hyprland.follows = "hyprland";
-    impermanence.url = "github:nix-community/impermanence";
+    #impermanence.url = "github:nix-community/impermanence";
     fine-cmdline = {
       url = "github:VonHeikemen/fine-cmdline.nvim";
       flake = false;
@@ -36,7 +36,7 @@
     home-manager,
     spicetify-nix,
     alejandra,
-    impermanence,
+    #impermanence,
     #grub2-themes,
     darkmatter-grub-theme,
     ...
@@ -61,7 +61,7 @@
         darkmatter-grub-theme.nixosModule
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
-        impermanence.nixosModules.impermanence
+        #impermanence.nixosModules.impermanence
         #grub2-themes.nixosModules.default
         {
           home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-unstable;};
