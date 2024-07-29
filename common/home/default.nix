@@ -38,5 +38,6 @@
     ../../pkgs/startup
     ../../pkgs/notification
     ./libnotify.nix
+    ./mangohud.nix
   ];
 }
