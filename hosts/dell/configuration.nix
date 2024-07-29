@@ -20,7 +20,7 @@
     #./docker-compose.nix
   ];
 
-  drivers.amdgpu.enable = true;
+  drivers.amdgpu.enable = false;
   drivers.intel.enable = true;
 
   # Bootloader.
