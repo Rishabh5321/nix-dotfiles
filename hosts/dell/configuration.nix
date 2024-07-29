@@ -13,15 +13,15 @@
     ../modules/amd-drivers.nix
     #../modules/nvidia-drivers.nix
     #../modules/nvidia-prime-drivers.nix
-    ../modules/intel-drivers.nix
+    #../modules/intel-drivers.nix
     #../modules/vm-guest-services.nix
     #../modules/local-hardware-clock.nix
     ./power.nix
     #./docker-compose.nix
   ];
 
-  drivers.amdgpu.enable = false;
-  drivers.intel.enable = true;
+  drivers.amdgpu.enable = true;
+  #drivers.intel.enable = true;
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
