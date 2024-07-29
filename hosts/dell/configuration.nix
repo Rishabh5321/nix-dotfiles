@@ -10,7 +10,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../common/system
-    ../modules/amd-drivers.nix
+    #../modules/amd-drivers.nix
     #../modules/nvidia-drivers.nix
     #../modules/nvidia-prime-drivers.nix
     #../modules/intel-drivers.nix
@@ -20,8 +20,7 @@
     #./docker-compose.nix
   ];
 
-  drivers.amdgpu.enable = true;
-  #drivers.intel.enable = true;
+  drivers.intel.enable = true;
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
