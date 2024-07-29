@@ -34,7 +34,7 @@
     fonts = {
       monospace = {
         package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-        name = "FiraCode Nerd Font";
+        name = "JetBrainsMono Nerd Font Mono";
       };
       sansSerif = {
         package = pkgs.montserrat;
