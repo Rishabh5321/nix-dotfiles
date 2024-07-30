@@ -63,7 +63,7 @@
     ./syncthing.nix
 
     # # Swap Configuration
-    ./swap.nix
+    #./swap.nix
 
     # # Upgrade Configuration
     ./upgrade.nix
@@ -137,8 +137,8 @@
     #greetd.tuigreet
   ];
 
-  # environment.variables = {
-  #   FLAKE = "${flakeDir}";
-  #   POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-  # };
+  environment.variables = {
+    FLAKE = "${flakeDir}";
+    POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+  };
 }
