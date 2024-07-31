@@ -18,28 +18,23 @@
     "uas"
     "sd_mod"
     "rtsx_usb_sdmmc"
-    "amdgpu"
   ];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
-  boot.kernelParams = [
-    "radeon.si_support=0"
-    "amdgpu.si_support=1"
-  ];
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/88d6ede8-2b8f-4507-8c79-abd3d6caf656";
+    device = "/dev/disk/by-uuid/973a203d-bbd8-4fe1-87af-e6868549e67e";
     fsType = "btrfs";
     options = ["subvol=@"];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/34B7-F1BB";
+    device = "/dev/disk/by-uuid/03FE-D7B7";
     fsType = "vfat";
     options = ["fmask=0022" "dmask=0022"];
   };
 
-  swapDevices = [{device = "/dev/disk/by-uuid/abbf86ea-3a7e-48a2-9074-da13bfe11395";}];
+  swapDevices = [{device = "/dev/disk/by-uuid/ec32bd39-d36c-4064-90cc-dc3f1b5c1f1e";}];
 
   fileSystems."/mnt/Raid" = {
     device = "/dev/disk/by-uuid/d35415ef-75c1-4708-9759-b7d1ae846559";
