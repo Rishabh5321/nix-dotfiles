@@ -20,7 +20,7 @@
   ];
 
   #drivers.amdgpu.enable = true;
-  drivers.intel.enable = true;
+  # drivers.intel.enable = true;
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
