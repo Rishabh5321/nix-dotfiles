@@ -1,4 +1,4 @@
-name: Auto Update Flake Inputs
+name: Flake ❄️ Lock 🔒️ Updater ✨
 
 on:
   schedule:
