@@ -21,7 +21,7 @@
     loader.grub.efiInstallAsRemovable = true;
     loader.grub.efiSupport = true;
     loader.grub.useOSProber = true;
-    loader.grub.version = 2;
+    #loader.grub.version = 2;
     # Make /tmp a tmpfs
     tmp = {
       useTmpfs = false;
