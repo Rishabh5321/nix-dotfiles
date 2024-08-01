@@ -25,4 +25,4 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git push --force-with-lease origin HEAD:update_flake_lock_action
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
