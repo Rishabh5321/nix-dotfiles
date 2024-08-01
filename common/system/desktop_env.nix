@@ -25,5 +25,6 @@
 
   environment.systemPackages = with pkgs; [
     gnome.dconf-editor
+    gnome.gnome-tweaks
   ];
 }

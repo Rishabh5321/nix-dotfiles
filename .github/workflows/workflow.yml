@@ -55,6 +55,9 @@ jobs:
       id: nix-flake-checker
       uses: DeterminateSystems/flake-checker-action@v5
 
+    - name: Magic Nix Cache
+      uses: DeterminateSystems/magic-nix-cache-action@v7
+  
     - name: Commit
       id: commit
       uses: stefanzweifel/git-auto-commit-action@v5

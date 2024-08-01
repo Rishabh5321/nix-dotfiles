@@ -102,6 +102,7 @@
 
   fonts = {
     packages = with pkgs; [
+      noto-fonts
       noto-fonts-emoji
       noto-fonts-cjk
       font-awesome
@@ -109,6 +110,7 @@
       powerline
       nerdfonts
       material-icons
+      (nerdfonts.override {fonts = ["Meslo"];})
     ];
   };
 }
