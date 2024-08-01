@@ -17,6 +17,7 @@
       # Internet and Communication
       github-desktop
       rquickshare
+      floorp
 
       # System Tools
       inputs.alejandra.defaultPackage.${system}

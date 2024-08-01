@@ -15,9 +15,9 @@
     plasma-manager.url = "github:pjones/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "nixpkgs";
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
-    hyprland-plugins.inputs.hyprland.follows = "hyprland";
+    #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
+    #hyprland-plugins.inputs.hyprland.follows = "hyprland";
     #impermanence.url = "github:nix-community/impermanence";
     fine-cmdline = {
       url = "github:VonHeikemen/fine-cmdline.nvim";

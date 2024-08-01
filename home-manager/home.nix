@@ -24,7 +24,7 @@
     ../common/home/rofi/rofi.nix
     ../common/home/rofi/config-emoji.nix
     ../common/home/rofi/config-long.nix
-    ../common/home/rofi/config-wallpaper.nix
+    #../common/home/rofi/config-wallpaper.nix
     ../common/home/hyprland/emoji.nix
     ../common/home/hyprland/neovim.nix
     ../common/home/hyprland/hyprland.nix
@@ -90,7 +90,7 @@
     (import ../pkgs/rofi-launcher.nix {inherit pkgs;})
     (import ../pkgs/emopicker9000.nix {inherit pkgs;})
     (import ../pkgs/task-waybar.nix {inherit pkgs;})
-    (import ../pkgs/squirtle.nix {inherit pkgs;})
+    #(import ../pkgs/squirtle.nix {inherit pkgs;})
     #(import ../pkgs/nvidia-offload.nix { inherit pkgs; })
     (import ../pkgs/wallsetter.nix {
       inherit pkgs;

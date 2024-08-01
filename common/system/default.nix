@@ -63,7 +63,7 @@
     ./syncthing.nix
 
     # # Swap Configuration
-    #./swap.nix
+    ./swap.nix
 
     # # Upgrade Configuration
     ./upgrade.nix
