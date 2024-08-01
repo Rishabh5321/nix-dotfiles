@@ -1,9 +1,8 @@
 name: update-flake-lock
 on:
-  push:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '0 0 * * *' # runs daily at 00:00
+    - cron: '0 0 * * 0' # runs weekly on Sunday at 00:00
 
 jobs:
   lockfile:
@@ -12,17 +11,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
+        uses: DeterminateSystems/nix-installer-action@v1
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@main
         id: update
-      - name: Merge pull request
-        run: gh pr merge --auto --merge "${{ steps.update.outputs.pull-request-number }}"
-        env:
-          GH_TOKEN: ${{ secrets.PAT }}
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - name: Push changes
-        run: git push --force-with-lease origin update_flake_lock_action:refs/heads/update_flake_lock_action
+        uses: DeterminateSystems/update-flake-lock@vX
+        with:
+          inputs: input1 input2 input3
+      - name: Print PR number
+        run: echo Pull request number is ${{ steps.update.outputs.pull-request-number }}.
