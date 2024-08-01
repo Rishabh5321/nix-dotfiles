@@ -73,6 +73,8 @@
 
     # Xfce Configuration
     #./xfce.nix
+
+    ./nh.nix
   ];
 
   environment.systemPackages = with pkgs; [
