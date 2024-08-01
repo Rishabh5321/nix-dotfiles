@@ -13,7 +13,7 @@
 
   services.logind.lidSwitchDocked = "ignore";
 
-   services.tlp = {
+  services.tlp = {
     enable = true;
     settings = {
       CPU_BOOST_ON_AC = 1;
