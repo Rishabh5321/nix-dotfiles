@@ -3,7 +3,7 @@ on:
   push:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '0 0 * * *' # runs dayly 00:00
+    - cron: '0 0 * * *' # runs daily at 00:00
 
 jobs:
   lockfile:
@@ -16,10 +16,13 @@ jobs:
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@main
         id: update
-      - run: "gh pr merge --auto --merge ${{ steps.update.outputs.pull-request-number }}"
+      - name: Merge pull request
+        run: gh pr merge --auto --merge "${{ steps.update.outputs.pull-request-number }}"
         env:
           GH_TOKEN: ${{ secrets.PAT }}
-      - run: 
+      - name: Configure Git
+        run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git push --force-with-lease origin update_flake_lock_action:refs/heads/update_flake_lock_action
+      - name: Push changes
+        run: git push --force-with-lease origin update_flake_lock_action:refs/heads/update_flake_lock_action
