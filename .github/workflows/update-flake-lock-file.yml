@@ -19,3 +19,7 @@ jobs:
       - run: "gh pr merge --auto --merge ${{ steps.update.outputs.pull-request-number }}"
         env:
           GH_TOKEN: ${{ secrets.PAT }}
+      - run: 
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git push --force-with-lease origin update_flake_lock_action:refs/heads/update_flake_lock_action
