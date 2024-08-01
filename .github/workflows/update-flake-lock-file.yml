@@ -19,12 +19,14 @@ jobs:
       - name: Merge pull request
         run: gh pr merge --auto --merge "${{ steps.update.outputs.pull-request-number }}"
         env:
-          token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Push changes
         run: |
-          git remote set-url origin https://${{ secrets.GH_TOKEN_FOR_UPDATES }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN_FOR_UPDATES }}@github.com/${{ github.repository }}.git
           git push --force-with-lease origin update_flake_lock_action:refs/heads/update_flake_lock_action
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
