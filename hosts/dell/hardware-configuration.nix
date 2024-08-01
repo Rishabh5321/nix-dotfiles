@@ -18,6 +18,7 @@
     "uas"
     "sd_mod"
     "rtsx_usb_sdmmc"
+    "amdgpu"
   ];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
@@ -34,7 +35,7 @@
     options = ["fmask=0022" "dmask=0022"];
   };
 
-  #swapDevices = [{device = "/dev/disk/by-uuid/ec32bd39-d36c-4064-90cc-dc3f1b5c1f1e";}];
+  swapDevices = [{device = "/dev/disk/by-uuid/ec32bd39-d36c-4064-90cc-dc3f1b5c1f1e";}];
 
   fileSystems."/mnt/Raid" = {
     device = "/dev/disk/by-uuid/d35415ef-75c1-4708-9759-b7d1ae846559";

@@ -44,7 +44,7 @@
         layout = "us";
         variant = "";
       };
-      #videoDrivers = ["amdgpu"];
+      videoDrivers = ["amdgpu" "intel"];
     };
   };
 
