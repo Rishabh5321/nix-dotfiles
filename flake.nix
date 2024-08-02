@@ -20,8 +20,8 @@
     #hyprland-plugins.inputs.hyprland.follows = "hyprland";
     #impermanence.url = "github:nix-community/impermanence";
     fine-cmdline = {
-      url = "github:VonHeikemen/fine-cmdline.nvim";
-      flake = false;
+            url = "github:VonHeikemen/fine-cmdline.nvim";
+            flake = false;
     };
     darkmatter-grub-theme.url = "gitlab:VandalByte/darkmatter-grub-theme";
     darkmatter-grub-theme.inputs.nixpkgs.follows = "nixpkgs";
