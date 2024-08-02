@@ -54,7 +54,7 @@
 
     commonConfig = {hostname}: {
       specialArgs = {
-          inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-unstable;
+        inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-unstable;
       };
       modules = [
         ./hosts/${hostname}/configuration.nix
