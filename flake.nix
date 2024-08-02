@@ -50,9 +50,6 @@
       system = "x86_64-linux";
       config = {allowUnfree = true;};
     };
-    devShells = forAllSystems (system: {
-      lint = nixpkgs.legacyPackages.${system}.callPackage ./shells/lint.nix {};
-    });
     legacyPackages = forAllSystems (
       system:
         import inputs.nixpkgs {
@@ -91,7 +88,7 @@
     overlays = import ./overlays {inherit inputs;};
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
-
+    defaultPackage.x86_64-linux = self.packages.x86_64-linux.lint;
     nixosConfigurations = {
       redmi = nixpkgs.lib.nixosSystem (commonConfig {hostname = "redmi";});
       dell = nixpkgs.lib.nixosSystem (commonConfig {hostname = "dell";});
