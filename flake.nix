@@ -53,6 +53,13 @@
     devShells = forAllSystems (system: {
       lint = nixpkgs.legacyPackages.${system}.callPackage ./shells/lint.nix {};
     });
+    legacyPackages = forAllSystems (
+      system:
+        import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        }
+    );
     formatter = forAllSystems (system: nixpkgs.legacyPackages."${system}".nixpkgs-fmt);
     forAllSystems = nixpkgs.lib.genAttrs systems;
 
