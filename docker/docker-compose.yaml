@@ -310,8 +310,8 @@ services:
     container_name: dockerproxy
     environment:
       - CONTAINERS=1  # Allow access to viewing containers
-      - SERVICES=1  # Allow access to viewing services (necessary when using Docker Swarm)
-      - TASKS=1  # Allow access to viewing tasks (necessary when using Docker Swarm)
+      - SERVICES=1  
+      - TASKS=1 
       - POST=0  # Disallow any POST operations (effectively read-only)
     ports:
       - 127.0.0.1:2375:2375
@@ -329,7 +329,7 @@ services:
       - 8600:9000
     restart: unless-stopped
     volumes:
-      - /mnt/Docker/Docker/Watchstate_Config:/config:rw  # mount current directory to container /config directory.
+      - /mnt/Docker/Docker/Watchstate_Config:/config:rw  
 
   # syncthing:
   #   image: lscr.io/linuxserver/syncthing:latest
