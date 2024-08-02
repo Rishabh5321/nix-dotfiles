@@ -47,10 +47,6 @@ jobs:
       id: run-nix-fmt
       run: nix fmt
 
-    - name: Nix Flake Check - Manual
-      id: nix-flake-check-manual
-      run: nix flake check
-
     - name: Nix Flake Checker
       id: nix-flake-checker
       uses: DeterminateSystems/flake-checker-action@v5
