@@ -90,6 +90,7 @@
       #prismlauncher
       #spicetify-cli
 
+      amdvlk
       # Unsorted/Commented
       #cursor
       #inputs.wezterm.packages.${pkgs.system}.default
