@@ -1,4 +1,4 @@
-name: Flake Check
+name: Flake Format and Check
 
 on:
   push:
