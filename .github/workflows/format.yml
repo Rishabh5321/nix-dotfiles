@@ -1,29 +1,18 @@
----
-    name: Format 🔎
-    
-    'on':
-      push:
-      pull_request:
-    
-    concurrency:
-      group: ci-${{ github.ref }}-format
-      cancel-in-progress: true
-    
-    jobs:
-      format:
-        name: Format 🔎
-        runs-on: ubuntu-22.04
-        steps:
-          - uses: actions/checkout@v4
-          - uses: DeterminateSystems/nix-installer-action@v13
-          - uses: DeterminateSystems/magic-nix-cache-action@v7
-          - uses: DeterminateSystems/flake-checker-action@v8
-    
-          - name: Check nix file formatting ❄️
-            run: 'nix fmt . -- --check'
-          #- name: Check yaml file formatting 📂
-          #  run: 'nix run nixpkgs#yamllint -- --strict --format github .'
-          - name: Check deadnix file formatting ❄️
-            run: 'nix run nixpkgs#deadnix'
-          - name: Check statix file formatting ❄️
-            run: 'nix run nixpkgs#statix -- check --config .statix.toml'
+name: Formatting Check
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  checks:
+    name: Check expressions
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v18
+        with:
+          install_url: https://nixos.org/nix/install
+          extra_nix_config: |
+            auto-optimise-store = true
+            experimental-features = nix-command flakes
+      - run: nix run nixpkgs#alejandra -- -c .
