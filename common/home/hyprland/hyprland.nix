@@ -1,9 +1,6 @@
 {
   lib,
   username,
-  host,
-  inputs,
-  pkgs,
   config,
   wallpaper,
   ...
