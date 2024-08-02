@@ -1,5 +1,4 @@
 ---
-#version: "5.1"
 services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
@@ -78,7 +77,7 @@ services:
     volumes:
       - /mnt/Docker/Docker/Sonarr_Config:/config
       - /mnt/Raid/Learn/Bonus:/data
-      - /mnt/Docker/Downloads:/downloads 
+      - /mnt/Docker/Downloads:/downloads
       - /mnt/Raid/Downloads:/downloads1
       - /mnt/E_Disk/Learn/Bonus:/data1
     ports:
@@ -95,7 +94,7 @@ services:
       - /mnt/Docker/Docker/FileBrowser_Config:/config
     environment:
       - FB_BASEURL=/filebrowser
-    restart: always    
+    restart: always
 
   watchtower:
     image: containrrr/watchtower
@@ -123,7 +122,7 @@ services:
     volumes:
       - /mnt/Docker/Docker/Radarr_Config:/config
       - /mnt/Raid/Learn/Bonus:/data
-      - /mnt/Docker/Downloads:/downloads 
+      - /mnt/Docker/Downloads:/downloads
       - /mnt/Raid/Downloads:/downloads1
       - /mnt/E_Disk/Learn/Bonus:/data1
     ports:
@@ -144,12 +143,12 @@ services:
     ports:
       - 6767:6767
     restart: unless-stopped
-    
+
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     environment:
-      PUID: 1000 
+      PUID: 1000
       PGID: 1000
     ports:
       - 2500:3000
@@ -170,8 +169,8 @@ services:
 #      - TZ=Asia/Kolkata
 #    volumes:
 #      - /mnt/Docker/Docker/Readarr_Config:/config
-#      - /mnt/Raid/Learn/Bonus/Books:/books 
-#      - /mnt/Docker/Downloads:/downloads 
+#      - /mnt/Raid/Learn/Bonus/Books:/books
+#      - /mnt/Docker/Downloads:/downloads
 #      - /mnt/Raid/Downloads:/downloads1
 #      - /mnt/E_Disk/Learn/Bonus:/data
 #    ports:
@@ -205,7 +204,7 @@ services:
       - /mnt/Docker/:/source
       - /home/rishabh/:/source_home
     restart: unless-stopped
-    
+
   tailscale:
     image: tailscale/tailscale
     container_name: tailscaler
@@ -264,13 +263,13 @@ services:
 #      - "32414:32414/udp"
 #      - "32469:32469"
     devices:
-      - "/dev/dri:/dev/dri" 
+      - "/dev/dri:/dev/dri"
     volumes:
       - /mnt/Docker/Docker/Plex_Config:/config
       - /mnt/Raid/Learn/Bonus:/data
       - /mnt/E_Disk/Learn/Bonus:/data1
     restart: unless-stopped
-    
+
 #  adguardhome:
 #    container_name: adguardhome
 #    restart: unless-stopped
@@ -305,7 +304,6 @@ services:
           # # WebUI
 #      - 3000:3000/tcp
 #    restart: unless-stopped
-
 
   dockerproxy:
     image: ghcr.io/tecnativa/docker-socket-proxy:latest
@@ -352,8 +350,6 @@ services:
 #        - 21027:21027/udp
 #      restart: unless-stopped
 
-
-
 #  lidarr:
 #    image: lscr.io/linuxserver/lidarr:latest
 #    container_name: lidarr
@@ -365,9 +361,8 @@ services:
 #      - /mnt/Docker/Docker/Lidarr_Config:/config
 #      - /mnt/Raid/Learn/Bonus:/data
 #      - /mnt/E_Disk/Learn/Bonus:/data1 #optional
-#      - /mnt/Docker/Downloads:/downloads 
+#      - /mnt/Docker/Downloads:/downloads
 #      - /mnt/Raid/Downloads:/downloads1
 #    ports:
 #      - 8686:8686
 #    restart: unless-stopped
-
