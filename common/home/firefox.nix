@@ -1,4 +1,4 @@
-{...}: {
+_: {
   # Text Source Files
   home.file.".mozilla/firefox/profiles.ini".text = ''
     [Profile0]
