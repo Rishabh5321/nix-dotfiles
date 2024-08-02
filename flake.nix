@@ -50,6 +50,9 @@
       system = "x86_64-linux";
       config = {allowUnfree = true;};
     };
+    devShells = forAllSystems (system: {
+      lint = nixpkgs.legacyPackages.${system}.callPackage ./shells/lint.nix {};
+    });
     forAllSystems = nixpkgs.lib.genAttrs systems;
 
     commonConfig = {hostname}: {
