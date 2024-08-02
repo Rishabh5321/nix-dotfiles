@@ -1,0 +1,29 @@
+---
+    name: Format 🔎
+    
+    'on':
+      push:
+      pull_request:
+    
+    concurrency:
+      group: ci-${{ github.ref }}-format
+      cancel-in-progress: true
+    
+    jobs:
+      format:
+        name: Format 🔎
+        runs-on: ubuntu-22.04
+        steps:
+          - uses: actions/checkout@v4
+          - uses: DeterminateSystems/nix-installer-action@v13
+          - uses: DeterminateSystems/magic-nix-cache-action@v7
+          - uses: DeterminateSystems/flake-checker-action@v8
+    
+          - name: Check nix file formatting ❄️
+            run: 'nix fmt . -- --check'
+          - name: Check yaml file formatting 📂
+            run: 'nix run nixpkgs#yamllint -- --strict --format github .'
+          - name: Check deadnix file formatting ❄️
+            run: 'nix run nixpkgs#deadnix -- --fail hosts/ modules/ packages/'
+          - name: Check statix file formatting ❄️
+            run: 'nix run nixpkgs#statix -- check --config .statix.toml'
