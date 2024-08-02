@@ -53,6 +53,7 @@
     devShells = forAllSystems (system: {
       lint = nixpkgs.legacyPackages.${system}.callPackage ./shells/lint.nix {};
     });
+    formatter = forAllSystems (system: nixpkgs.legacyPackages."${system}".nixpkgs-fmt);
     forAllSystems = nixpkgs.lib.genAttrs systems;
 
     commonConfig = {hostname}: {
