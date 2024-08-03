@@ -3,6 +3,7 @@
   username,
   host,
   wallpaper,
+  pkgs-unstable,
   ...
 }: {
   stylix = {
