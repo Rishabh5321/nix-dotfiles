@@ -49,7 +49,7 @@ jobs:
 
     - name: Nix Flake Checker
       id: nix-flake-checker
-      uses: DeterminateSystems/flake-checker-action@v5
+      uses: DeterminateSystems/flake-checker-action@v8
 
     - name: Commit
       id: commit
