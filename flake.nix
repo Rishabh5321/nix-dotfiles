@@ -15,6 +15,9 @@
     plasma-manager.url = "github:pjones/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "nixpkgs";
+    nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
+    nix-software-center.url = "github:snowfallorg/nix-software-center";
+    #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
     #hyprland-plugins.inputs.hyprland.follows = "hyprland";
@@ -36,6 +39,7 @@
     home-manager,
     spicetify-nix,
     alejandra,
+    #chaotic,
     #impermanence,
     #grub2-themes,
     darkmatter-grub-theme,
@@ -62,6 +66,7 @@
         darkmatter-grub-theme.nixosModule
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
+        #chaotic.nixosModules.default
         #impermanence.nixosModules.impermanence
         #grub2-themes.nixosModules.default
         {
