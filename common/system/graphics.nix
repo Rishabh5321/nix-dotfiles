@@ -4,9 +4,9 @@
   ...
 }: {
   # OpenGL
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    #driSupport = true;
-    driSupport32Bit = true;
+    #extraPackages = true;
+    #extraPackages32 = true;
   };
 }

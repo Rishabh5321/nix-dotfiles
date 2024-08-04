@@ -8,7 +8,7 @@
   ...
 }: {
   environment.systemPackages = let
-    cursor = pkgs.callPackage ./pkgs/cursor.nix {};
+    cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
   in
     with pkgs; [
       alacritty
@@ -42,10 +42,10 @@
       gedit
       gh
       git
-      gnome.file-roller
-      gnome.gnome-disk-utility
-      gnome.gnome-system-monitor
-      gnome.nautilus
+      #file-roller
+      gnome-disk-utility
+      gnome-system-monitor
+      nautilus
       grim
       htop
       hyprlock
