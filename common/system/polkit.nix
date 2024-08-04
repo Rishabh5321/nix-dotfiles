@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  flakeDir,
   ...
 }: {
   # Security / Polkit
@@ -22,9 +23,15 @@
       }
     })
   '';
+
   security.pam.services.swaylock = {
     text = ''
       auth include login
     '';
+  };
+
+  environment.variables = {
+    FLAKE = "${flakeDir}";
+    POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
   };
 }

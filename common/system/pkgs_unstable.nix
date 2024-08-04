@@ -11,34 +11,24 @@
     cursor = pkgs-unstable.callPackage ../../pkgs/cursor.nix {};
   in
     with pkgs-unstable; [
-      # Terminal and Shell
-      wezterm
-
-      # Internet and Communication
-      github-desktop
-      rquickshare
+      cursor
       floorp
-
-      # System Tools
+      github-desktop
+      heroic
       inputs.alejandra.defaultPackage.${system}
-
-      # Development Tools
+      lutris
       obsidian
+      protonup-qt
+      rquickshare
+      steam
       vscode
+      wezterm
       zed-editor
 
-      # Gaming
-      heroic
-      lutris
-      protonup-qt
-      steam
-
-      # Testing
-      cursor
       #inputs.nix-software-center.packages.${system}.nix-software-center
       #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
-      #sddm-astronaut
       #plex
+      #sddm-astronaut
     ];
   #services.plex.enable = true;
   #services.hypridle.enable = true;

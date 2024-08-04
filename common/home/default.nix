@@ -14,27 +14,26 @@
     #./chromium.nix
     #./conky.nix
     ./direnv.nix
+    ./eza.nix
     ./firefox.nix
+    ./fzf.nix
     ./git.nix
     ./gnome-extensions.nix
     ./gnome.nix
     ./hypridle.nix
     ./hyprlock.nix
-    #./plasma.nix
     #./idleinhibitor.nix
     ./kitty.nix
+    ./libnotify.nix
+    ./mangohud.nix
     ./packages.nix
+    #./plasma.nix
     ./spicetify.nix
     #./starship.nix
     ./stylix.nix
+    #./vscode.nix
     ./wezterm.nix
-    ./zsh.nix
     #./xfce/xfce.nix
-
-    # TEST
-    ./eza.nix
-    ./fzf.nix
-    ./libnotify.nix
-    ./mangohud.nix
+    ./zsh.nix
   ];
 }

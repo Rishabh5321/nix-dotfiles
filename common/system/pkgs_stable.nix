@@ -12,91 +12,117 @@
     #  cursor = pkgs.callPackage ./pkgs/cursor.nix { };
     #in
     with pkgs; [
-      # Terminal and Shell
       alacritty
-      figlet
-      fzf
-      lazygit
-      micro
-      nh
-      nvtopPackages.full
-      ranger
-      vim
-      zoxide
-      zinit
-      zsh
-      zsh-powerlevel10k
-
-      # Internet and Communication
-      brave
-      firefox
-      jellyfin-media-player
-      kdePackages.kdeconnect-kde
-      qbittorrent
-      resilio-sync
-      telegram-desktop
-      wget
-
-      # System Tools
+      amdvlk
       android-tools
+      appimage-run
+      bat
       bitwarden-desktop
+      bottles
+      brave
+      brightnessctl
+      btop
+      cava
       cliphist
+      cmatrix
+      cowsay
+      discord
       distrobox
       docker
+      docker-compose
+      duf
       eza
       fast-cli
       fastfetch
       ffmpeg
+      figlet
+      filezilla
+      firefox
+      fzf
+      gedit
       gh
-      hyprlock
-      hyprshot
+      git
+      gnome.file-roller
       gnome.gnome-disk-utility
       gnome.gnome-system-monitor
       gnome.nautilus
+      grim
+      htop
+      hyprlock
+      hyprpicker
+      hyprshot
+      imv
+      inxi
+      jellyfin-media-player
+      kdePackages.kdeconnect-kde
+      killall
       kodi-wayland
       lazycli
       lazydocker
+      lazygit
+      libnotify
       libreoffice
+      libvirt
+      lm_sensors
+      lolcat
+      lshw
+      lxqt.lxqt-policykit
+      meson
+      micro
+      mpv
+      ncdu
+      neovide
+      networkmanagerapplet
+      nh
+      ninja
+      nixfmt-rfc-style
       nixos-generators
+      nvtopPackages.full
       onlyoffice-bin_latest
-      #polkit_gnome
+      pavucontrol
+      peaclock
+      pciutils
+      pfetch-rs
+      pkg-config
+      playerctl
+      plex-media-player
+      qbittorrent
+      ranger
+      resilio-sync
+      ripgrep
+      slurp
+      socat
       speedtest-cli
+      spicetify-cli
+      spotify
+      spotdl
+      stremio
+      swappy
+      swaynotificationcenter
+      swww
+      telegram-desktop
       tldr
+      tree
+      unetbootin
+      unrar
+      unzip
+      uwufetch
+      v4l-utils
+      ventoy
+      vim
+      virt-viewer
+      vlc
       wayland-pipewire-idle-inhibit
+      wget
+      wl-clipboard
       wlroots
       xfce.xfce4-pulseaudio-plugin
-      unetbootin
-      ventoy
-
-      # Multimedia
-      cava
-      filezilla
-      plex-media-player
-      stremio
-      vlc
-      peaclock
-      spicetify-cli
-      spotdl
-
-      # Development Tools
-      bottles
-      pfetch-rs
-      uwufetch
-
-      # Miscellaneous
-      btop
-      #floorp
-      #google-chrome
-      #prismlauncher
-      #spicetify-cli
-
-      amdvlk
-      # Unsorted/Commented
-      #cursor
-      #inputs.wezterm.packages.${pkgs.system}.default
-      #plex
-      #where-is-my-sddm-theme
-      #pkgs.libsForQt5.qt5.qtgraphicaleffects
+      yad
+      ydotool
+      zinit
+      zoxide
+      zsh
+      zsh-powerlevel10k
     ];
   #services.plex.enable = true;
   #services.hypridle.enable = true;
