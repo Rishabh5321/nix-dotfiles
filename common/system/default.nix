@@ -24,7 +24,7 @@
     ./polkit.nix
     ./program.nix
     ./proton.nix
-    ./sound.nix
+    #./sound.nix
     ./stylix.nix
     ./swap.nix
     ./syncthing.nix
