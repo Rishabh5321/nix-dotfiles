@@ -2,7 +2,7 @@
   config,
   lib,
   pkgs,
-  pkgs-unstable,
+  pkgs,
   ...
 }: {
   programs.gnome-shell = {

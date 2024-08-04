@@ -7,10 +7,9 @@
   options,
   ...
 }: {
-  environment.systemPackages =
-    #let
-    #  cursor = pkgs.callPackage ./pkgs/cursor.nix { };
-    #in
+  environment.systemPackages = let
+    cursor = pkgs.callPackage ./pkgs/cursor.nix {};
+  in
     with pkgs; [
       alacritty
       amdvlk
@@ -21,6 +20,7 @@
       bottles
       brave
       brightnessctl
+      cursor
       btop
       cava
       cliphist
@@ -119,6 +119,18 @@
       xfce.xfce4-pulseaudio-plugin
       yad
       ydotool
+      floorp
+      github-desktop
+      heroic
+      inputs.alejandra.defaultPackage.${system}
+      lutris
+      obsidian
+      protonup-qt
+      rquickshare
+      steam
+      vscode
+      wezterm
+      zed-editor
       zinit
       zoxide
       zsh

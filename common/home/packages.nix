@@ -13,20 +13,10 @@ in {
       inherit pkgs;
       inherit wallpaperDir;
     })
-    hyprshot
-    hyprpicker
-    # hyprcursor
-    wlr-randr
-    wl-clipboard
-    brightnessctl
     gnome-themes-extra
-    wlsunset
-    xwayland
-    wlroots
     qt5ct
-    libva
-    hyprlock
-    dconf
+    wlsunset
+    wlr-randr
     wayland-utils
     wayland-protocols
     meson

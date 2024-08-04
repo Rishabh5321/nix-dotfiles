@@ -2,7 +2,7 @@
   config,
   pkgs,
   inputs,
-  pkgs-unstable,
+  pkgs,
   options,
   ...
 }: {
@@ -30,7 +30,7 @@
     };
     hyprland = {
       enable = true;
-      package = pkgs-unstable.hyprland;
+      package = pkgs.hyprland;
       xwayland.enable = true;
     };
     thunar = {
