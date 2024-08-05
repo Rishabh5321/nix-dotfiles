@@ -22,7 +22,7 @@
     ./gnome.nix
     ./hypridle.nix
     ./hyprlock.nix
-    #./idleinhibitor.nix
+    ./idleinhibitor.nix
     ./kitty.nix
     ./libnotify.nix
     ./mangohud.nix
