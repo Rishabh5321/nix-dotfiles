@@ -81,6 +81,7 @@
       onlyoffice-bin_latest
       pavucontrol
       peaclock
+      polkit_gnome
       pciutils
       pfetch-rs
       pkg-config
