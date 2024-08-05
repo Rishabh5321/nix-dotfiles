@@ -61,7 +61,7 @@ in
               gaps_in = 4
               gaps_out = 6
               border_size = 3
-              layout = master
+              layout = dwindle
               resize_on_border = true
               col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.stylix.base16Scheme.base0C}) 45deg
               col.inactive_border = rgb(${config.stylix.base16Scheme.base01})
