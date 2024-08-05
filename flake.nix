@@ -17,6 +17,10 @@
     plasma-manager.inputs.home-manager.follows = "nixpkgs";
     nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
     nix-software-center.url = "github:snowfallorg/nix-software-center";
+    nix-github-actions = {
+      url = "github:zhaofengli/nix-github-actions/matrix-name";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
