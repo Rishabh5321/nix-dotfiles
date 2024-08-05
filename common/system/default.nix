@@ -20,6 +20,7 @@
     ./nh.nix
     ./nix_settings.nix
     ./pkgs.nix
+    ./pkgs_stable.nix
     #./pkgs_unstable.nix
     ./polkit.nix
     ./program.nix

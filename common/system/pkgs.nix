@@ -54,7 +54,7 @@
       imv
       inxi
       jellyfin-media-player
-      kdePackages.kdeconnect-kde
+      #kdePackages.kdeconnect-kde
       killall
       kodi-wayland
       lazycli
@@ -85,7 +85,7 @@
       pfetch-rs
       pkg-config
       playerctl
-      plex-media-player
+      #plex-media-player
       qbittorrent
       ranger
       resilio-sync
