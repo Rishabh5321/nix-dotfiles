@@ -48,6 +48,7 @@
         layout = "us";
         variant = "";
       };
+      videoDrivers = ["modesetting"];
     };
   };
 

@@ -1,14 +1,14 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{...}: {
+{pkgs, ...}: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../common/system
     ./power.nix
     #./docker-compose.nix
-    ../modules/amd-drivers.nix
+    #../modules/amd-drivers.nix
     #../modules/nvidia-drivers.nix
     #../modules/nvidia-prime-drivers.nix
     ../modules/intel-drivers.nix
@@ -17,7 +17,8 @@
   ];
 
   drivers.intel.enable = true;
-  drivers.amdgpu.enable = true;
+  hardware.enableAllFirmware = true;
+  #drivers.amdgpu.enable = true;
   #services.xserver.videoDrivers = ["amdgpu"];
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
@@ -48,13 +49,13 @@
         layout = "us";
         variant = "";
       };
-      videoDrivers = ["amdgpu" "intel"];
+      videoDrivers = ["amdgpu" "modesetting"];
     };
   };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  hardware.graphics.extraPackages = with pkgs; [vulkan-loader vulkan-tools];
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -83,5 +84,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 }

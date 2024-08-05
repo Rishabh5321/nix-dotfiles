@@ -6,7 +6,7 @@
   # OpenGL
   hardware.graphics = {
     enable = true;
-    #extraPackages = true;
-    #extraPackages32 = true;
+    extraPackages = with pkgs; [vaapiIntel vaapiVdpau libvdpau-va-gl libvdpau-va-gl];
+    enable32Bit = true;
   };
 }

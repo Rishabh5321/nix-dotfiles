@@ -33,6 +33,7 @@
       duf
       eza
       fast-cli
+      mesa
       fastfetch
       ffmpeg
       figlet
@@ -136,6 +137,12 @@
       zoxide
       zsh
       zsh-powerlevel10k
+
+      pciutils # For lspci command
+      #mesa-utils # For glxinfo and other utilities
+      vulkan-tools # For vulkaninfo and other Vulkan tools
+      intel-gpu-tools # For Intel GPU tools
+      radeontop # For AMD GPU monitoring
     ];
   #services.plex.enable = true;
   #services.hypridle.enable = true;

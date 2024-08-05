@@ -19,6 +19,7 @@
     "sd_mod"
     "rtsx_usb_sdmmc"
     "amdgpu"
+    "i915"
   ];
   boot.kernelParams = ["radeon.si_support=0" "amdgpu.si_support=1"];
   boot.initrd.kernelModules = [];
@@ -62,6 +63,10 @@
   systemd.tmpfiles.rules = [
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
+
+  environment.variables = {
+    ROC_ENABLE_PRE_VEGA = "1";
+  };
 
   # hardware = {
   #   hardware.extraPackages = with pkgs; [
