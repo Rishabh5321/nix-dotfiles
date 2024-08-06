@@ -9,14 +9,13 @@
 }: {
   environment.systemPackages = let
     cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
-    autin = pkgs.callPackage ../../pkgs/autin.nix {};
   in
     with pkgs; [
       alacritty
       #amdvlk
       android-tools
       appimage-run
-      autin
+      #autin
       bat
       bitwarden-desktop
       bottles
