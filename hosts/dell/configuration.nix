@@ -14,6 +14,7 @@
     ../modules/intel-drivers.nix
     #../modules/vm-guest-services.nix
     #../modules/local-hardware-clock.nix
+    #./nfs.nix
   ];
 
   #drivers.intel.enable = true;

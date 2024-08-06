@@ -46,6 +46,10 @@
     enable = true;
   };
 
+  # services = {
+  #   nfs.server.enable = true;
+  # };
+
   networking.timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
 
   virtualisation.libvirtd.enable = true;
