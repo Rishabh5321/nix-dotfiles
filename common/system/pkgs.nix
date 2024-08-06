@@ -12,7 +12,7 @@
   in
     with pkgs; [
       alacritty
-      amdvlk
+      #amdvlk
       android-tools
       appimage-run
       bat
@@ -22,6 +22,7 @@
       brightnessctl
       cursor
       btop
+      glxinfo
       cava
       cliphist
       cmatrix

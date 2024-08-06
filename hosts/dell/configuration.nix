@@ -16,7 +16,7 @@
     #../modules/local-hardware-clock.nix
   ];
 
-  drivers.intel.enable = true;
+  #drivers.intel.enable = true;
   hardware.enableAllFirmware = true;
   #drivers.amdgpu.enable = true;
   #services.xserver.videoDrivers = ["amdgpu"];
