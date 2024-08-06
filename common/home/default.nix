@@ -9,6 +9,7 @@
 }: {
   imports = [
     ./alacritty.nix
+    ./atuin.nix
     ./btop.nix
     ./cava.nix
     #./chromium.nix

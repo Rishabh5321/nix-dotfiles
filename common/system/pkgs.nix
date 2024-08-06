@@ -15,7 +15,7 @@
       #amdvlk
       android-tools
       appimage-run
-      #autin
+      atuin
       bat
       bitwarden-desktop
       bottles
