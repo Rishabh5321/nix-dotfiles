@@ -29,7 +29,7 @@
     ./stylix.nix
     ./swap.nix
     ./syncthing.nix
-    ./upgrade.nix
+    #./upgrade.nix
     ./users.nix
   ];
 }
