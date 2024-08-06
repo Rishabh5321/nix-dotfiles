@@ -21,6 +21,7 @@
       bottles
       brave
       brightnessctl
+      sops
       btop
       cava
       cliphist

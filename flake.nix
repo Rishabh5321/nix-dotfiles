@@ -34,12 +34,14 @@
     darkmatter-grub-theme.inputs.nixpkgs.follows = "nixpkgs";
     #grub2-themes.url = "github:vinceliuice/grub2-themes";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
     self,
     nixpkgs,
     nixpkgs-stable,
+    sops-nix,
     home-manager,
     spicetify-nix,
     alejandra,
@@ -52,7 +54,7 @@
     inherit (self) outputs;
     systems = ["x86_64-linux"];
     username = "rishabh";
-    wallpaper = "wall44.jpg";
+    wallpaper = "wall74.jpg";
     flakeDir = "~/nix-dotfiles";
     pkgs-stable = import nixpkgs-stable {
       system = "x86_64-linux";
@@ -67,18 +69,19 @@
 
     commonConfig = {hostname}: {
       specialArgs = {
-        inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-stable pkgs;
+        inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-stable pkgs sops-nix;
       };
       modules = [
         ./hosts/${hostname}/configuration.nix
         darkmatter-grub-theme.nixosModule
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
+        sops-nix.nixosModules.sops
         #chaotic.nixosModules.default
         #impermanence.nixosModules.impermanence
         #grub2-themes.nixosModules.default
         {
-          home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable pkgs;};
+          home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable pkgs sops-nix;};
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension =
             if hostname == "redmi"

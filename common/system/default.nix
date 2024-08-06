@@ -31,5 +31,7 @@
     ./syncthing.nix
     #./upgrade.nix
     ./users.nix
+
+    ./sops.nix
   ];
 }
