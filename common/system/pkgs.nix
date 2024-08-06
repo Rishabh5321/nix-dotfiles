@@ -9,24 +9,25 @@
 }: {
   environment.systemPackages = let
     cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
+    autin = pkgs.callPackage ../../pkgs/autin.nix {};
   in
     with pkgs; [
       alacritty
       #amdvlk
       android-tools
       appimage-run
+      autin
       bat
       bitwarden-desktop
       bottles
       brave
       brightnessctl
-      cursor
       btop
-      glxinfo
       cava
       cliphist
       cmatrix
       cowsay
+      cursor
       discord
       distrobox
       docker
@@ -34,26 +35,30 @@
       duf
       eza
       fast-cli
-      mesa
       fastfetch
       ffmpeg
       figlet
       filezilla
       firefox
+      floorp
       fzf
       gedit
       gh
+      github-desktop
       git
       #file-roller
+      glxinfo
       gnome-disk-utility
       gnome-system-monitor
-      nautilus
       grim
+      heroic
       htop
       hyprlock
       hyprpicker
       hyprshot
       imv
+      inputs.alejandra.defaultPackage.${system}
+      intel-gpu-tools # For Intel GPU tools
       inxi
       jellyfin-media-player
       #kdePackages.kdeconnect-kde
@@ -68,10 +73,13 @@
       lm_sensors
       lolcat
       lshw
+      lutris
       lxqt.lxqt-policykit
+      mesa
       meson
       micro
       mpv
+      nautilus
       ncdu
       neovide
       networkmanagerapplet
@@ -80,25 +88,31 @@
       nixfmt-rfc-style
       nixos-generators
       nvtopPackages.full
+      obsidian
       onlyoffice-bin_latest
       pavucontrol
-      peaclock
-      polkit_gnome
       pciutils
+      pciutils # For lspci command
+      peaclock
       pfetch-rs
       pkg-config
       playerctl
       #plex-media-player
+      polkit_gnome
+      protonup-qt
       qbittorrent
+      radeontop # For AMD GPU monitoring
       ranger
       resilio-sync
       ripgrep
+      rquickshare
       slurp
       socat
       speedtest-cli
       spicetify-cli
       spotify
       spotdl
+      steam
       stremio
       swappy
       swaynotificationcenter
@@ -115,36 +129,23 @@
       vim
       virt-viewer
       vlc
+      vscode
+      vulkan-tools # For vulkaninfo and other Vulkan tools
       wayland-pipewire-idle-inhibit
       wget
+      wezterm
       wl-clipboard
       wlroots
       xfce.xfce4-pulseaudio-plugin
       yad
       ydotool
-      floorp
-      github-desktop
-      heroic
-      inputs.alejandra.defaultPackage.${system}
-      lutris
-      obsidian
-      protonup-qt
-      rquickshare
-      steam
-      vscode
-      wezterm
       zed-editor
       zinit
       zoxide
       zsh
       zsh-powerlevel10k
-
-      pciutils # For lspci command
-      #mesa-utils # For glxinfo and other utilities
-      vulkan-tools # For vulkaninfo and other Vulkan tools
-      intel-gpu-tools # For Intel GPU tools
-      radeontop # For AMD GPU monitoring
     ];
+
   #services.plex.enable = true;
   #services.hypridle.enable = true;
 
