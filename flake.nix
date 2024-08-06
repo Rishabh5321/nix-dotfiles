@@ -69,7 +69,7 @@
 
     commonConfig = {hostname}: {
       specialArgs = {
-        inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-stable pkgs sops-nix;
+        inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-stable pkgs;
       };
       modules = [
         ./hosts/${hostname}/configuration.nix
@@ -81,7 +81,7 @@
         #impermanence.nixosModules.impermanence
         #grub2-themes.nixosModules.default
         {
-          home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable pkgs sops-nix;};
+          home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable;};
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension =
             if hostname == "redmi"

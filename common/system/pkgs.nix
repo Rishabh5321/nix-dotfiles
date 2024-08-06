@@ -13,6 +13,7 @@
     with pkgs; [
       alacritty
       #amdvlk
+      age
       android-tools
       appimage-run
       atuin
