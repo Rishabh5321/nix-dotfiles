@@ -25,8 +25,10 @@
     ./hyprlock.nix
     ./idleinhibitor.nix
     ./kitty.nix
-    ./libnotify.nix
+    #./libnotify.nix
     ./mangohud.nix
+    ./man.nix
+    ./nix-index.nix
     ./packages.nix
     #./plasma.nix
     ./spicetify.nix
