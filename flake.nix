@@ -58,12 +58,16 @@
       system = "x86_64-linux";
       config = {allowUnfree = true;};
     };
+    pkgs = import nixpkgs {
+      system = "x86_64-linux";
+      config = {allowUnfree = true;};
+    };
     formatter = forAllSystems (system: nixpkgs.legacyPackages."${system}".nixpkgs-fmt);
     forAllSystems = nixpkgs.lib.genAttrs systems;
 
     commonConfig = {hostname}: {
       specialArgs = {
-        inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-stable;
+        inherit inputs outputs username home-manager wallpaper spicetify-nix flakeDir pkgs-stable pkgs;
       };
       modules = [
         ./hosts/${hostname}/configuration.nix
@@ -74,7 +78,7 @@
         #impermanence.nixosModules.impermanence
         #grub2-themes.nixosModules.default
         {
-          home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable;};
+          home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable pkgs;};
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension =
             if hostname == "redmi"
