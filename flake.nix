@@ -76,7 +76,7 @@
         darkmatter-grub-theme.nixosModule
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
-        sops-nix.nixosModules.sops
+        #sops-nix.nixosModules.sops
         #chaotic.nixosModules.default
         #impermanence.nixosModules.impermanence
         #grub2-themes.nixosModules.default
