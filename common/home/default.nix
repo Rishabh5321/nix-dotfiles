@@ -34,7 +34,7 @@
     ./spicetify.nix
     #./starship.nix
     ./stylix.nix
-    ./vscode.nix
+    #./vscode.nix
     ./wezterm.nix
     #./xfce/xfce.nix
     ./zsh.nix
