@@ -39,6 +39,6 @@
     #./xfce/xfce.nix
     ./zsh.nix
 
-    ./sops.nix
+    #./sops.nix
   ];
 }
