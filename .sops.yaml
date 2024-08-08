@@ -4,7 +4,7 @@ keys:
   - &hosts:
     - &dell age15954qfmg0vfp4vg6vhavv88svtlwhecpxf24r9aduhgx9lg35c3q4x0kx7
 creation_rules:
-  - path_regex: secrets.yaml$
+  - path_regex: secrets/secrets.yaml$
     key_groups:
     - age:
       - *ta

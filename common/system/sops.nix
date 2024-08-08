@@ -8,7 +8,7 @@
   ];
 
   sops = {
-    defautSopsFile = ../../secrets.yaml;
+    defautSopsFile = ../../secrets/secrets.yaml;
     validateSopsFiles = false;
 
     age = {
