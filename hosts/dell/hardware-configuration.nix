@@ -26,18 +26,18 @@
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/973a203d-bbd8-4fe1-87af-e6868549e67e";
+    device = "/dev/disk/by-uuid/b8a79454-febc-4055-bf43-a6a824bab6f3";
     fsType = "btrfs";
     options = ["subvol=@"];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/03FE-D7B7";
+    device = "/dev/disk/by-uuid/AC13-2663";
     fsType = "vfat";
     options = ["fmask=0022" "dmask=0022"];
   };
 
-  swapDevices = [{device = "/dev/disk/by-uuid/ec32bd39-d36c-4064-90cc-dc3f1b5c1f1e";}];
+  swapDevices = [{device = "/dev/disk/by-uuid/c04fbb3d-ae45-42e6-aa47-76e805000eb3";}];
 
   fileSystems."/mnt/Raid" = {
     device = "/dev/disk/by-uuid/d35415ef-75c1-4708-9759-b7d1ae846559";

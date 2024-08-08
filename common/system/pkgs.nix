@@ -8,7 +8,7 @@
   ...
 }: {
   environment.systemPackages = let
-    cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
+    #cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
   in
     with pkgs; [
       alacritty
@@ -28,7 +28,7 @@
       cliphist
       cmatrix
       cowsay
-      cursor
+      #cursor
       discord
       distrobox
       docker
