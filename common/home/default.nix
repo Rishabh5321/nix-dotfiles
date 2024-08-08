@@ -38,5 +38,7 @@
     ./wezterm.nix
     #./xfce/xfce.nix
     ./zsh.nix
+
+    ./sops.nix
   ];
 }
