@@ -32,6 +32,6 @@
     #./upgrade.nix
     ./users.nix
 
-    #./sops.nix
+    ./sops.nix
   ];
 }
