@@ -235,7 +235,7 @@ in
         ''
                * {
           font-size: 16px;
-          font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
+          font-family: JetBrainsMono Nerd Font, JetBrainsMono Nerd Font , JetBrainsMono Nerd Font;
              	font-weight: bold;
                }
                window#waybar {

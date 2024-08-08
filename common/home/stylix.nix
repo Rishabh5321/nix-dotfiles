@@ -7,8 +7,8 @@
 }: {
   gtk = {
     iconTheme = {
-      name = "Papirus";
-      package = pkgs.papirus-icon-theme;
+      name = "Dracula";
+      package = pkgs.dracula-icon-theme;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
