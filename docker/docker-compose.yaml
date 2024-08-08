@@ -19,6 +19,22 @@ services:
       - 6881:6881/udp
     restart: unless-stopped
 
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Kolkata
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /portainer_data:/data
+    ports:
+      - 8000:8000
+      - 9443:9443
+      - 9000:9000
+    restart: unless-stopped
+
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
@@ -366,3 +382,8 @@ services:
   #   ports:
   #     - 8686:8686
   #   restart: unless-stopped
+
+
+volumes:
+  portainer_data:
+    external: true
