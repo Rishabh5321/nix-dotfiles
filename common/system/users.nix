@@ -21,6 +21,7 @@ in {
         "libvirtd"
         "scanner"
         "lp"
+        "adbusers"
         "docker"
       ];
       shell = pkgs.zsh;
@@ -37,4 +38,7 @@ in {
     #   packages = with pkgs; [];
     # };
   };
+
+  location.provider = "geoclue2";
+  services.geoclue2.enable = true;
 }
