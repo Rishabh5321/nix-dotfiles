@@ -35,6 +35,10 @@
     #grub2-themes.url = "github:vinceliuice/grub2-themes";
     nix-gaming.url = "github:fufexan/nix-gaming";
     sops-nix.url = "github:Mic92/sops-nix";
+    # nixos-cosmic = {
+    #   url = "github:lilyinstarlight/nixos-cosmic";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {
@@ -45,6 +49,7 @@
     home-manager,
     spicetify-nix,
     alejandra,
+    #nixos-cosmic,
     #chaotic,
     #impermanence,
     #grub2-themes,
@@ -73,6 +78,7 @@
       };
       modules = [
         ./hosts/${hostname}/configuration.nix
+        #nixos-cosmic.nixosModules.default
         darkmatter-grub-theme.nixosModule
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
