@@ -22,7 +22,7 @@
     ./pkgs.nix
     ./pkgs_stable.nix
     #./pkgs_unstable.nix
-    ./polkit.nix
+    #./polkit.nix
     ./program.nix
     ./proton.nix
     #./sound.nix
