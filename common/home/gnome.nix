@@ -59,7 +59,7 @@
       disable-user-extensions = false;
       favorite-apps = [
         "firefox.desktop"
-        "org.wezfurlong.wezterm.desktop"
+        "kitty.desktop"
         "org.gnome.Nautilus.desktop"
         "discord.desktop"
         "spotify.desktop"
