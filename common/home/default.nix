@@ -40,5 +40,6 @@
     ./zsh.nix
 
     #./sops.nix
+    ./htop.nix
   ];
 }
