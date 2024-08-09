@@ -13,16 +13,17 @@
     with pkgs; [
       alacritty
       #amdvlk
-      age
+      #age
       android-tools
       appimage-run
       atuin
       bat
+      beeper
       bitwarden-desktop
       bottles
       brave
       brightnessctl
-      sops
+      #sops
       btop
       cava
       cliphist
@@ -33,12 +34,12 @@
       distrobox
       docker
       docker-compose
-      duf
+      #duf
       eza
       fast-cli
       fastfetch
       ffmpeg
-      figlet
+      #figlet
       filezilla
       firefox
       floorp
@@ -48,7 +49,7 @@
       github-desktop
       git
       #file-roller
-      glxinfo
+      #glxinfo
       gnome-disk-utility
       gnome-system-monitor
       grim
@@ -59,7 +60,7 @@
       hyprshot
       imv
       inputs.alejandra.defaultPackage.${system}
-      intel-gpu-tools # For Intel GPU tools
+      #intel-gpu-tools # For Intel GPU tools
       inxi
       jellyfin-media-player
       #kdePackages.kdeconnect-kde
@@ -81,18 +82,18 @@
       micro
       mpv
       nautilus
-      ncdu
-      neovide
+      #ncdu
+      #neovide
       networkmanagerapplet
       nh
-      ninja
+      #ninja
       nixfmt-rfc-style
       nixos-generators
       nvtopPackages.full
       obsidian
       onlyoffice-bin_latest
       pavucontrol
-      pciutils
+      #pciutils
       pciutils # For lspci command
       peaclock
       pfetch-rs
@@ -104,7 +105,7 @@
       qbittorrent
       radeontop # For AMD GPU monitoring
       ranger
-      resilio-sync
+      #resilio-sync
       ripgrep
       rquickshare
       slurp
@@ -121,7 +122,7 @@
       telegram-desktop
       tldr
       tree
-      unetbootin
+      #unetbootin
       unrar
       unzip
       uwufetch
@@ -131,7 +132,7 @@
       virt-viewer
       vlc
       vscode
-      vulkan-tools # For vulkaninfo and other Vulkan tools
+      #vulkan-tools # For vulkaninfo and other Vulkan tools
       wayland-pipewire-idle-inhibit
       wget
       wezterm
