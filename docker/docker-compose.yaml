@@ -125,7 +125,8 @@ services:
       - WATCHTOWER_NOTIFICATIONS=shoutrrr
       - WATCHTOWER_NOTIFICATION_URL=telegram://6967316132:AAH8IclO_3btJ9ovRpD2CRBoKwlJZ53ywhQ@telegram/?channels=-4105555598
       - WATCHTOWER_CLEANUP=true
-      - WATCHTOWER_HTTP_API_TOKEN=/run/secrets/access_token
+      - WATCHTOWER_METRICS_ENDPOINT=:8080
+      - WATCHTOWER_HTTP_API_TOKEN=demotoken
     restart: unless-stopped
 
   radarr:
