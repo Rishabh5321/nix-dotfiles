@@ -119,17 +119,16 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - 2800:8080
-    command: --debug --http-api-update
+    command: --debug --http-api-update --schedule "00 10 * * *"
     environment:
       - TZ=Asia/Kolkata
-      - WATCHTOWER_POLL_INTERVAL=3600
       - WATCHTOWER_NOTIFICATIONS=shoutrrr
       - WATCHTOWER_NOTIFICATION_URL=telegram://6967316132:AAH8IclO_3btJ9ovRpD2CRBoKwlJZ53ywhQ@telegram/?channels=-4105555598
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_HTTP_API_METRICS=true
+      - WATCHTOWER_HTTP_API_PERIODIC_POLLS=true
       - WATCHTOWER_HTTP_API_TOKEN=mytoken
     restart: unless-stopped
-
 
   radarr:
     image: lscr.io/linuxserver/radarr:latest
