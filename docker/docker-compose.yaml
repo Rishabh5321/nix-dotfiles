@@ -235,13 +235,13 @@ services:
       - TS_USERSPACE=true
       - TS_AUTH_KEY=tskey-auth-kfwJGCMSXX11CNTRL-qXp3ftMxy9iD7Q49skS6Ai5gT99ttAE3B
       - TS_ROUTES=192.168.1.0/24
-      - TS_EXTRA_ARGS=--accept-routes
-      - TS_EXTRA_ARGS=--accept-risk=all
+      - TS_EXTRA_ARGS=--advertise-routes=192.168.1.0/24 --accept-routes --accept-risk=all
     volumes:
       - /data:/var/lib
       - /dev/net/tun:/dev/net/tun
     network_mode: host
     restart: unless-stopped
+
 
   speedtest-tracker:
     image: lscr.io/linuxserver/speedtest-tracker:latest
