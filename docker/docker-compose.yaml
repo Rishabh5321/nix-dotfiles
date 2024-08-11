@@ -233,7 +233,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TS_USERSPACE=true
-      - TS_AUTH_KEY=tskey-auth-kng2WdZnwp11CNTRL-kkX3gp8MSqDCnRAxjM3ZqDLTJ8nFK83L
+      - TS_AUTH_KEY=tskey-auth-kfwJGCMSXX11CNTRL-qXp3ftMxy9iD7Q49skS6Ai5gT99ttAE3B
       - TS_ROUTES=192.168.1.0/24
       - TS_EXTRA_ARGS=--accept-routes
       - TS_EXTRA_ARGS=--accept-risk=all
