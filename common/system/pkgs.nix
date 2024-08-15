@@ -135,7 +135,7 @@
       #vulkan-tools # For vulkaninfo and other Vulkan tools
       wayland-pipewire-idle-inhibit
       wget
-      wezterm
+      #wezterm
       wl-clipboard
       wlroots
       xfce.xfce4-pulseaudio-plugin
