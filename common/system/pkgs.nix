@@ -91,6 +91,7 @@
       nixos-generators
       nvtopPackages.full
       obsidian
+      oh-my-posh
       onlyoffice-bin_latest
       pavucontrol
       #pciutils

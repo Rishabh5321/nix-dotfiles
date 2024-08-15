@@ -41,5 +41,6 @@
 
     #./sops.nix
     ./htop.nix
+    ./oh-my-posh.nix
   ];
 }
