@@ -7,11 +7,11 @@
 }: {
   programs = {
     firefox.enable = true;
-    #hyprland = {
-    #  enable = true;
-    #  package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    #  xwayland.enable = true;
-    #t};
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      xwayland.enable = true;
+    };
     dconf.enable = true;
     #seahorse.enable = true;
     fuse.userAllowOther = true;
@@ -27,11 +27,11 @@
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
     };
-    hyprland = {
-      enable = true;
-      package = pkgs.hyprland;
-      xwayland.enable = true;
-    };
+    #hyprland = {
+    #  enable = true;
+    #  package = pkgs.hyprland;
+    #  xwayland.enable = true;
+    #};
     thunar = {
       enable = true;
       plugins = with pkgs.xfce; [
