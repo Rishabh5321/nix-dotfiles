@@ -102,13 +102,13 @@ in
               bezier = winIn, 0.1, 1.1, 0.1, 1
               bezier = winOut, 0.3, -0.3, 0, 1
               bezier = liner, 1, 1, 1, 1
-              animation = windows, 1, 6, wind, slide
-              animation = windowsIn, 1, 6, winIn, slide
-              animation = windowsOut, 1, 5, winOut, slide
-              animation = windowsMove, 1, 5, wind, slide
+              animation = windows, 1, 1, wind, slide
+              animation = windowsIn, 1, 1, winIn, slide
+              animation = windowsOut, 1, 1, winOut, slide
+              animation = windowsMove, 1, 1, wind, slide
               animation = border, 1, 1, liner
-              animation = fade, 1, 4, default
-              animation = workspaces, 1, 5, wind
+              animation = fade, 1, 1, default
+              animation = workspaces, 1, 1, wind
             }
             decoration {
               rounding = 4

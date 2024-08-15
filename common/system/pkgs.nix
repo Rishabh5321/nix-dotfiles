@@ -21,7 +21,7 @@
       beeper
       bitwarden-desktop
       bottles
-      brave
+      #brave
       brightnessctl
       #sops
       btop

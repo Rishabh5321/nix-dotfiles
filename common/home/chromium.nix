@@ -1,6 +1,6 @@
 {
   programs.chromium = {
-    enable = true;
+    enable = false;
     commandLineArgs = ["--enable-features=TouchpadOverscrollHistoryNavigation"];
     extensions = [
       {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";}
