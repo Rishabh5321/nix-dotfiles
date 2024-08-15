@@ -21,23 +21,23 @@
     "amdgpu"
     "i915"
   ];
-  boot.kernelParams = ["radeon.si_support=0" "amdgpu.si_support=1"];
+  boot.kernelParams = ["amdgpu.si_support=1"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/b8a79454-febc-4055-bf43-a6a824bab6f3";
+    device = "/dev/disk/by-uuid/ba9bc6b9-e010-476b-8f0c-bca7ec161223";
     fsType = "btrfs";
     options = ["subvol=@"];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/AC13-2663";
+    device = "/dev/disk/by-uuid/AD66-1242";
     fsType = "vfat";
     options = ["fmask=0022" "dmask=0022"];
   };
 
-  swapDevices = [{device = "/dev/disk/by-uuid/c04fbb3d-ae45-42e6-aa47-76e805000eb3";}];
+  swapDevices = [{device = "/dev/disk/by-uuid/c7124c83-4478-485d-b044-d8539ffbb518";}];
 
   fileSystems."/mnt/Raid" = {
     device = "/dev/disk/by-uuid/d35415ef-75c1-4708-9759-b7d1ae846559";
