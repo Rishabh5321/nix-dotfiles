@@ -50,7 +50,7 @@
         layout = "us";
         variant = "";
       };
-      videoDrivers = [];
+      videoDrivers = ["amd"];
     };
   };
 

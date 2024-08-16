@@ -46,6 +46,12 @@
       switch-applications = ["<Super>Tab"];
       switch-windows-backward = ["<Shift><Alt>Tab"];
       switch-applications-backward = ["<Shift><Super>Tab"];
+      switch-to-workspace-left = ["<Control><Super>Left"];
+      switch-to-workspace-right = ["<Control><Super>Right"];
+    };
+
+    "org/gnome/shell/keybindings" = {
+      toggle-application-view = ["<Shift><Super>Return"];
     };
 
     "org/gnome/mutter" = {
