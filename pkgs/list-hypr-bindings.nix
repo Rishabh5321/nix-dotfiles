@@ -1,6 +1,5 @@
 {
   pkgs,
-  host,
   ...
 }: let
   inherit (import ../common/system/variables.nix) terminal browser;

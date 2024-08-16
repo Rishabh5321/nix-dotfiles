@@ -1,8 +1,5 @@
 {
   pkgs,
-  lib,
-  inputs,
-  spicetify-nix,
   ...
 }: {
   gtk = {

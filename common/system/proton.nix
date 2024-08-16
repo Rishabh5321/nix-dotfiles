@@ -1,10 +1,4 @@
 {
-  config,
-  pkgs,
-  host,
-  inputs,
-  username,
-  options,
   ...
 }: {
   #PROTON

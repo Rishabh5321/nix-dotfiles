@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }: {
   # NOTE: Home-manager related settings are in homemanager/xfce.nix

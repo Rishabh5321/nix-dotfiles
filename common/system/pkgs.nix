@@ -1,10 +1,6 @@
 {
-  config,
   pkgs,
-  host,
   inputs,
-  username,
-  options,
   ...
 }: {
   environment.systemPackages = let

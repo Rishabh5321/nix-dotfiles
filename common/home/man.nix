@@ -1,7 +1,4 @@
 {
-  pkgs,
-  misc,
-  lib,
   ...
 }: {
   # also adds the man pages for home-manager

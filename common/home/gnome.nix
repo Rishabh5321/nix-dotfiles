@@ -1,9 +1,4 @@
 {
-  config,
-  lib,
-  pkgs,
-  wallpaper,
-  username,
   ...
 }: {
   dconf.settings = {

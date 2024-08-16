@@ -1,10 +1,4 @@
 {
-  pkgs,
-  pkgs-unstable,
-  config,
-  lib,
-  wallpaper,
-  username,
   ...
 }: {
   services.displayManager = {

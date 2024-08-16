@@ -1,7 +1,4 @@
 {
-  pkgs,
-  misc,
-  lib,
   ...
 }: {
   # supplies the command-not-found hook to tell about nix packages
