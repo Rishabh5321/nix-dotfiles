@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   boot = {
     # Kernel
     kernelPackages = pkgs.linuxPackages_latest;

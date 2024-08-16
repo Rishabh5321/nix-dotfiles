@@ -1,7 +1,4 @@
-{
-  config,
-  ...
-}: let
+{config, ...}: let
   palette = config.stylix.base16Scheme;
 in {
   home.file.".config/cava/config".text = ''

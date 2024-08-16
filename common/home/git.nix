@@ -1,4 +1,4 @@
-{ ...}: {
+_: {
   # Git
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.git.enable
   # Aliases config in ./configs/git-aliases.nix

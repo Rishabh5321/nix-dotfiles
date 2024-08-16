@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   sound.enable = true;
 
   # rtkit is optional but recommended

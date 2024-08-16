@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   services.rpcbind.enable = true;
   environment.systemPackages = [pkgs.nfs-utils];
   boot.initrd = {

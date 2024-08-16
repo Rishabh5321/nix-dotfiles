@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   inherit (import ../common/system/variables.nix) terminal browser;
 in
   pkgs.writeShellScriptBin "list-hypr-bindings" ''

@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   # also adds the man pages for home-manager
   programs.man = {
     enable = true;

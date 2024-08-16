@@ -1,7 +1,4 @@
-{
-  lib,
-  ...
-}: let
+{lib, ...}: let
   inherit (import ../system/variables.nix) alacritty;
 in
   lib.mkIf alacritty {

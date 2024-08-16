@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   services.displayManager = {
     enable = true;
     sddm = {

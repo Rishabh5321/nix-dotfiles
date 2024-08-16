@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   environment.persistence."/nix/persist" = {
     hideMounts = true;
     directories = [

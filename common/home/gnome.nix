@@ -1,6 +1,4 @@
-{
-  ...
-}: {
+_: {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       clock-format = "12h";

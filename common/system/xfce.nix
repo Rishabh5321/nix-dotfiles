@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # NOTE: Home-manager related settings are in homemanager/xfce.nix
 
   # Enable the XFCE Desktop Environment.
