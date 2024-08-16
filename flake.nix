@@ -59,7 +59,7 @@
     inherit (self) outputs;
     systems = ["x86_64-linux"];
     username = "rishabh";
-    wallpaper = "wall78.jpg";
+    wallpaper = "wall13.jpg";
     flakeDir = "~/nix-dotfiles";
     pkgs-stable = import nixpkgs-stable {
       system = "x86_64-linux";

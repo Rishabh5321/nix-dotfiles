@@ -16,6 +16,9 @@
       {package = pkgs.gnomeExtensions.system-monitor;}
       {package = pkgs.gnomeExtensions.dash-to-dock;}
       {package = pkgs.gnomeExtensions.gsconnect;}
+      {package = pkgs.gnomeExtensions.pop-shell;}
+      {package = pkgs.gnomeExtensions.unite;}
+      {package = pkgs.gnomeExtensions.blur-my-shell;}
       #{package = pkgs-unstable.gnome-shell-extension-tilingnome-unstable;}
     ];
   };
@@ -37,6 +40,27 @@
       tray-pos = "right";
     };
 
+    # "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
+    #   brightness = 0.6;
+    #   sigma = 30;
+    # };
+
+    # "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+    #   blur = true;
+    #   brightness = 0.6;
+    #   sigma = 30;
+    #   static-blur = true;
+    #   style-dash-to-dock = 5;
+    # };
+
+    "org/gnome/shell/extensions/blur-my-shell/panel" = {
+      blur = true;
+      brightness = 0.6;
+      sigma = 0;
+      static-blur = false;
+      style-panel = 3;
+    };
+
     "org/gnome/shell/extensions/caffeine" = {
       indicator-position = -1;
       indicator-position-index = -1;
@@ -55,8 +79,6 @@
       topbar-preview-size = 8;
 
       clear-history = [];
-      next-entry = ["<Shift><Control>p"];
-      prev-entry = ["<Shift><Control>o"];
       private-mode-binding = [];
       toggle-menu = ["<Super><Control>v"];
     };
@@ -88,5 +110,17 @@
     "org/gnome/shell/extensions/gsconnect" = {
       enable = true;
     };
-  };
+
+    "org/gnome/shell/extensions/unite" = {
+      extend-left-box = false;
+      greyscale-tray-icons = false;
+      hide-app-menu-icon = true;
+      use-activities-text = true;
+    };
+
+    "org/gnome/shell/extensions/pop-shell" = {
+      active-hint = true;
+      tile-by-default = true;
+    };
+  }; 
 }
