@@ -17,7 +17,7 @@
     #./nfs.nix
   ];
 
-  #drivers.intel.enable = true;
+  drivers.intel.enable = true;
   hardware.enableAllFirmware = true;
   #drivers.amdgpu.enable = true;
   #services.xserver.videoDrivers = ["amdgpu"];
@@ -50,13 +50,13 @@
         layout = "us";
         variant = "";
       };
-      videoDrivers = ["amdgpu" "modesetting"];
+      videoDrivers = [];
     };
   };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  hardware.graphics.extraPackages = with pkgs; [vulkan-loader vulkan-tools];
+  # hardware.graphics.extraPackages = with pkgs; [vulkan-loader vulkan-tools];
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

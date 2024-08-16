@@ -5,6 +5,8 @@
 }: {
   programs.oh-my-posh = {
     enable = true;
-    useTheme = "gruvbox";
+    useTheme = "fish";
+    enableBashIntegration = true;
+    enableZshIntegration = true;
   };
 }
