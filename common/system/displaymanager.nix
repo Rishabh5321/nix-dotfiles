@@ -7,8 +7,7 @@
   username,
   ...
 }: {
-  
-    services.displayManager = {
+  services.displayManager = {
     enable = true;
     sddm = {
       enable = true;
@@ -44,7 +43,6 @@
       #theme = "where_is_my_sddm_theme";
     };
   };
-  
 
   #services.xserver.displayManager.lightdm.enable = true;
 
