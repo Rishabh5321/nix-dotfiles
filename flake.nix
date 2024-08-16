@@ -85,7 +85,7 @@
         #sops-nix.nixosModules.sops
         #chaotic.nixosModules.default
         #impermanence.nixosModules.impermanence
-        #grub2-themes.nixosModules.default 
+        #grub2-themes.nixosModules.default
         {
           home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable;};
           home-manager.useUserPackages = true;
