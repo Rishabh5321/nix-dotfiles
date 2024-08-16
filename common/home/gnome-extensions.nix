@@ -122,5 +122,5 @@
       active-hint = true;
       tile-by-default = true;
     };
-  }; 
+  };
 }
