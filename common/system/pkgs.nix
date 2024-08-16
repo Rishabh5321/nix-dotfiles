@@ -143,7 +143,7 @@
       xfce.xfce4-pulseaudio-plugin
       yad
       ydotool
-      yubioath-flutter
+      #yubioath-flutter
       zed-editor
       zinit
       zoxide
