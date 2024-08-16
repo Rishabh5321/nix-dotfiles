@@ -58,9 +58,9 @@
       disable-extension-version-validation = true;
       disable-user-extensions = false;
       favorite-apps = [
-        "firefox.desktop"
         "kitty.desktop"
         "org.gnome.Nautilus.desktop"
+        "firefox.desktop"
         "discord.desktop"
         "spotify.desktop"
         "code.desktop"
@@ -68,7 +68,7 @@
         "github-desktop.desktop"
         "steam.desktop"
         "heroic.desktop"
-        "lutris.desktop"
+        "obsidian.desktop"
       ];
     };
   };

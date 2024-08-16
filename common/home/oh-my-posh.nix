@@ -5,7 +5,7 @@
 }: {
   programs.oh-my-posh = {
     enable = true;
-    useTheme = "fish";
+    useTheme = "thecyberden";
     enableBashIntegration = true;
     enableZshIntegration = true;
   };

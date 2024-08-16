@@ -14,11 +14,11 @@ in {
       inherit wallpaperDir;
     })
     gnome-themes-extra
-    qt5ct
-    wlsunset
-    wlr-randr
-    wayland-utils
-    wayland-protocols
     meson
+    qt5ct
+    wayland-protocols
+    wayland-utils
+    wlr-randr
+    wlsunset
   ];
 }

@@ -11,19 +11,19 @@
     cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
   in
     with pkgs; [
-      alacritty
-      #amdvlk
       #age
+      #amdvlk
+      alacritty
       android-tools
       appimage-run
       atuin
+      #authenticator
       bat
       beeper
       bitwarden-desktop
       bottles
-      #brave
+      brave
       brightnessctl
-      #sops
       btop
       cava
       cliphist
@@ -40,15 +40,15 @@
       fastfetch
       ffmpeg
       #figlet
+      #file-roller
       filezilla
       firefox
       floorp
       fzf
       gedit
       gh
-      github-desktop
       git
-      #file-roller
+      github-desktop
       #glxinfo
       gnome-disk-utility
       gnome-system-monitor
@@ -59,8 +59,8 @@
       hyprpicker
       hyprshot
       imv
-      inputs.alejandra.defaultPackage.${system}
       #intel-gpu-tools # For Intel GPU tools
+      inputs.alejandra.defaultPackage.${system}
       inxi
       jellyfin-media-player
       #kdePackages.kdeconnect-kde
@@ -111,6 +111,7 @@
       rquickshare
       slurp
       socat
+      #sops
       speedtest-cli
       spicetify-cli
       spotify
@@ -142,6 +143,7 @@
       xfce.xfce4-pulseaudio-plugin
       yad
       ydotool
+      yubioath-flutter
       zed-editor
       zinit
       zoxide
