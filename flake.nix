@@ -45,7 +45,6 @@
     self,
     nixpkgs,
     nixpkgs-stable,
-    sops-nix,
     home-manager,
     spicetify-nix,
     alejandra,

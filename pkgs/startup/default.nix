@@ -1,7 +1,6 @@
 # File runned at startup by Hyprland
 {
   pkgs,
-  config,
   ...
 }: let
   startup = pkgs.writeShellScriptBin "startup" ''

@@ -1,7 +1,6 @@
 {
   pkgs,
   username,
-  config,
   ...
 }: let
   inherit (import ./variables.nix) gitUsername;

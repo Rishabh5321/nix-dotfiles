@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   ...
 }: {
   # Starship Prompt

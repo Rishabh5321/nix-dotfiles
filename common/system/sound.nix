@@ -1,11 +1,4 @@
 {
-  config,
-  pkgs,
-  host,
-  username,
-  options,
-  wallpaper,
-  inputs,
   ...
 }: {
   sound.enable = true;

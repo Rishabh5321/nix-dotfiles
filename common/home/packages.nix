@@ -1,8 +1,5 @@
 {
   pkgs,
-  config,
-  username,
-  wallpaperDir,
   ...
 }: let
   inherit (import ../system/variables.nix) wallpaperDir;

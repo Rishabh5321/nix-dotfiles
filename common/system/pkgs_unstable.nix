@@ -1,16 +1,8 @@
 {
-  config,
   pkgs,
-  host,
-  inputs,
-  username,
-  options,
   ...
 }: {
-  environment.systemPackages = let
-    cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
-  in
-    with pkgs; [
+  environment.systemPackages = with pkgs; [
       #inputs.nix-software-center.packages.${system}.nix-software-center
       #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
       #plex

@@ -1,11 +1,4 @@
 {
-  config,
-  pkgs,
-  host,
-  inputs,
-  username,
-  options,
-  flakeDir,
   ...
 }: {
   imports = [

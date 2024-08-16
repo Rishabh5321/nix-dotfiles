@@ -1,6 +1,4 @@
 {
-  lib,
-  osConfig,
   ...
 }: {
   services.hypridle = {
