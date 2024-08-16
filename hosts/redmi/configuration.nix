@@ -48,7 +48,7 @@
         layout = "us";
         variant = "";
       };
-      videoDrivers = ["modesetting"];
+      videoDrivers = [];
     };
   };
 

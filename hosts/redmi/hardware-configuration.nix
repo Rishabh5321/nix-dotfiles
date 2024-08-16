@@ -15,6 +15,7 @@
     "uas"
     "sd_mod"
     "rtsx_usb_sdmmc"
+    "i915"
   ];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
