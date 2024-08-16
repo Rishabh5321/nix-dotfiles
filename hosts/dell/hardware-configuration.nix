@@ -21,7 +21,7 @@
     "amdgpu"
     "i915"
   ];
-  boot.kernelParams = [ "amdgpu.si_support=1" "amdgpu.si_support=0" ];
+  boot.kernelParams = ["amdgpu.si_support=1" "amdgpu.si_support=0"];
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
