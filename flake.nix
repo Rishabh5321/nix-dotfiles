@@ -12,15 +12,15 @@
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     alejandra.url = "github:kamadorueda/alejandra";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.url = "github:pjones/plasma-manager";
-    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs.home-manager.follows = "nixpkgs";
-    nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
-    nix-software-center.url = "github:snowfallorg/nix-software-center";
-    nix-github-actions = {
-      url = "github:zhaofengli/nix-github-actions/matrix-name";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #plasma-manager.url = "github:pjones/plasma-manager";
+    #plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
+    #plasma-manager.inputs.home-manager.follows = "nixpkgs";
+    #nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
+    #nix-software-center.url = "github:snowfallorg/nix-software-center";
+    #nix-github-actions = {
+    #  url = "github:zhaofengli/nix-github-actions/matrix-name";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
@@ -33,7 +33,7 @@
     darkmatter-grub-theme.url = "gitlab:VandalByte/darkmatter-grub-theme";
     darkmatter-grub-theme.inputs.nixpkgs.follows = "nixpkgs";
     #grub2-themes.url = "github:vinceliuice/grub2-themes";
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    #nix-gaming.url = "github:fufexan/nix-gaming";
     sops-nix.url = "github:Mic92/sops-nix";
     # nixos-cosmic = {
     #   url = "github:lilyinstarlight/nixos-cosmic";
