@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   gtk = {
     iconTheme = {
-      name = "Dracula";
-      package = pkgs.dracula-icon-theme;
+      name = "Tela-blue";
+      package = pkgs.tela-icon-theme;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;

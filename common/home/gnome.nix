@@ -59,8 +59,8 @@ _: {
       favorite-apps = [
         "kitty.desktop"
         "Alacritty.desktop"
+        "brave-browser.desktop"
         "org.gnome.Nautilus.desktop"
-        "firefox.desktop"
         "discord.desktop"
         "spotify.desktop"
         "code.desktop"
@@ -69,6 +69,15 @@ _: {
         "steam.desktop"
         "heroic.desktop"
         "obsidian.desktop"
+        "beeper.desktop"
+        "bitwarden.desktop"
+        "com.usebottles.bottles.desktop"
+        "ca.desrt.dconf-editor.desktop"
+        "com.heroicgameslauncher.hgl.desktop"
+        "firefox.desktop"
+        "org.telegram.desktop.desktop"
+        "plexmediaplayer.desktop"
+        "dev.zed.Zed.desktop"
       ];
     };
   };
