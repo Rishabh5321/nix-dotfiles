@@ -58,6 +58,7 @@ _: {
       disable-user-extensions = false;
       favorite-apps = [
         "kitty.desktop"
+        "Alacritty.desktop"
         "org.gnome.Nautilus.desktop"
         "firefox.desktop"
         "discord.desktop"
