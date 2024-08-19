@@ -148,6 +148,9 @@
 
       qemu
       swtpm
+      rtkit
+      kdePackages.sddm-kcm
+      #libsForQt5.sddm-kcm
     ];
 
   #services.plex.enable = true;

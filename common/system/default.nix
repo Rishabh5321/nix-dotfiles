@@ -4,7 +4,7 @@
     ./boot.nix
     ./cache.nix
     ./desktop_env.nix
-    #./displaymanager.nix
+    ./displaymanager.nix
     ./gaming.nix
     ./graphics.nix
     ./locale.nix
@@ -13,10 +13,10 @@
     ./pkgs.nix
     ./pkgs_stable.nix
     #./pkgs_unstable.nix
-    #./polkit.nix
+    ./polkit.nix
     ./program.nix
     ./proton.nix
-    #./sound.nix
+    ./sound.nix
     ./stylix.nix
     ./swap.nix
     ./syncthing.nix

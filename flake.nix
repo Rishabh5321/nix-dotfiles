@@ -12,9 +12,9 @@
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     alejandra.url = "github:kamadorueda/alejandra";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
-    #plasma-manager.url = "github:pjones/plasma-manager";
-    #plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
-    #plasma-manager.inputs.home-manager.follows = "nixpkgs";
+    plasma-manager.url = "github:pjones/plasma-manager";
+    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
+    plasma-manager.inputs.home-manager.follows = "nixpkgs";
     #nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
     #nix-software-center.url = "github:snowfallorg/nix-software-center";
     #nix-github-actions = {
@@ -39,6 +39,11 @@
     #   url = "github:lilyinstarlight/nixos-cosmic";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+    sddm-sugar-candy-nix = {
+      url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
+      # Optional, by default this flake follows nixpkgs-unstable.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -48,6 +53,7 @@
     home-manager,
     spicetify-nix,
     alejandra,
+    sddm-sugar-candy-nix,
     #nixos-cosmic,
     #chaotic,
     #impermanence,
@@ -81,14 +87,22 @@
         darkmatter-grub-theme.nixosModule
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
+        sddm-sugar-candy-nix.nixosModules.default
         #sops-nix.nixosModules.sops
         #chaotic.nixosModules.default
         #impermanence.nixosModules.impermanence
         #grub2-themes.nixosModules.default
         {
+          nixpkgs = {
+            overlays = [
+              sddm-sugar-candy-nix.overlays.default
+            ];
+          };
+        }
+        {
           home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable;};
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = ".rebuild";
+          home-manager.backupFileExtension = ".build";
           home-manager.users.rishabh = import ./home-manager/home.nix;
         }
       ];

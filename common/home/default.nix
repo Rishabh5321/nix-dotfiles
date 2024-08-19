@@ -22,7 +22,7 @@
     ./man.nix
     ./nix-index.nix
     ./packages.nix
-    #./plasma.nix
+    ./plasma.nix
     ./spicetify.nix
     #./starship.nix
     ./stylix.nix
