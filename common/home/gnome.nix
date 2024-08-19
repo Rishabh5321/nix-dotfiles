@@ -34,7 +34,7 @@ _: {
 
     "org/gnome/desktop/wm/keybindings" = {
       close = ["<Super>q"];
-      toggle-fullscreen = ["<Super>Print"];
+      toggle-fullscreen = ["<Super>f"];
       switch-windows = ["<Alt>Tab"];
       switch-applications = ["<Super>Tab"];
       switch-windows-backward = ["<Shift><Alt>Tab"];
@@ -50,7 +50,9 @@ _: {
     "org/gnome/mutter" = {
       overlay-key = "Super_L";
       edge-tiling = true;
-      dynamic-workspaces = true;
+      dynamic-workspaces = false;
+      workspaces-only-on-primary = true;
+      auto-maximize = false;
     };
 
     "org/gnome/shell" = {
