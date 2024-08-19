@@ -24,5 +24,6 @@
     ./users.nix
 
     #./sops.nix
+    ./virtualisation.nix  
   ];
 }

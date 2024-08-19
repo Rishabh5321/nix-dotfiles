@@ -145,6 +145,9 @@
       zoxide
       zsh
       zsh-powerlevel10k
+
+      qemu
+      swtpm
     ];
 
   #services.plex.enable = true;

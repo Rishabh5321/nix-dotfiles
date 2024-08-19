@@ -51,7 +51,6 @@
 
   networking.timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
 
-  virtualisation.libvirtd.enable = true;
   virtualisation.docker = {
     enable = true;
     rootless = {
