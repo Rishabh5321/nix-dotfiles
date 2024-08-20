@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   options,
+  lib,
   ...
 }: {
   programs = {
@@ -12,7 +13,7 @@
       xwayland.enable = true;
     };
     dconf.enable = true;
-    #seahorse.enable = true;
+    #seahorse.enable = lib.mkForce true;
     fuse.userAllowOther = true;
     mtr.enable = true;
     gnupg.agent = {

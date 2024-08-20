@@ -1,7 +1,11 @@
-_: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   services.desktopManager.plasma6.enable = true;
   #services.displayManager.sddm.enable = true;
-  /*
+
   services.xserver = {
     enable = true;
     desktopManager = {
@@ -19,5 +23,6 @@ _: {
     dconf-editor
     gnome-tweaks
   ];
-  */
+
+  programs.ssh.askPassword = lib.mkForce "true";
 }

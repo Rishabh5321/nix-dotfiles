@@ -4,7 +4,7 @@
     ./boot.nix
     ./cache.nix
     ./desktop_env.nix
-    ./displaymanager.nix
+    #./displaymanager.nix
     ./gaming.nix
     ./graphics.nix
     ./locale.nix
