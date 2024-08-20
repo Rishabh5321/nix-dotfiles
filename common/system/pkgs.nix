@@ -1,12 +1,11 @@
+{ pkgs, inputs, ... }:
 {
-  pkgs,
-  inputs,
-  ...
-}: {
-  environment.systemPackages = let
-    cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
-  in
-    with pkgs; [
+  environment.systemPackages =
+    let
+      cursor = pkgs.callPackage ../../pkgs/cursor.nix { };
+    in
+    with pkgs;
+    [
       #age
       #amdvlk
       alacritty
@@ -150,6 +149,7 @@
       swtpm
       rtkit
       kdePackages.sddm-kcm
+      libsForQt5.krohnkite
       #libsForQt5.sddm-kcm
     ];
 
@@ -166,7 +166,7 @@
       powerline
       nerdfonts
       material-icons
-      (nerdfonts.override {fonts = ["Meslo"];})
+      (nerdfonts.override { fonts = [ "Meslo" ]; })
     ];
   };
 }
