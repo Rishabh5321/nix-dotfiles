@@ -102,7 +102,7 @@
         {
           home-manager.extraSpecialArgs = {inherit inputs outputs username wallpaper flakeDir spicetify-nix pkgs-stable;};
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = ".build";
+          home-manager.backupFileExtension = ".rebuildsss";
           home-manager.users.rishabh = import ./home-manager/home.nix;
         }
       ];
