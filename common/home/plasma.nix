@@ -3,15 +3,14 @@
 #
 # Get the plasma configs in a file with $ nix run github:pjones/plasma-manager > <file>
 #
-{ inputs, ... }:
-{
-  imports = [ inputs.plasma-manager.homeManagerModules.plasma-manager ];
+{inputs, ...}: {
+  imports = [inputs.plasma-manager.homeManagerModules.plasma-manager];
 
   programs.plasma = {
     enable = true;
     shortcuts = {
-      "ActivityManager"."switch-to-activity-b3473825-69a4-4434-a8c7-732f4163cad1" = [ ];
-      "ActivityManager"."switch-to-activity-c7bafcf1-9719-4f3e-b804-6d748aaa2d37" = [ ];
+      "ActivityManager"."switch-to-activity-b3473825-69a4-4434-a8c7-732f4163cad1" = [];
+      "ActivityManager"."switch-to-activity-c7bafcf1-9719-4f3e-b804-6d748aaa2d37" = [];
       "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
       "KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Meta+Alt+K";
       "kaccess"."Toggle Screen Reader On and Off" = "Meta+Alt+S";
@@ -50,8 +49,8 @@
       "ksmserver"."Reboot Without Confirmation" = "none,,Reboot Without Confirmation";
       "ksmserver"."Shut Down" = "none,,Shut Down";
       "kwin"."Activate Window Demanding Attention" = "Meta+Ctrl+A";
-      "kwin"."Cycle Overview" = [ ];
-      "kwin"."Cycle Overview Opposite" = [ ];
+      "kwin"."Cycle Overview" = [];
+      "kwin"."Cycle Overview Opposite" = [];
       "kwin"."Decrease Opacity" = "none,,Decrease Opacity of Active Window by 5%";
       "kwin"."Edit Tiles" = "Meta+T";
       "kwin"."Expose" = "Ctrl+F9";
@@ -61,17 +60,17 @@
         "Launch (C),Toggle Present Windows (All desktops)"
       ];
       "kwin"."ExposeClass" = "Ctrl+F7";
-      "kwin"."ExposeClassCurrentDesktop" = [ ];
+      "kwin"."ExposeClassCurrentDesktop" = [];
       "kwin"."Grid View" = "Meta+G";
       "kwin"."Increase Opacity" = "none,,Increase Opacity of Active Window by 5%";
       "kwin"."Kill Window" = "Meta+Ctrl+Esc";
-      "kwin"."Move Tablet to Next Output" = [ ];
+      "kwin"."Move Tablet to Next Output" = [];
       "kwin"."MoveMouseToCenter" = "Meta+F6";
       "kwin"."MoveMouseToFocus" = "Meta+F5";
-      "kwin"."MoveZoomDown" = [ ];
-      "kwin"."MoveZoomLeft" = [ ];
-      "kwin"."MoveZoomRight" = [ ];
-      "kwin"."MoveZoomUp" = [ ];
+      "kwin"."MoveZoomDown" = [];
+      "kwin"."MoveZoomLeft" = [];
+      "kwin"."MoveZoomRight" = [];
+      "kwin"."MoveZoomUp" = [];
       "kwin"."Overview" = "Meta+W";
       "kwin"."Setup Window Shortcut" = "none,,Setup Window Shortcut";
       "kwin"."Show Desktop" = "Meta+D";
@@ -119,7 +118,7 @@
       "kwin"."Switch to Screen Below" = "none,,Switch to Screen Below";
       "kwin"."Switch to Screen to the Left" = "none,,Switch to Screen to the Left";
       "kwin"."Switch to Screen to the Right" = "none,,Switch to Screen to the Right";
-      "kwin"."Toggle Night Color" = [ ];
+      "kwin"."Toggle Night Color" = [];
       "kwin"."Toggle Window Raise/Lower" = "none,,Toggle Window Raise/Lower";
       "kwin"."Walk Through Windows" = "Alt+Tab";
       "kwin"."Walk Through Windows (Reverse)" = "Alt+Shift+Tab";
@@ -210,7 +209,7 @@
         "Meta+=,Zoom In"
       ];
       "kwin"."view_zoom_out" = "Meta+-";
-      "mediacontrol"."mediavolumedown" = [ ];
+      "mediacontrol"."mediavolumedown" = [];
       "mediacontrol"."mediavolumeup" = "none,,Media volume up";
       "mediacontrol"."nextmedia" = "Media Next";
       "mediacontrol"."pausemedia" = "Media Pause";
@@ -229,7 +228,7 @@
       "org_kde_powerdevil"."PowerOff" = "Power Off";
       "org_kde_powerdevil"."Sleep" = "Sleep";
       "org_kde_powerdevil"."Toggle Keyboard Backlight" = "Keyboard Light On/Off";
-      "org_kde_powerdevil"."Turn Off Screen" = [ ];
+      "org_kde_powerdevil"."Turn Off Screen" = [];
       "org_kde_powerdevil"."powerProfile" = [
         "Battery"
         ""
@@ -252,14 +251,14 @@
       "plasmashell"."activate task manager entry 7" = "Meta+7";
       "plasmashell"."activate task manager entry 8" = "Meta+8";
       "plasmashell"."activate task manager entry 9" = "Meta+9";
-      "plasmashell"."clear-history" = [ ];
+      "plasmashell"."clear-history" = [];
       "plasmashell"."clipboard_action" = "Meta+Ctrl+X";
       "plasmashell"."cycle-panels" = "Meta+Alt+P";
       "plasmashell"."cycleNextAction" = "none,,Next History Item";
       "plasmashell"."cyclePrevAction" = "none,,Previous History Item";
       "plasmashell"."manage activities" = "\\, Meta+Q\\, ,Meta+Q,Show Activity Switcher";
-      "plasmashell"."next activity" = [ ];
-      "plasmashell"."previous activity" = [ ];
+      "plasmashell"."next activity" = [];
+      "plasmashell"."previous activity" = [];
       "plasmashell"."repeat_action" = "Meta+Ctrl+R";
       "plasmashell"."show dashboard" = "Ctrl+F12";
       "plasmashell"."show-barcode" = "none,,Show Barcode…";
@@ -269,7 +268,7 @@
       "plasmashell"."switch to previous activity" = "none,,Switch to Previous Activity";
       "plasmashell"."toggle do not disturb" = "none,,Toggle do not disturb";
       "services/Alacritty.desktop"."_launch" = "Meta+Return";
-      "services/org.kde.spectacle.desktop"."RecordWindow" = [ ];
+      "services/org.kde.spectacle.desktop"."RecordWindow" = [];
       "services/rofi-launcher.desktop"."_launch" = "Meta+Shift+Return";
     };
     configFile = {
