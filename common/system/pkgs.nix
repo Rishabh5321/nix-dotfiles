@@ -1,11 +1,12 @@
-{ pkgs, inputs, ... }:
 {
-  environment.systemPackages =
-    let
-      cursor = pkgs.callPackage ../../pkgs/cursor.nix { };
-    in
-    with pkgs;
-    [
+  pkgs,
+  inputs,
+  ...
+}: {
+  environment.systemPackages = let
+    cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
+  in
+    with pkgs; [
       #age
       #amdvlk
       alacritty
@@ -168,7 +169,7 @@
       powerline
       nerdfonts
       material-icons
-      (nerdfonts.override { fonts = [ "Meslo" ]; })
+      (nerdfonts.override {fonts = ["Meslo"];})
     ];
   };
 }
