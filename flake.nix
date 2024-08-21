@@ -15,7 +15,7 @@
     plasma-manager.url = "github:pjones/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "nixpkgs";
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    #zen-browser.url = "github:MarceColl/zen-browser-flake";
     #nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
     #nix-software-center.url = "github:snowfallorg/nix-software-center";
     #nix-github-actions = {
