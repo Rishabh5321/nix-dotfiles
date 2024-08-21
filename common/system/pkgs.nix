@@ -154,6 +154,7 @@
       # kdePackages.sddm-kcm
       # libsForQt5.krohnkite
       #libsForQt5.sddm-kcm
+      inputs.zen-browser.packages."${system}".default
     ];
 
   #services.plex.enable = true;
