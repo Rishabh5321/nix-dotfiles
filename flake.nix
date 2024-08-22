@@ -125,7 +125,7 @@
               ;
           };
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = ".rebulsss";
+          home-manager.backupFileExtension = ".b";
           home-manager.users.rishabh = import ./home-manager/home.nix;
         }
       ];
