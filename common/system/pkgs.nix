@@ -1,12 +1,11 @@
+{ pkgs, inputs, ... }:
 {
-  pkgs,
-  inputs,
-  ...
-}: {
-  environment.systemPackages = let
-    cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
-  in
-    with pkgs; [
+  environment.systemPackages =
+    let
+      cursor = pkgs.callPackage ../../pkgs/cursor.nix { };
+    in
+    with pkgs;
+    [
       #age
       #amdvlk
       alacritty
@@ -155,7 +154,7 @@
       # kdePackages.sddm-kcm
       # libsForQt5.krohnkite
       #libsForQt5.sddm-kcm
-      #inputs.zen-browser.packages."${system}".default
+      inputs.zen-browser.packages."${system}".generic
     ];
 
   #services.plex.enable = true;
@@ -171,7 +170,7 @@
       powerline
       nerdfonts
       material-icons
-      (nerdfonts.override {fonts = ["Meslo"];})
+      (nerdfonts.override { fonts = [ "Meslo" ]; })
     ];
   };
 }
