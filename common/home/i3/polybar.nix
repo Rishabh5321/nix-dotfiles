@@ -2,7 +2,6 @@
 # Created By @icanwalkonwater
 # Edited and ported to Nix by Th0rgal
 let
-  ac = "#1E88E5";
   mf = "#383838";
 
   bg = "#00000000";
