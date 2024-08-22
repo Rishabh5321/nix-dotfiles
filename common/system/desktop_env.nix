@@ -10,12 +10,19 @@
     enable = true;
     desktopManager = {
       xterm.enable = true;
-      gnome.enable = true;
+      #gnome.enable = true;
+      xfce = {
+        enable = true;
+        noDesktop = true;
+        enableXfwm = false;
+      };
     };
-    displayManager.gdm = {
+    displayManager.lightdm = {
       enable = true;
     };
+    windowManager.i3.enable = true;
   };
+  services.displayManager.defaultSession = "xfce";
   #services.desktopManager.cosmic.enable = true;
   #services.displayManager.cosmic-greeter.enable = true;
 

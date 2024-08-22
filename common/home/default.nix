@@ -11,8 +11,8 @@
     ./firefox.nix
     ./fzf.nix
     ./git.nix
-    ./gnome-extensions.nix
-    ./gnome.nix
+    #./gnome-extensions.nix
+    #./gnome.nix
     ./hypridle.nix
     ./hyprlock.nix
     ./idleinhibitor.nix
@@ -34,5 +34,7 @@
     #./sops.nix
     ./htop.nix
     ./oh-my-posh.nix
+
+    ./i3
   ];
 }
