@@ -66,7 +66,7 @@
     inherit (self) outputs;
     systems = ["x86_64-linux"];
     username = "rishabh";
-    wallpaper = "wall74.jpg";
+    wallpaper = "wall79.png";
     flakeDir = "~/nix-dotfiles";
     pkgs-stable = import nixpkgs-stable {
       system = "x86_64-linux";
@@ -126,7 +126,7 @@
               ;
           };
           home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = ".c";
+          home-manager.backupFileExtension = ".d";
           home-manager.users.rishabh = import ./home-manager/home.nix;
         }
       ];
