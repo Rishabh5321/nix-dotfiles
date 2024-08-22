@@ -13,16 +13,14 @@
       #gnome.enable = true;
       xfce = {
         enable = true;
-        noDesktop = true;
-        enableXfwm = false;
       };
     };
     displayManager.lightdm = {
       enable = true;
     };
-    windowManager.i3.enable = true;
+    #windowManager.i3.enable = true;
   };
-  services.displayManager.defaultSession = "xfce";
+  #services.displayManager.defaultSession = "xfce";
   #services.desktopManager.cosmic.enable = true;
   #services.displayManager.cosmic-greeter.enable = true;
 
