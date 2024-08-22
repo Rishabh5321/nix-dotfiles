@@ -1,21 +1,18 @@
+{ lib, pkgs, ... }:
 {
-  lib,
-  pkgs,
-  ...
-}: {
   #services.desktopManager.plasma6.enable = true;
   #services.displayManager.sddm.enable = true;
 
   services.xserver = {
     enable = true;
     desktopManager = {
-      xterm.enable = true;
-      #gnome.enable = true;
-      xfce = {
-        enable = true;
-      };
+      xterm.enable = false;
+      gnome.enable = true;
+      # xfce = {
+      #   enable = true;
+      # }
     };
-    displayManager.lightdm = {
+    displayManager.gdm = {
       enable = true;
     };
     #windowManager.i3.enable = true;

@@ -11,8 +11,8 @@
     ./firefox.nix
     ./fzf.nix
     ./git.nix
-    #./gnome-extensions.nix
-    #./gnome.nix
+    ./gnome-extensions.nix
+    ./gnome.nix
     ./hypridle.nix
     ./hyprlock.nix
     ./idleinhibitor.nix

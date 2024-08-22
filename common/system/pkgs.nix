@@ -149,6 +149,7 @@
       qemu
       swtpm
       rtkit
+      google-chrome
       # vivaldi
       # vivaldi-ffmpeg-codecs
       # kdePackages.sddm-kcm
