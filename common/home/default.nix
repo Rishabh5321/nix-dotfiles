@@ -35,6 +35,6 @@
     ./htop.nix
     ./oh-my-posh.nix
 
-    #./i3
+    ./i3
   ];
 }
