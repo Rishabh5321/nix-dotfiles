@@ -26,7 +26,7 @@ _: {
   #   LANG = "en_US.UTF-8";
   # };
 
-    # Set your time zone.
+  # Set your time zone.
   time.timeZone = "Asia/Kolkata";
 
   # Select internationalisation properties.
