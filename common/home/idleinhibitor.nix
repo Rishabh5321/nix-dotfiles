@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # The service 'wayland-pipewire-idle-inhibit' does not exist in the current NixOS configuration.
   # If you want to use this functionality, you might need to set it up manually.
   # Here's a placeholder for potential manual setup:
@@ -22,7 +22,7 @@
       Restart = "on-failure";
     };
     Install = {
-      WantedBy = ["graphical-session.target"];
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 

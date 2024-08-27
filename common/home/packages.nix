@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   inherit (import ../system/variables.nix) wallpaperDir;
-in {
+in
+{
   home.packages = with pkgs; [
     waybar
     (import ../../pkgs/wall-selector.nix {

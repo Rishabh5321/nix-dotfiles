@@ -3,14 +3,14 @@
 #
 # Get the plasma configs in a file with $ nix run github:pjones/plasma-manager > <file>
 #
-{inputs, ...}: {
-  imports = [inputs.plasma-manager.homeManagerModules.plasma-manager];
+{ inputs, ... }: {
+  imports = [ inputs.plasma-manager.homeManagerModules.plasma-manager ];
 
   programs.plasma = {
     enable = true;
     shortcuts = {
-      "ActivityManager"."switch-to-activity-b3473825-69a4-4434-a8c7-732f4163cad1" = [];
-      "ActivityManager"."switch-to-activity-c7bafcf1-9719-4f3e-b804-6d748aaa2d37" = [];
+      "ActivityManager"."switch-to-activity-b3473825-69a4-4434-a8c7-732f4163cad1" = [ ];
+      "ActivityManager"."switch-to-activity-c7bafcf1-9719-4f3e-b804-6d748aaa2d37" = [ ];
       "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
       "KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Meta+Alt+K";
       "kaccess"."Toggle Screen Reader On and Off" = "Meta+Alt+S";
@@ -46,8 +46,8 @@
       "ksmserver"."Reboot Without Confirmation" = "none,,Reboot Without Confirmation";
       "ksmserver"."Shut Down" = "none,,Shut Down";
       "kwin"."Activate Window Demanding Attention" = "Meta+Ctrl+A";
-      "kwin"."Cycle Overview" = [];
-      "kwin"."Cycle Overview Opposite" = [];
+      "kwin"."Cycle Overview" = [ ];
+      "kwin"."Cycle Overview Opposite" = [ ];
       "kwin"."Decrease Opacity" = "none,,Decrease Opacity of Active Window by 5%";
       "kwin"."Edit Tiles" = "Meta+T";
       "kwin"."Expose" = "Ctrl+F9";
@@ -57,71 +57,71 @@
         "Launch (C),Toggle Present Windows (All desktops)"
       ];
       "kwin"."ExposeClass" = "Ctrl+F7";
-      "kwin"."ExposeClassCurrentDesktop" = [];
+      "kwin"."ExposeClassCurrentDesktop" = [ ];
       "kwin"."Grid View" = "Meta+G";
       "kwin"."Increase Opacity" = "none,,Increase Opacity of Active Window by 5%";
       "kwin"."Kill Window" = "Meta+Ctrl+Esc";
-      "kwin"."KrohnkiteBTreeLayout" = [];
-      "kwin"."KrohnkiteDecrease" = [];
+      "kwin"."KrohnkiteBTreeLayout" = [ ];
+      "kwin"."KrohnkiteDecrease" = [ ];
       "kwin"."KrohnkiteFloatAll" = "Meta+Shift+F,none,Krohnkite: Float All";
-      "kwin"."KrohnkiteFloatingLayout" = [];
+      "kwin"."KrohnkiteFloatingLayout" = [ ];
       "kwin"."KrohnkiteFocusDown" = "Meta+J,none,Krohnkite: Focus Down";
       "kwin"."KrohnkiteFocusLeft" = "Meta+H,none,Krohnkite: Focus Left";
-      "kwin"."KrohnkiteFocusNext" = [];
+      "kwin"."KrohnkiteFocusNext" = [ ];
       "kwin"."KrohnkiteFocusPrev" = "Meta+\\,,none,Krohnkite: Focus Previous";
-      "kwin"."KrohnkiteFocusRight" = [];
+      "kwin"."KrohnkiteFocusRight" = [ ];
       "kwin"."KrohnkiteFocusUp" = "Meta+K,none,Krohnkite: Focus Up";
       "kwin"."KrohnkiteGrowHeight" = "Meta+Ctrl+J,none,Krohnkite: Grow Height";
       "kwin"."KrohnkiteIncrease" = "Meta+I,none,Krohnkite: Increase";
       "kwin"."KrohnkiteMonocleLayout" = "Meta+M,none,Krohnkite: Monocle Layout";
       "kwin"."KrohnkiteNextLayout" = "Meta+\\\\,none,Krohnkite: Next Layout";
       "kwin"."KrohnkitePreviousLayout" = "Meta+|,none,Krohnkite: Previous Layout";
-      "kwin"."KrohnkiteQuarterLayout" = [];
-      "kwin"."KrohnkiteRotate" = [];
-      "kwin"."KrohnkiteRotatePart" = [];
-      "kwin"."KrohnkiteSetMaster" = [];
+      "kwin"."KrohnkiteQuarterLayout" = [ ];
+      "kwin"."KrohnkiteRotate" = [ ];
+      "kwin"."KrohnkiteRotatePart" = [ ];
+      "kwin"."KrohnkiteSetMaster" = [ ];
       "kwin"."KrohnkiteShiftDown" = "Meta+Shift+J,none,Krohnkite: Move Down/Next";
       "kwin"."KrohnkiteShiftLeft" = "Meta+Shift+H,none,Krohnkite: Move Left";
       "kwin"."KrohnkiteShiftRight" = "Meta+Shift+L,none,Krohnkite: Move Right";
       "kwin"."KrohnkiteShiftUp" = "Meta+Shift+K,none,Krohnkite: Move Up/Prev";
       "kwin"."KrohnkiteShrinkHeight" = "Meta+Ctrl+K,none,Krohnkite: Shrink Height";
       "kwin"."KrohnkiteShrinkWidth" = "Meta+Ctrl+H,none,Krohnkite: Shrink Width";
-      "kwin"."KrohnkiteSpiralLayout" = [];
-      "kwin"."KrohnkiteSpreadLayout" = [];
-      "kwin"."KrohnkiteStackedLayout" = [];
-      "kwin"."KrohnkiteStairLayout" = [];
-      "kwin"."KrohnkiteTileLayout" = [];
+      "kwin"."KrohnkiteSpiralLayout" = [ ];
+      "kwin"."KrohnkiteSpreadLayout" = [ ];
+      "kwin"."KrohnkiteStackedLayout" = [ ];
+      "kwin"."KrohnkiteStairLayout" = [ ];
+      "kwin"."KrohnkiteTileLayout" = [ ];
       "kwin"."KrohnkiteToggleFloat" = "Meta+F,none,Krohnkite: Toggle Float";
-      "kwin"."KrohnkiteTreeColumnLayout" = [];
+      "kwin"."KrohnkiteTreeColumnLayout" = [ ];
       "kwin"."KrohnkitegrowWidth" = "Meta+Ctrl+L,none,Krohnkite: Grow Width";
-      "kwin"."Move Tablet to Next Output" = [];
+      "kwin"."Move Tablet to Next Output" = [ ];
       "kwin"."MoveMouseToCenter" = "Meta+F6";
       "kwin"."MoveMouseToFocus" = "Meta+F5";
-      "kwin"."MoveZoomDown" = [];
-      "kwin"."MoveZoomLeft" = [];
-      "kwin"."MoveZoomRight" = [];
-      "kwin"."MoveZoomUp" = [];
+      "kwin"."MoveZoomDown" = [ ];
+      "kwin"."MoveZoomLeft" = [ ];
+      "kwin"."MoveZoomRight" = [ ];
+      "kwin"."MoveZoomUp" = [ ];
       "kwin"."Overview" = "Meta+W";
-      "kwin"."PoloniumCycleEngine" = [];
-      "kwin"."PoloniumFocusAbove" = [];
-      "kwin"."PoloniumFocusBelow" = [];
-      "kwin"."PoloniumFocusLeft" = [];
-      "kwin"."PoloniumFocusRight" = [];
-      "kwin"."PoloniumInsertAbove" = [];
-      "kwin"."PoloniumInsertBelow" = [];
-      "kwin"."PoloniumInsertLeft" = [];
-      "kwin"."PoloniumInsertRight" = [];
-      "kwin"."PoloniumOpenSettings" = [];
-      "kwin"."PoloniumResizeAbove" = [];
-      "kwin"."PoloniumResizeBelow" = [];
-      "kwin"."PoloniumResizeLeft" = [];
-      "kwin"."PoloniumResizeRight" = [];
+      "kwin"."PoloniumCycleEngine" = [ ];
+      "kwin"."PoloniumFocusAbove" = [ ];
+      "kwin"."PoloniumFocusBelow" = [ ];
+      "kwin"."PoloniumFocusLeft" = [ ];
+      "kwin"."PoloniumFocusRight" = [ ];
+      "kwin"."PoloniumInsertAbove" = [ ];
+      "kwin"."PoloniumInsertBelow" = [ ];
+      "kwin"."PoloniumInsertLeft" = [ ];
+      "kwin"."PoloniumInsertRight" = [ ];
+      "kwin"."PoloniumOpenSettings" = [ ];
+      "kwin"."PoloniumResizeAbove" = [ ];
+      "kwin"."PoloniumResizeBelow" = [ ];
+      "kwin"."PoloniumResizeLeft" = [ ];
+      "kwin"."PoloniumResizeRight" = [ ];
       "kwin"."PoloniumRetileWindow" = "Meta+Shift+Space,none,Polonium: Retile Window";
-      "kwin"."PoloniumSwitchBTree" = [];
-      "kwin"."PoloniumSwitchHalf" = [];
-      "kwin"."PoloniumSwitchKwin" = [];
-      "kwin"."PoloniumSwitchMonocle" = [];
-      "kwin"."PoloniumSwitchThreeColumn" = [];
+      "kwin"."PoloniumSwitchBTree" = [ ];
+      "kwin"."PoloniumSwitchHalf" = [ ];
+      "kwin"."PoloniumSwitchKwin" = [ ];
+      "kwin"."PoloniumSwitchMonocle" = [ ];
+      "kwin"."PoloniumSwitchThreeColumn" = [ ];
       "kwin"."Setup Window Shortcut" = "none,,Setup Window Shortcut";
       "kwin"."Show Desktop" = "Meta+D";
       "kwin"."Switch One Desktop Down" = "Meta+Ctrl+Down";
@@ -168,7 +168,7 @@
       "kwin"."Switch to Screen Below" = "none,,Switch to Screen Below";
       "kwin"."Switch to Screen to the Left" = "none,,Switch to Screen to the Left";
       "kwin"."Switch to Screen to the Right" = "none,,Switch to Screen to the Right";
-      "kwin"."Toggle Night Color" = [];
+      "kwin"."Toggle Night Color" = [ ];
       "kwin"."Toggle Window Raise/Lower" = "none,,Toggle Window Raise/Lower";
       "kwin"."Walk Through Windows" = "Alt+Tab";
       "kwin"."Walk Through Windows (Reverse)" = "Alt+Shift+Tab";
@@ -283,7 +283,7 @@
       "org_kde_powerdevil"."PowerOff" = "Power Off";
       "org_kde_powerdevil"."Sleep" = "Sleep";
       "org_kde_powerdevil"."Toggle Keyboard Backlight" = "Keyboard Light On/Off";
-      "org_kde_powerdevil"."Turn Off Screen" = [];
+      "org_kde_powerdevil"."Turn Off Screen" = [ ];
       "org_kde_powerdevil"."powerProfile" = [
         "Battery"
         "Meta+B,Battery"
@@ -310,8 +310,8 @@
       "plasmashell"."cycleNextAction" = "none,,Next History Item";
       "plasmashell"."cyclePrevAction" = "none,,Previous History Item";
       "plasmashell"."manage activities" = "none,Meta+Q,Show Activity Switcher";
-      "plasmashell"."next activity" = [];
-      "plasmashell"."previous activity" = [];
+      "plasmashell"."next activity" = [ ];
+      "plasmashell"."previous activity" = [ ];
       "plasmashell"."repeat_action" = "Meta+Ctrl+R";
       "plasmashell"."show dashboard" = "Ctrl+F12";
       "plasmashell"."show-barcode" = "none,,Show Barcode…";
@@ -321,7 +321,7 @@
       "plasmashell"."switch to previous activity" = "none,,Switch to Previous Activity";
       "plasmashell"."toggle do not disturb" = "none,,Toggle do not disturb";
       "services/Alacritty.desktop"."_launch" = "Meta+Return";
-      "services/org.kde.spectacle.desktop"."RecordWindow" = [];
+      "services/org.kde.spectacle.desktop"."RecordWindow" = [ ];
       "services/rofi-launcher.desktop"."_launch" = "Meta+Shift+Return";
     };
     configFile = {

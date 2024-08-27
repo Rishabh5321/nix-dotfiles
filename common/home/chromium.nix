@@ -1,10 +1,10 @@
 {
   programs.chromium = {
     enable = false;
-    commandLineArgs = ["--enable-features=TouchpadOverscrollHistoryNavigation"];
+    commandLineArgs = [ "--enable-features=TouchpadOverscrollHistoryNavigation" ];
     extensions = [
-      {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";}
-      {id = "bkkmolkhemgaeaeggcmfbghljjjoofoh";}
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; }
+      { id = "bkkmolkhemgaeaeggcmfbghljjjoofoh"; }
     ];
   };
 }

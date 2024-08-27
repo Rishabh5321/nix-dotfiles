@@ -1,8 +1,7 @@
-{
-  pkgs,
-  inputs,
-  options,
-  ...
+{ pkgs
+, inputs
+, options
+, ...
 }: {
   programs = {
     firefox.enable = true;
@@ -49,7 +48,7 @@
   #   nfs.server.enable = true;
   # };
 
-  networking.timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
+  networking.timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
 
   virtualisation.docker = {
     enable = true;

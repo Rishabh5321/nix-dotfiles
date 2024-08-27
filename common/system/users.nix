@@ -1,10 +1,11 @@
-{
-  pkgs,
-  username,
-  ...
-}: let
+{ pkgs
+, username
+, ...
+}:
+let
   inherit (import ./variables.nix) gitUsername;
-in {
+in
+{
   #sops.secrets.ta-password.neededForUsers = true;
   #users.mutableUsers = false;
 
@@ -25,7 +26,7 @@ in {
       ];
       shell = pkgs.zsh;
       ignoreShellProgramCheck = true;
-      packages = with pkgs; [];
+      packages = with pkgs; [ ];
     };
     # "newuser" = {
     #   homeMode = "755";

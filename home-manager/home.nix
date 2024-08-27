@@ -1,12 +1,11 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  outputs,
-  config,
-  pkgs,
-  username,
-  host,
-  ...
+{ outputs
+, config
+, pkgs
+, username
+, host
+, ...
 }: {
   # You can import other home-manager modules here
   imports = [
@@ -97,18 +96,18 @@
   };
 
   home.packages = [
-    (import ../pkgs/rofi-launcher.nix {inherit pkgs;})
-    (import ../pkgs/emopicker9000.nix {inherit pkgs;})
-    (import ../pkgs/task-waybar.nix {inherit pkgs;})
+    (import ../pkgs/rofi-launcher.nix { inherit pkgs; })
+    (import ../pkgs/emopicker9000.nix { inherit pkgs; })
+    (import ../pkgs/task-waybar.nix { inherit pkgs; })
     #(import ../pkgs/squirtle.nix {inherit pkgs;})
     #(import ../pkgs/nvidia-offload.nix { inherit pkgs; })
     (import ../pkgs/wallsetter.nix {
       inherit pkgs;
       inherit username;
     })
-    (import ../pkgs/web-search.nix {inherit pkgs;})
-    (import ../pkgs/rofi-launcher.nix {inherit pkgs;})
-    (import ../pkgs/screenshootin.nix {inherit pkgs;})
+    (import ../pkgs/web-search.nix { inherit pkgs; })
+    (import ../pkgs/rofi-launcher.nix { inherit pkgs; })
+    (import ../pkgs/screenshootin.nix { inherit pkgs; })
     (import ../pkgs/list-hypr-bindings.nix {
       inherit pkgs;
       inherit host;
@@ -119,8 +118,8 @@
 
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
     };
   };
 

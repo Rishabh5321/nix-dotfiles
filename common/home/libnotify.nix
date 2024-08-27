@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [libnotify];
+{ pkgs, ... }: {
+  home.packages = with pkgs; [ libnotify ];
 
   services.dunst = {
     enable = true;
@@ -63,7 +63,7 @@
         browser = "${pkgs.qutebrowser}/bin/qutebrowser";
       };
 
-      fullscreen_delay_everything = {fullscreen = "delay";};
+      fullscreen_delay_everything = { fullscreen = "delay"; };
 
       # urgency_critical = {
       #   background = "#" + config.stylix.base16Scheme.base08;
