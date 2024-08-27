@@ -2,6 +2,10 @@ name: Flake Format and Check
 
 on:
   push:
+    branches:
+      - 'main'
+    tags-ignore:
+      - 'update'
   pull_request:
   workflow_dispatch:
   schedule:
