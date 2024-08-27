@@ -3,7 +3,7 @@ name: Nix Format and Lint
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
     tags-ignore:
       - 'update'
   pull_request:
