@@ -1,5 +1,4 @@
-#My NixOS Configuration [![Check](https://github.com/Rishabh5321/nix-dotfiles/actions/workflows/flake_check.yaml/badge.svg?event=push)](https://github.com/Rishabh5321/nix-dotfiles/actions/workflows/flake_check.yaml)
-
+My NixOS Configuration 
 Welcome to my NixOS configuration repository! This setup is inspired by ZaneyOS and tailored to my personal needs. There is a script avaiable in repo which should jump start my flake but try it at your own risk.
 
 
