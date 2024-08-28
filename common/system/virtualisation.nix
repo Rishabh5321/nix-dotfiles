@@ -1,14 +1,14 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   virtualisation = {
     libvirtd = {
       enable = true;
-      qemuOvmf = true;
-      qemuSwtpm = true;
+      qemu.ovmf.enable = true;
+      qemu.swtpm.enable = true;
       #qemuOvmfPackage = pkgs.OVMFFull;
     };
   };
 
-  environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
+  environment.sessionVariables.LIBVIRT_DEFAULT_URI = ["qemu:///system"];
   environment.systemPackages = with pkgs; [
     virt-manager
     win-virtio
@@ -16,7 +16,4 @@
     qemu
     swtpm
   ];
-  users.users.putchar = {
-    extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" ];
-  };
 }

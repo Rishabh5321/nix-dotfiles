@@ -1,11 +1,11 @@
-{ pkgs
-, inputs
-, ...
+{
+  pkgs,
+  inputs,
+  ...
 }: {
-  environment.systemPackages =
-    let
-      cursor = pkgs.callPackage ../../pkgs/cursor.nix { };
-    in
+  environment.systemPackages = let
+    cursor = pkgs.callPackage ../../pkgs/cursor.nix {};
+  in
     with pkgs; [
       #age
       #amdvlk
@@ -156,7 +156,7 @@
       # libsForQt5.krohnkite
       #libsForQt5.sddm-kcm
       inputs.zen-browser.packages."${system}".generic
-      quickget
+      quickemu
     ];
 
   #services.plex.enable = true;
@@ -172,7 +172,7 @@
       powerline
       nerdfonts
       material-icons
-      (nerdfonts.override { fonts = [ "Meslo" ]; })
+      (nerdfonts.override {fonts = ["Meslo"];})
     ];
   };
 }
