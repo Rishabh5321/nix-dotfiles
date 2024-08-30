@@ -25,7 +25,7 @@
     #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
-    hyprland-plugins.inputs.hyprland.follows = "hyprland";
+    #hyprland-plugins.inputs.hyprland.follows = "hyprland";
     #impermanence.url = "github:nix-community/impermanence";
     fine-cmdline = {
       url = "github:VonHeikemen/fine-cmdline.nvim";
