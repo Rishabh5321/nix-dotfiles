@@ -15,19 +15,14 @@
     plasma-manager.url = "github:pjones/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "nixpkgs";
-    #zen-browser.url = "github:MarceColl/zen-browser-flake";
-    #nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
-    #nix-software-center.url = "github:snowfallorg/nix-software-center";
+    nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
+    nix-software-center.url = "github:snowfallorg/nix-software-center";
     #nix-github-actions = {
     #  url = "github:zhaofengli/nix-github-actions/matrix-name";
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
     #chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      submodules = true;
-    };
+    #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     #hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
     #hyprland-plugins.inputs.hyprland.follows = "hyprland";
     #impermanence.url = "github:nix-community/impermanence";
