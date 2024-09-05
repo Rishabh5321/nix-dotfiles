@@ -243,23 +243,23 @@ services:
     restart: unless-stopped
 
 
-  speedtest-tracker:
-    image: lscr.io/linuxserver/speedtest-tracker:latest
-    container_name: speedtest-tracker
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - APP_TIMEZONE=Asia/Kolkata
-      - DISPLAY_TIMEZONE=Asia/Kolkata
-      - SPEEDTEST_SCHEDULE=*/30 * * * *
-      - DB_CONNECTION=sqlite
-      - TELEGRAM_BOT_TOKEN=6260786279:AAFBHq8WQgOB8kux1Fnfvwc8z9bfndDj6c4
-      - APP_KEY=base64:ov/pvp6VKvBWL3XfT5N+6yg11UNzUchr9LCvMF/G/AE=
-    volumes:
-      - /mnt/Docker/Docker/Speedtest-Tracker_Config:/config
-    ports:
-      - 8443:80
-    restart: unless-stopped
+  #speedtest-tracker:
+  #  image: lscr.io/linuxserver/speedtest-tracker:latest
+  #  container_name: speedtest-tracker
+  #  environment:
+  #    - PUID=1000
+  #    - PGID=1000
+  #    - APP_TIMEZONE=Asia/Kolkata
+  #    - DISPLAY_TIMEZONE=Asia/Kolkata
+  #    - SPEEDTEST_SCHEDULE=*/30 * * * *
+  #    - DB_CONNECTION=sqlite
+  #    - TELEGRAM_BOT_TOKEN=6260786279:AAFBHq8WQgOB8kux1Fnfvwc8z9bfndDj6c4
+  #    - APP_KEY=base64:ov/pvp6VKvBWL3XfT5N+6yg11UNzUchr9LCvMF/G/AE=
+  #  volumes:
+  #    - /mnt/Docker/Docker/Speedtest-Tracker_Config:/config
+  #  ports:
+  #    - 8443:80
+  #  restart: unless-stopped
 
   plex:
     image: lscr.io/linuxserver/plex:latest
@@ -361,6 +361,7 @@ services:
       - /mnt/Docker/Docker/Syncthing_Config:/config
       - /mnt:/data1
       - /home/rishabh:/data2
+      - /mnt/E_Disk/Learn/Bonus/Music:/Music
     ports:
       - 8384:8384
       - 22000:22000/tcp
@@ -368,23 +369,60 @@ services:
       - 21027:21027/udp
     restart: unless-stopped
 
-  # lidarr:
-  #   image: lscr.io/linuxserver/lidarr:latest
-  #   container_name: lidarr
-  #   environment:
-  #     - PUID=1000
-  #     - PGID=1000
-  #     - TZ=Asia/Kolkata
-  #   volumes:
-  #     - /mnt/Docker/Docker/Lidarr_Config:/config
-  #     - /mnt/Raid/Learn/Bonus:/data
-  #     - /mnt/E_Disk/Learn/Bonus:/data1  # optional
-  #     - /mnt/Docker/Downloads:/downloads
-  #     - /mnt/Raid/Downloads:/downloads1
-  #   ports:
-  #     - 8686:8686
-  #   restart: unless-stopped
+  lidarr:
+    image: lscr.io/linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Kolkata
+    volumes:
+      - /mnt/Docker/Docker/Lidarr_Config:/config
+      - /mnt/Raid/Learn/Bonus:/data
+      - /mnt/E_Disk/Learn/Bonus:/data1  # optional
+      - /mnt/Docker/Downloads:/downloads
+      - /mnt/Raid/Downloads:/downloads1
+    ports:
+      - 8686:8686
+    restart: unless-stopped
 
+  lidatube:
+    image: thewicklowwolf/lidatube:latest
+    container_name: lidatube
+    environment:
+      - thread_limit=10
+    volumes:
+      - /mnt/Docker/Docker/Lidatube_Config:/lidatube/config
+      - /mnt/E_Disk/Learn/Bonus/Music:/lidatube/downloads
+    ports:
+      - 5000:5000
+    restart: unless-stopped
+
+  #lidify:
+  #  image: thewicklowwolf/lidify:latest
+  #  container_name: lidify
+  #  volumes:
+  #    - /mnt/Docker/Docker/Lidift_Config:/lidatube/config
+  #    - /mnt/E_Disk/Learn/Bonus/Music:/lidatube/downloads
+  #  ports:
+  #    - 5000:5000
+  #  restart: unless-stopped
+
+  #headphones:
+  #  image: lscr.io/linuxserver/headphones:latest
+  #  container_name: headphones
+  #  environment:
+  #    - PUID=1000
+  #    - PGID=1000
+  #    - TZ=Asia/Kolkata
+  #  volumes:
+  #    - /mnt/Docker/Docker/Headphones_Config:/config
+  #    - /mnt/Docker/Downloads:/downloads
+  #    - /mnt/Raid/Downloads:/downloads1
+  #    - /mnt/E_Disk/Learn/Bonus:/music
+  #  ports:
+  #    - 8181:8181
+  #  restart: unless-stopped
 
 volumes:
   portainer_data:
