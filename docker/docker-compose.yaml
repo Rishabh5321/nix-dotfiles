@@ -369,34 +369,34 @@ services:
       - 21027:21027/udp
     restart: unless-stopped
 
-  lidarr:
-    image: lscr.io/linuxserver/lidarr:latest
-    container_name: lidarr
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Asia/Kolkata
-    volumes:
-      - /mnt/Docker/Docker/Lidarr_Config:/config
-      - /mnt/Raid/Learn/Bonus:/data
-      - /mnt/E_Disk/Learn/Bonus:/data1  # optional
-      - /mnt/Docker/Downloads:/downloads
-      - /mnt/Raid/Downloads:/downloads1
-    ports:
-      - 8686:8686
-    restart: unless-stopped
+  #lidarr:
+  #  image: lscr.io/linuxserver/lidarr:latest
+  #  container_name: lidarr
+  #  environment:
+  #    - PUID=1000
+  #    - PGID=1000
+  #    - TZ=Asia/Kolkata
+  #  volumes:
+  #    - /mnt/Docker/Docker/Lidarr_Config:/config
+  #    - /mnt/Raid/Learn/Bonus:/data
+  #    - /mnt/E_Disk/Learn/Bonus:/data1  # optional
+  #    - /mnt/Docker/Downloads:/downloads
+  #    - /mnt/Raid/Downloads:/downloads1
+  #  ports:
+  #    - 8686:8686
+  #  restart: unless-stopped
 
-  lidatube:
-    image: thewicklowwolf/lidatube:latest
-    container_name: lidatube
-    environment:
-      - thread_limit=10
-    volumes:
-      - /mnt/Docker/Docker/Lidatube_Config:/lidatube/config
-      - /mnt/E_Disk/Learn/Bonus/Music:/lidatube/downloads
-    ports:
-      - 5000:5000
-    restart: unless-stopped
+  #lidatube:
+  #  image: thewicklowwolf/lidatube:latest
+  #  container_name: lidatube
+  #  environment:
+  #    - thread_limit=10
+  #  volumes:
+  #    - /mnt/Docker/Docker/Lidatube_Config:/lidatube/config
+  #    - /mnt/E_Disk/Learn/Bonus/Music:/lidatube/downloads
+  #  ports:
+  #    - 5000:5000
+  #  restart: unless-stopped
 
   #lidify:
   #  image: thewicklowwolf/lidify:latest
@@ -423,7 +423,7 @@ services:
   #  ports:
   #    - 8181:8181
   #  restart: unless-stopped
-
+  
 volumes:
   portainer_data:
     external: true
